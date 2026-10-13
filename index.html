@@ -552,6 +552,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
         <button sc-camel-on-click="{{ setEs }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ esBg }};color:{{ esFg }}">ES</button>
         <button sc-camel-on-click="{{ setEn }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ enBg }};color:{{ enFg }}">EN</button>
       </div>
+      <a href="{{ cvHref }}" download="" style="white-space:nowrap;flex:0 0 auto;border:1px solid rgba(30,36,48,0.2);border-radius:999px;padding:8px 14px;color:#1E2430;font:600 13px Manrope,sans-serif;text-decoration:none" style-hover="background:#1E2430;color:#F7F5F1">CV ↓</a>
       <button sc-camel-on-click="{{ startTour }}" style="white-space:nowrap;flex:0 0 auto;border:0;border-radius:999px;padding:9px 16px;background:#1E2430;color:#F7F5F1;font:600 13px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.tourBtn }}</button>
     </div>
   </div>
@@ -897,6 +898,9 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
       <a href="https://www.linkedin.com/in/andreamariange/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:andreamariangelap10@gmail.com">Email</a>
       <a href="https://wa.me/5492213512482" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div style="display:flex">
+      <a data-magnet="1" href="{{ cvHref }}" download="" style="display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:14px 24px;background:#1E2430;color:#F7F5F1;font:700 15px Manrope,sans-serif;text-decoration:none" style-hover="background:#333B4B;color:#F7F5F1">{{ t.cv }} <span style="font-family:'JetBrains Mono',monospace;font-size:12px;opacity:0.75">PDF ↓</span></a>
     </div>
   </div>
 </section>
@@ -1379,6 +1383,7 @@ class Component extends DCLogic {
     return {
       timeline, skillGroups, skill,
       heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(5),
+      cvHref: 'cv/CV-Andrea-Perez-'+lang.toUpperCase()+'.pdf',
       t, steps, phases, projects, preview, didactic, phoneRef:this.phoneRef, deskRef:this.deskRef, deskTransform:'scale('+this.state.deskScale.toFixed(4)+')', phoneTransform:'scale('+this.state.phoneScale.toFixed(4)+')',
       canvasRef:this.canvasRef,
       esBg: lang==='es'?'#1E2430':'transparent', esFg: lang==='es'?'#F7F5F1':'#1E2430',

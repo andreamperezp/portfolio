@@ -19,6 +19,16 @@ vendor/react*.js      React 18.3.1 (lo usa el runtime)
 
 Para editar textos, buscá `const COPY` en `index.html`.
 
+## CV
+
+`cv/cv-es.html` y `cv/cv-en.html` son la fuente del CV (estilos en `cv/cv.css`). Formato pensado para ATS:
+una sola columna, texto seleccionable, encabezados estándar y palabras clave integradas en la experiencia.
+Después de editarlos, regenerá los PDF que descarga el botón "Descargar CV":
+
+```bash
+node cv/build.mjs
+```
+
 ## Desarrollo local
 
 ```bash
