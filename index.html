@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrea Pérez · Product &amp; Technology Leader</title>
+<meta name="description" content="Portfolio de Andrea Pérez — Product &amp; Technology Leader. Product Management, productos digitales y soluciones con IA.">
+<meta property="og:title" content="Andrea Pérez · Product &amp; Technology Leader">
+<meta property="og:description" content="Product Management, productos digitales y soluciones con IA.">
+<meta property="og:image" content="assets/img/andrea-perez.png">
+<meta name="theme-color" content="#F7F5F1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"vendor/react-dom.production.min.js"};</script>
+<script src="vendor/three.min.js"></script>
+<script src="vendor/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/nunito-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/nunito-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/nunito-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/nunito-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/nunito-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/nunito-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/nunito-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/nunito-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/nunito-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/nunito-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/outfit-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/outfit-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/outfit-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/outfit-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F5F1;color:#1E2430;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1E2430;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#B4553A}
+*{box-sizing:border-box}
+html.ap-cursor,html.ap-cursor *{cursor:none!important}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#F7F5F1">
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,245,241,0.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,36,48,0.08)">
+  <div style="max-width:1280px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+      <div style="width:32px;height:32px;border-radius:50%;background:#1E2430;color:#F7F5F1;display:grid;place-items:center;font-weight:800;font-size:12px;letter-spacing:0.02em">AP</div>
+      <span style="font-weight:700;font-size:15px">Andrea Pérez</span>
+    </div>
+    <nav style="flex:1 1 360px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+        <button sc-camel-on-click="{{ s.go }}" style="background:none;border:0;padding:0;text-align:left;cursor:pointer;color:#1E2430;font-family:inherit;display:flex;flex-direction:column;gap:6px">
+          <span title="{{ s.n }} {{ s.label }}" style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:{{ s.op }}">{{ s.label }}</span>
+          <span style="display:block;height:3px;border-radius:2px;background:rgba(30,36,48,0.1);overflow:hidden"><span style="display:block;height:100%;width:{{ s.fill }};background:linear-gradient(90deg,#EE9B7E,#7FC8A5);transition:width .2s"></span></span>
+        </button>
+      </sc-for>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px;flex:0 0 auto">
+      <div style="display:flex;border:1px solid rgba(30,36,48,0.15);border-radius:999px;padding:2px">
+        <button sc-camel-on-click="{{ setEs }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ esBg }};color:{{ esFg }}">ES</button>
+        <button sc-camel-on-click="{{ setEn }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ enBg }};color:{{ enFg }}">EN</button>
+      </div>
+      <button sc-camel-on-click="{{ startTour }}" style="white-space:nowrap;flex:0 0 auto;border:0;border-radius:999px;padding:9px 16px;background:#1E2430;color:#F7F5F1;font:600 13px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.tourBtn }}</button>
+    </div>
+  </div>
+</header>
+
+<section id="s-inicio" data-screen-label="01 Inicio" style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;background:radial-gradient(60% 70% at 0% 0%,rgba(244,179,154,0.45),transparent 60%),radial-gradient(55% 70% at 100% 100%,rgba(169,220,192,0.5),transparent 60%),#F7F5F1">
+  <div ref="{{ canvasRef }}" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(247,245,241,0.92) 0%,rgba(247,245,241,0.75) 35%,rgba(247,245,241,0) 60%)"></div>
+  <div style="position:relative;z-index:2;max-width:1280px;width:100%;margin:0 auto;padding:140px clamp(16px,4vw,40px) 80px;pointer-events:none">
+    <div style="max-width:620px;display:flex;flex-direction:column;gap:28px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em">{{ t.kicker }}</span>
+      <h1 style="margin:0;font-size:clamp(44px,7vw,92px);line-height:0.98;letter-spacing:-0.035em;font-weight:500">{{ t.h1a }}<br><span style="font-weight:800">{{ t.h1b }}</span></h1>
+      <p style="margin:0;font-size:clamp(17px,1.6vw,21px);line-height:1.5;max-width:520px;text-wrap:pretty">{{ t.lead }}</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;pointer-events:auto">
+        <button data-magnet="1" sc-camel-on-click="{{ goProjects }}" style="white-space:nowrap;flex:0 0 auto;border:0;border-radius:999px;padding:14px 24px;background:#1E2430;color:#F7F5F1;font:700 15px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.ctaProjects }}</button>
+        <button data-magnet="1" sc-camel-on-click="{{ goAbout }}" style="flex:0 0 auto;border:0;background:none;padding:6px 8px 6px 4px;display:flex;align-items:center;gap:12px;cursor:pointer;color:#1E2430;font:700 15px Manrope,sans-serif">
+          <span style="width:48px;height:48px;border-radius:50%;border:1px solid #1E2430;display:grid;place-items:center;font-size:18px">↓</span>
+          <span style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><span>{{ t.ctaAbout }}</span><span style="font:500 11px 'JetBrains Mono',monospace;opacity:0.75">{{ t.ctaAboutSub }}</span></span>
+        </button>
+      </div>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;font-size:14px;padding-top:12px;border-top:1px solid rgba(30,36,48,0.12)">
+        <span>Product &amp; Technology Leader</span>
+        <span>La Plata, Argentina</span>
+        
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;right:clamp(16px,4vw,40px);bottom:28px;z-index:2;font-family:'JetBrains Mono',monospace;font-size:12px;opacity:0.7">{{ t.drag }}</div>
+</section>
+
+<section id="s-sobre" data-screen-label="02 Sobre mí" style="background:#FFFFFF">
+  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:80px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+      <div style="position:relative;aspect-ratio:1;width:100%;max-width:520px;justify-self:center">
+        <div ref="{{ blobRef }}" style="position:absolute;inset:-6%"></div>
+        <div role="img" aria-label="Andrea Pérez" style="position:absolute;left:50%;top:50%;width:46%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background-image:url(&quot;assets/img/andrea-perez.png&quot;);background-size:cover;background-position:center;border:6px solid #FFFFFF;box-shadow:0 24px 60px rgba(30,36,48,0.18);pointer-events:none"></div>
+        <span style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;pointer-events:none">{{ t.blobHint }}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">02 — {{ t.sAbout }}</span>
+        <p data-manifesto="1" style="margin:0;font-size:clamp(28px,3.4vw,46px);line-height:1.18;letter-spacing:-0.025em;font-weight:600">
+          <sc-for list="{{ manifesto }}" as="w" hint-placeholder-count="24"><span data-w="1" style="display:inline-block;margin-right:0.26em;opacity:0.16;color:{{ w.c }};transition:opacity .35s ease">{{ w.t }}</span></sc-for>
+        </p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px;padding-top:16px;border-top:1px solid rgba(30,36,48,0.12)">
+          <span style="font-weight:700">Andrea Pérez</span><span>Product &amp; Technology Leader</span><span>La Plata, Argentina</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(24px,3vw,40px)">
+      <sc-for list="{{ chapters }}" as="ch" hint-placeholder-count="4">
+        <div data-reveal="{{ ch.i }}" style="display:flex;flex-direction:column;gap:14px;padding-top:20px;border-top:2px solid #1E2430">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B4553A">{{ ch.n }}</span>
+          <h3 style="margin:0;font-size:clamp(22px,2vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.15">{{ ch.title }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">{{ ch.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
+        <h3 style="margin:0;font-size:clamp(24px,2.6vw,34px);font-weight:700;letter-spacing:-0.02em">{{ t.pathTitle }}</h3>
+        <p style="margin:0;font-size:15px;max-width:440px;text-wrap:pretty">{{ t.pathLead }}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+        <sc-for list="{{ timeline }}" as="tl" hint-placeholder-count="5">
+          <div style="border-radius:18px;padding:20px;background:{{ tl.bg }};color:{{ tl.fg }};border:1px solid {{ tl.bd }};display:flex;flex-direction:column;gap:10px;transition:transform .25s" style-hover="transform:translateY(-4px)">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ tl.lvl }}</span>
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.01em">{{ tl.title }}</span>
+            <span style="font-size:14px;line-height:1.5;text-wrap:pretty">{{ tl.text }}</span>
+            <span style="margin-top:auto;align-self:flex-start;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:{{ tl.chip }}">{{ tl.skill }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <h3 style="margin:0;font-size:clamp(24px,2.6vw,34px);font-weight:700;letter-spacing:-0.02em">{{ t.skillsTitle }}</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;align-items:start">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px">
+          <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-bottom:8px;border-bottom:2px solid {{ g.c }}">{{ g.label }}</span>
+              <sc-for list="{{ g.items }}" as="sk" hint-placeholder-count="3">
+                <button sc-camel-on-click="{{ sk.pick }}" sc-camel-on-mouse-enter="{{ sk.pick }}" style="text-align:left;border:1px solid {{ sk.bd }};border-radius:12px;padding:12px 14px;background:{{ sk.bg }};color:{{ sk.fg }};font:600 14px Manrope,sans-serif;cursor:pointer;transition:background .2s,color .2s">{{ sk.name }}</button>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+        <div style="border-radius:20px;background:#F7F5F1;padding:28px;display:flex;flex-direction:column;gap:14px;min-height:280px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B4553A">{{ skill.scope }}</span>
+          <h4 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-0.01em;line-height:1.2">{{ skill.title }}</h4>
+          <sc-for list="{{ skill.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;font-size:15px;line-height:1.55"><span style="color:#2F8F68;font-weight:800">→</span><span>{{ it.t }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius:28px;background:#1E2430;color:#F7F5F1;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#A9DCC0">{{ t.toolsKicker }}</span>
+          <h3 data-reveal="0" style="margin:0;font-size:clamp(28px,3.2vw,44px);font-weight:700;letter-spacing:-0.025em;line-height:1.05">{{ t.toolsTitle }}</h3>
+        </div>
+        <p style="margin:0;font-size:15px;line-height:1.55;max-width:420px;text-wrap:pretty">{{ t.toolsLead }}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px 56px">
+        <sc-for list="{{ tools }}" as="tl" hint-placeholder-count="6">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <span style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-size:clamp(20px,1.8vw,24px);font-weight:800;letter-spacing:-0.01em">{{ tl.name }}</span><sc-if value="{{ tl.ai }}" hint-placeholder-val="{{ false }}"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#F4B39A;color:#1E2430">IA</span></sc-if></span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;white-space:nowrap">{{ tl.level }}</span>
+            </div>
+            <div style="height:14px;border-radius:999px;background:rgba(247,245,241,0.1);overflow:hidden">
+              <div data-bar="{{ tl.i }}" style="height:100%;width:{{ tl.w }};border-radius:999px;background:linear-gradient(90deg,#EE9B7E,#F4B39A 45%,#A9DCC0);transform-origin:0 50%"></div>
+            </div>
+            <span style="font-size:14px;line-height:1.5">{{ tl.use }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s-enfoque" data-screen-label="03 Enfoque" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end;margin-bottom:56px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px">03 — {{ t.s2 }}</span>
+      <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.approachTitle }}</h2>
+    </div>
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:480px;text-wrap:pretty">{{ t.approachLead }}</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:rgba(30,36,48,0.12);border:1px solid rgba(30,36,48,0.12);border-radius:20px;overflow:hidden">
+    <sc-for list="{{ phases }}" as="p" hint-placeholder-count="4">
+      <div sc-camel-on-mouse-enter="{{ p.enter }}" sc-camel-on-mouse-leave="{{ clearPhase }}" style="background:{{ p.bg }};padding:28px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .25s;cursor:default">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ p.n }}</span>
+        <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.01em">{{ p.title }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ p.body }}</p>
+        <sc-if value="{{ p.showWhy }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:auto;padding-top:14px;border-top:1px dashed rgba(30,36,48,0.3);font-size:13px;line-height:1.5"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;display:block;margin-bottom:4px">{{ t.why }}</span>{{ p.why }}</div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <sc-if value="{{ didactic }}" hint-placeholder-val="{{ true }}">
+    <p style="margin:16px 0 0;font-family:'JetBrains Mono',monospace;font-size:12px;opacity:0.75">{{ t.hoverHint }}</p>
+  </sc-if>
+</section>
+
+<section id="s-proyectos" data-screen-label="04 Proyectos" style="background:#1E2430;color:#F7F5F1">
+  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">04 — {{ t.s3 }}</span>
+        <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.projectsTitle }}</h2>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;border:1px dashed rgba(247,245,241,0.45);border-radius:999px;padding:6px 12px;white-space:nowrap">{{ t.sampleNote }}</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px;align-items:start">
+      <div style="display:flex;flex-direction:column;border-top:1px solid rgba(247,245,241,0.18)">
+        <sc-for list="{{ projects }}" as="pr" hint-placeholder-count="4">
+          <div sc-camel-on-mouse-enter="{{ pr.enter }}" style="border-bottom:1px solid rgba(247,245,241,0.18);background:{{ pr.bg }};transition:background .2s">
+            <button sc-camel-on-click="{{ pr.toggle }}" style="width:100%;background:none;border:0;color:#F7F5F1;font-family:inherit;text-align:left;cursor:pointer;padding:24px 8px;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:16px;align-items:center">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:13px;opacity:0.7">{{ pr.n }}</span>
+              <span style="display:flex;flex-direction:column;gap:6px">
+                <span style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-size:clamp(20px,2vw,26px);font-weight:700;letter-spacing:-0.01em">{{ pr.title }}</span><sc-if value="{{ pr.live }}" hint-placeholder-val="{{ false }}"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#A9DCC0;color:#1E2430;display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1E2430"></span>{{ t.live }}</span></sc-if></span>
+                <span style="font-size:14px;opacity:0.75">{{ pr.meta }}</span>
+              </span>
+              <span style="font-size:22px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(247,245,241,0.3);display:grid;place-items:center">{{ pr.sign }}</span>
+            </button>
+            <sc-if value="{{ pr.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 8px 28px 68px;display:flex;flex-direction:column;gap:20px">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+                  <sc-for list="{{ pr.blocks }}" as="b" hint-placeholder-count="4">
+                    <div style="display:flex;flex-direction:column;gap:6px">
+                      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:{{ b.color }}">{{ b.label }}</span>
+                      <span style="font-size:14px;line-height:1.5;opacity:0.9">{{ b.text }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+                  <button sc-camel-on-click="{{ pr.play }}" style="text-align:left;border:0;border-radius:16px;padding:14px 16px;background:#F7F5F1;color:#1E2430;font-family:Manrope,sans-serif;cursor:pointer;display:flex;flex-direction:column;gap:4px" style-hover="background:#FFFFFF">
+                    <span style="font-weight:800;font-size:15px">{{ pr.a1 }}</span>
+                    <span style="font-size:13px;line-height:1.4;opacity:0.8">{{ pr.a1h }}</span>
+                  </button>
+                  <sc-if value="{{ pr.live }}" hint-placeholder-val="{{ false }}">
+                    <a href="{{ pr.extUrl }}" target="_blank" rel="noopener" style="border:1px solid rgba(247,245,241,0.35);border-radius:16px;padding:14px 16px;color:#F7F5F1;text-decoration:none;display:flex;flex-direction:column;gap:4px" style-hover="background:rgba(247,245,241,0.06)">
+                      <span style="font-weight:800;font-size:15px">{{ pr.a2 }} ↗</span>
+                      <span style="font-size:13px;line-height:1.4;opacity:0.8">{{ pr.a2h }}</span>
+                    </a>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <aside style="position:sticky;top:110px;display:flex;flex-direction:column;gap:16px">
+        <div data-tilt="1" style="aspect-ratio:4/3;border-radius:18px;border:1px solid rgba(247,245,241,0.2);background:repeating-linear-gradient(135deg,rgba(247,245,241,0.04) 0 10px,rgba(247,245,241,0.09) 10px 20px);display:grid;place-items:center;position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;background:{{ preview.glow }};opacity:0.35;transition:background .3s"></div>
+          <span style="position:relative;font-family:'JetBrains Mono',monospace;font-size:12px;opacity:0.8;text-align:center;padding:0 24px">{{ preview.slot }}</span>
+          <sc-if value="{{ preview.isAhorrandy }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;inset:0;background:linear-gradient(168deg,#FCEDE7 0%,#FBF1EB 45%,#F8FAFC 100%);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(14px,2.4vw,26px);padding:clamp(18px,3vw,30px);color:#1A2E44;align-items:stretch">
+              <div style="display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-width:0">
+                <span style="font-family:Nunito,sans-serif;font-weight:900;font-size:18px;letter-spacing:-0.02em">Ahorr<span style="color:#FF6B6B">andy</span></span>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <span style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(26px,3.3vw,40px);line-height:1;letter-spacing:-0.03em;text-wrap:balance">{{ t.ahzH }}</span>
+                  <span style="font-family:Outfit,sans-serif;font-size:clamp(12px,1.1vw,14px);line-height:1.45;color:#2A4A6B;text-wrap:pretty">{{ t.ahzSub }}</span>
+                </div>
+                <span style="font-family:Outfit,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B7D94">{{ t.ahzTag }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;justify-content:center;gap:8px;min-width:0">
+                <div style="display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 12px;border-radius:14px;background:#FFFFFF;box-shadow:0 4px 14px rgba(26,46,68,0.06)">
+                  <span style="width:26px;height:26px;border-radius:9px;background:#E0F7F5;color:#1A7A72;display:grid;place-items:center;font-family:Nunito,sans-serif;font-weight:900;font-size:15px">+</span>
+                  <span style="font-family:Outfit,sans-serif;font-size:13px;color:#1A2E44;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.ahzR1 }}</span>
+                  <span style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px;font-variant-numeric:tabular-nums;color:#1A7A72;white-space:nowrap">$ 850.000</span>
+                </div>
+                <div style="display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 12px;border-radius:14px;background:#FFFFFF;box-shadow:0 4px 14px rgba(26,46,68,0.06)">
+                  <span style="width:26px;height:26px;border-radius:9px;background:#FFE5E5;color:#C43A3A;display:grid;place-items:center;font-family:Nunito,sans-serif;font-weight:900;font-size:15px">−</span>
+                  <span style="font-family:Outfit,sans-serif;font-size:13px;color:#1A2E44;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.ahzR2 }}</span>
+                  <span style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px;font-variant-numeric:tabular-nums;color:#C43A3A;white-space:nowrap">$ 64.300</span>
+                </div>
+                <div style="display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 12px;border-radius:14px;background:#FFFFFF;box-shadow:0 4px 14px rgba(26,46,68,0.06)">
+                  <span style="width:26px;height:26px;border-radius:9px;background:#FFF8E0;color:#8A6200;display:grid;place-items:center;font-family:Nunito,sans-serif;font-weight:900;font-size:15px">↗</span>
+                  <span style="font-family:Outfit,sans-serif;font-size:13px;color:#1A2E44;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.ahzR3 }}</span>
+                  <span style="font-family:Nunito,sans-serif;font-weight:800;font-size:15px;font-variant-numeric:tabular-nums;color:#8A6200;white-space:nowrap">US$ 200</span>
+                </div>
+                <div style="margin-top:4px;padding:12px 14px;border-radius:16px;background:#1A2E44;display:flex;flex-direction:column;gap:2px">
+                  <span style="font-family:Outfit,sans-serif;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#FFD166">{{ t.ahzNet }}</span>
+                  <span style="font-family:Nunito,sans-serif;font-weight:900;font-size:clamp(18px,2vw,24px);font-variant-numeric:tabular-nums;color:#FFFFFF;white-space:nowrap">$ 2.418.700</span>
+                  <span style="font-family:Outfit,sans-serif;font-size:11px;color:rgba(255,255,255,0.55);white-space:nowrap">≈ US$ 1.919</span>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ preview.isIcon }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;background:{{ preview.imgBg }};display:grid;place-items:center"><div role="img" aria-label="{{ preview.title }}" style="width:38%;aspect-ratio:1;border-radius:22%;background-image:{{ preview.bgImg }};background-size:cover;box-shadow:0 20px 40px rgba(30,36,48,0.18)"></div></div></sc-if>
+          <sc-if value="{{ preview.hasPhoto }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ preview.title }}" style="position:absolute;inset:0;background-image:{{ preview.bgImg }};background-color:{{ preview.imgBg }};background-size:{{ preview.imgSize }};background-repeat:no-repeat;background-position:center"></div></sc-if>
+        </div>
+        <sc-if value="{{ didactic }}" hint-placeholder-val="{{ true }}">
+          <div style="border-radius:18px;background:rgba(247,245,241,0.06);padding:20px 22px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A9DCC0">{{ t.keyDecision }} · {{ preview.title }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ preview.decision }}</p>
+          </div>
+        </sc-if>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="s-auditorias" data-screen-label="05 Auditorías" style="background:#F7F5F1">
+  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end;margin-bottom:48px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">05 — {{ t.s4 }}</span>
+        <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.auditTitle }}</h2>
+      </div>
+      <p style="margin:0;font-size:17px;line-height:1.6;max-width:500px;text-wrap:pretty">{{ t.auditLead }}</p>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid rgba(30,36,48,0.1);border-radius:24px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:18px 24px;border-bottom:1px solid rgba(30,36,48,0.08)">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em">{{ t.reportLabel }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;border:1px dashed rgba(30,36,48,0.35);border-radius:999px;padding:4px 10px">{{ t.sampleReport }}</span>
+        </div>
+        <button sc-camel-on-click="{{ rescan }}" style="white-space:nowrap;border:1px solid #1E2430;border-radius:999px;padding:9px 16px;background:transparent;color:#1E2430;font:700 13px Manrope,sans-serif;cursor:pointer" style-hover="background:rgba(30,36,48,0.06)">↻ {{ scanBtn }}</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+        <div style="padding:24px;display:flex;flex-direction:column;gap:20px;border-right:1px solid rgba(30,36,48,0.08)">
+          <div style="display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ t.overall }}</span>
+              <span style="font-size:56px;font-weight:800;letter-spacing:-0.03em;line-height:1">{{ avgTxt }}<span style="font-size:20px;font-weight:600;opacity:0.5">/10</span></span>
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;padding-bottom:6px">
+              <sc-for list="{{ sevCounts }}" as="c" hint-placeholder-count="4">
+                <span style="display:flex;align-items:center;gap:6px;font-size:13px"><span style="width:10px;height:10px;border-radius:3px;background:{{ c.c }}"></span><strong>{{ c.n }}</strong> {{ c.label }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px">
+            <sc-for list="{{ heur }}" as="hh" hint-placeholder-count="10">
+              <button sc-camel-on-click="{{ hh.pick }}" sc-camel-on-mouse-enter="{{ hh.pick }}" style="text-align:left;border:1px solid {{ hh.bd }};border-radius:14px;padding:12px 14px;background:{{ hh.bg }};color:{{ hh.fg }};font-family:inherit;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:background .2s,color .2s">
+                <span style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ hh.code }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500">{{ hh.scoreTxt }}</span></span>
+                <span style="font-size:14px;font-weight:600;line-height:1.3;min-height:36px">{{ hh.name }}</span>
+                <span style="display:block;height:4px;border-radius:2px;background:rgba(127,127,127,0.18);overflow:hidden"><span style="display:block;height:100%;width:{{ hh.barW }};background:{{ hh.barC }};transition:width .5s ease"></span></span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="padding:28px;display:flex;flex-direction:column;gap:22px;background:#FBFAF7">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ det.code }} · {{ t.heuristic }}</span>
+              <h3 style="margin:0;font-size:clamp(22px,2.2vw,28px);font-weight:700;letter-spacing:-0.015em;line-height:1.15">{{ det.name }}</h3>
+            </div>
+            <span style="white-space:nowrap;font:600 12px 'JetBrains Mono',monospace;padding:6px 10px;border-radius:999px;background:{{ det.sevC }};color:#1E2430">{{ det.sevLabel }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ t.whatCheck }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ det.check }}</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:14px;background:#FFFFFF;border:1px solid rgba(30,36,48,0.08)">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B4553A">{{ t.finding }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ det.finding }}</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:14px;background:#E3F2EA">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#2F6B50">{{ t.reco }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ det.rec }}</p>
+          </div>
+          <sc-if value="{{ didactic }}" hint-placeholder-val="{{ true }}">
+            <p style="margin:auto 0 0;font-family:'JetBrains Mono',monospace;font-size:12px;opacity:0.75">{{ t.auditHint }}</p>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px">
+      <sc-for list="{{ auditSteps }}" as="as" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid #1E2430">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ as.n }}</span>
+          <h4 style="margin:0;font-size:20px;font-weight:700">{{ as.title }}</h4>
+          <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ as.body }}</p>
+          <span style="font-size:13px;font-weight:600;display:flex;gap:6px;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:400">{{ t.deliverable }}</span>{{ as.out }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:56px;border-radius:24px;padding:32px clamp(20px,3vw,40px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:radial-gradient(70% 120% at 0% 0%,rgba(244,179,154,0.55),transparent 60%),radial-gradient(70% 120% at 100% 100%,rgba(169,220,192,0.6),transparent 60%),#F2EEE7">
+      <p style="margin:0;font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-0.015em;max-width:620px;text-wrap:pretty">{{ t.auditCta }}</p>
+      <button sc-camel-on-click="{{ goContact }}" style="white-space:nowrap;border:0;border-radius:999px;padding:14px 24px;background:#1E2430;color:#F7F5F1;font:700 15px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.auditBtn }}</button>
+    </div>
+  </div>
+</section>
+
+<section id="s-contacto" data-screen-label="06 Contacto" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px) 160px">
+  <div style="display:flex;flex-direction:column;gap:24px;max-width:780px">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px">06 — {{ t.s5 }}</span>
+    <h2 data-reveal="0" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-0.03em;font-weight:500">{{ t.contactA }} <span style="font-weight:800">{{ t.contactB }}</span></h2>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:17px;font-weight:600">
+      <a href="https://www.linkedin.com/in/andreamariange/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:andreamariangelap10@gmail.com">Email</a>
+      <a href="https://wa.me/5492213512482" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ tourOn }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:95;width:min(520px,calc(100vw - 32px));background:#FFFFFF;color:#1E2430;border-radius:20px;box-shadow:0 20px 60px rgba(30,36,48,0.25);padding:22px 24px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ t.tourLabel }} · {{ tour.pos }}</span>
+      <button sc-camel-on-click="{{ endTour }}" style="border:0;background:none;font-size:20px;cursor:pointer;color:#1E2430;line-height:1">×</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px">
+      <sc-for list="{{ tour.dots }}" as="d" hint-placeholder-count="6">
+        <span style="height:3px;border-radius:2px;background:{{ d.c }}"></span>
+      </sc-for>
+    </div>
+    <h4 style="margin:4px 0 0;font-size:20px;font-weight:700">{{ tour.title }}</h4>
+    <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ tour.body }}</p>
+    <div style="display:flex;justify-content:space-between;gap:10px;padding-top:4px">
+      <button sc-camel-on-click="{{ tourPrev }}" style="border:1px solid rgba(30,36,48,0.2);border-radius:999px;padding:10px 18px;background:#fff;font:600 14px Manrope,sans-serif;cursor:pointer;color:#1E2430;opacity:{{ tour.prevOp }}">{{ t.prev }}</button>
+      <button sc-camel-on-click="{{ tourNext }}" style="border:0;border-radius:999px;padding:10px 18px;background:#1E2430;color:#F7F5F1;font:700 14px Manrope,sans-serif;cursor:pointer">{{ tour.nextLabel }}</button>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ modalOn }}" hint-placeholder-val="{{ false }}">
+  <div ref="{{ modalRef }}" sc-camel-on-click="{{ closeModal }}" style="position:fixed;inset:0;z-index:70;background:rgba(20,24,32,0.72);display:grid;place-items:center;padding:16px">
+    <div sc-camel-on-click="{{ stop }}" style="width:min(1240px,100%);background:#F7F5F1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid rgba(30,36,48,0.1)">
+        <span style="font-weight:700">{{ modal.title }}</span>
+        <button sc-camel-on-click="{{ closeModal }}" style="border:0;background:none;font-size:22px;cursor:pointer;color:#1E2430">×</button>
+      </div>
+      <sc-if value="{{ modal.hasUrl }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-wrap:wrap;gap:32px;padding:16px 24px;align-items:center;max-height:calc(100vh - 100px);overflow:auto">
+          <div style="flex:{{ modal.leftFlex }};min-width:0;display:flex;flex-direction:column;gap:18px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ t.howTry }}</span>
+            <sc-for list="{{ modal.roles }}" as="r" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start">
+                <span style="width:28px;height:28px;border-radius:50%;background:{{ r.c }};display:grid;place-items:center;font:600 12px 'JetBrains Mono',monospace">{{ r.n }}</span>
+                <div style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:700;font-size:16px">{{ r.title }}</span><span style="font-size:14px;line-height:1.5">{{ r.body }}</span></div>
+              </div>
+            </sc-for>
+            <p style="margin:0;font-size:13px;line-height:1.5;opacity:0.8">{{ modal.note }}</p>
+            <sc-if value="{{ modal.hasTips }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:12px;padding:16px 18px;border-radius:16px;background:#FFFFFF;border:1px solid rgba(30,36,48,0.1)">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B4553A">{{ t.tipsLabel }}</span>
+                <sc-for list="{{ modal.tips }}" as="tp" hint-placeholder-count="2">
+                  <div style="display:flex;flex-direction:column;gap:4px">
+                    <span style="font-weight:700;font-size:14px">{{ tp.title }}</span>
+                    <span style="font-size:13px;line-height:1.5">{{ tp.body }}</span>
+                  </div>
+                </sc-for>
+                <a href="{{ modal.url }}" target="_blank" rel="noopener" style="align-self:flex-start;text-decoration:none;border-radius:999px;padding:10px 16px;background:#1E2430;color:#F7F5F1;font-weight:700;font-size:13px">{{ t.openBrowser }} ↗</a>
+              </div>
+            </sc-if>
+            <sc-if value="{{ modal.noTips }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ modal.url }}" target="_blank" rel="noopener" style="align-self:flex-start;text-decoration:none;border-radius:999px;padding:10px 16px;background:#1E2430;color:#F7F5F1;font-weight:700;font-size:13px">{{ t.openBrowser }} ↗</a>
+            </sc-if>
+          </div>
+          <div style="flex:{{ modal.rightFlex }};position:relative;height:{{ modal.colH }};min-width:0">
+            <sc-if value="{{ modal.hasDesk }}" hint-placeholder-val="{{ false }}">
+              <div aria-hidden="true" style="position:absolute;left:0;top:9%;width:84%;border-radius:14px;background:#1E2430;padding:0 8px 8px;box-shadow:0 30px 60px rgba(30,36,48,0.22);pointer-events:none">
+                <div style="display:flex;gap:6px;padding:9px 4px"><span style="width:9px;height:9px;border-radius:50%;background:#FF6B6B"></span><span style="width:9px;height:9px;border-radius:50%;background:#FFD166"></span><span style="width:9px;height:9px;border-radius:50%;background:#2EC4B6"></span></div>
+                <div ref="{{ deskRef }}" style="position:relative;width:100%;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#FCEDE7">
+                  <iframe src="{{ modal.url }}" tabindex="-1" title="Vista desktop decorativa" style="position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0;transform:{{ deskTransform }};pointer-events:none"></iframe>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ modal.webMain }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;justify-content:center">
+                <div style="width:min(100%,calc((100vh - 200px) * 1.6));border-radius:14px;background:#1E2430;padding:0 8px 8px;box-shadow:0 30px 60px rgba(30,36,48,0.28)">
+                  <div style="display:flex;align-items:center;gap:6px;padding:9px 4px"><span style="width:9px;height:9px;border-radius:50%;background:#EE9B7E"></span><span style="width:9px;height:9px;border-radius:50%;background:#F2CF7E"></span><span style="width:9px;height:9px;border-radius:50%;background:#7FC8A5"></span><span style="margin-left:10px;flex:1;max-width:320px;border-radius:6px;background:rgba(247,245,241,0.1);color:rgba(247,245,241,0.75);font:500 11px 'JetBrains Mono',monospace;padding:4px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ modal.host }}</span></div>
+                  <div ref="{{ deskRef }}" style="position:relative;width:100%;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#F5EEDD">
+                    <iframe src="{{ modal.url }}" title="{{ modal.title }}" style="position:absolute;top:0;left:0;width:1024px;height:640px;border:0;transform-origin:0 0;transform:{{ deskTransform }}"></iframe>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ modal.showPhone }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:0;right:{{ modal.phR }};transform:{{ modal.phT }};height:100%;aspect-ratio:410/864;max-width:100%;border-radius:44px;background:#1E2430;padding:10px;box-shadow:0 30px 60px rgba(30,36,48,0.35)">
+              <div ref="{{ phoneRef }}" style="position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#F5EEDD">
+                <iframe src="{{ modal.url }}" title="{{ modal.title }}" style="position:absolute;top:0;left:0;width:390px;height:844px;border:0;transform-origin:0 0;transform:{{ phoneTransform }}"></iframe>
+              </div>
+            </div>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ modal.noUrl }}" hint-placeholder-val="{{ false }}">
+        <div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#EFECE6 0 10px,#E7E3DC 10px 20px);display:grid;place-items:center">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;text-align:center;padding:0 24px">{{ t.protoSlot }}</span>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+
+<canvas ref="{{ ringRef }}" aria-hidden="true" style="position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:100;display:none"></canvas>
+<div ref="{{ dotRef }}" aria-hidden="true" style="position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#1E2430;pointer-events:none;z-index:101;display:none;transition:width .35s cubic-bezier(.16,1,.3,1),height .35s cubic-bezier(.16,1,.3,1),margin .35s cubic-bezier(.16,1,.3,1),background .3s"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es'|'en'&quot;},&quot;didactic&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;show3d&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;},&quot;cursorFx&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;}}">
+const COPY = {
+  es: {
+    tourBtn:'Recorrido guiado', kicker:'Portfolio · 2026', h1a:'Diseño productos', h1b:'que conectan.',
+    lead:'Soy Andrea Pérez, Product & Technology Leader. Lidero productos digitales y soluciones con IA, desde la idea hasta el impacto medible.',
+    ctaProjects:'Ver proyectos', ctaTour:'Iniciar recorrido', ctaAbout:'Conocé mi historia', ctaAboutSub:'Scroll · 2 min', drag:'Mové el cursor: la superficie reacciona', blobHint:'Acercá el cursor: la idea se mueve con vos',
+    s1:'Inicio', sAbout:'Sobre mí', aboutA:'De la ejecución a la', aboutB:'dirección de producto.', aboutLead:'Amante de la tecnología y con ADN de UX Designer. Construyo puentes entre la visión de negocio y soluciones tecnológicas de impacto.', stackLabel:'STACK ESTRATÉGICO', pathTitle:'Mi bitácora', pathLead:'Esta trayectoria no tiene punto final: siempre construyendo hacia el siguiente nivel.', skillsTitle:'Competencias clave', toolsKicker:'STACK DE TRABAJO', toolsTitle:'Herramientas con las que trabajo', toolsLead:'Del diseño al deploy: con estas herramientas llevo una idea hasta un producto vivo en producción.', s2:'Enfoque', s3:'Proyectos', s4:'Auditorías', s5:'Contacto',
+    auditTitle:'Auditorías UX para empresas', auditLead:'Evalúo productos digitales en uso con las 10 heurísticas de Nielsen y entrego un plan de mejoras priorizado por severidad e impacto en el negocio.',
+    reportLabel:'REPORTE DE AUDITORÍA', sampleReport:'Datos de ejemplo', scan:'Volver a escanear', scanning:'Escaneando…', overall:'PUNTAJE GENERAL',
+    heuristic:'HEURÍSTICA', whatCheck:'QUÉ REVISO', finding:'HALLAZGO', reco:'RECOMENDACIÓN', deliverable:'ENTREGABLE',
+    auditHint:'← Pasa el cursor por cada heurística para ver su hallazgo', auditCta:'¿Tu producto necesita una mirada externa? Empiezo con una auditoría.', auditBtn:'Solicitar auditoría',
+    approachTitle:'Cómo trabajo', approachLead:'Cuatro etapas que se repiten en cada proyecto. Pasa el cursor sobre cada una para ver por qué la hago así.',
+    why:'POR QUÉ', hoverHint:'↑ Pasa el cursor sobre cada etapa', projectsTitle:'Proyectos seleccionados',
+    sampleNote:'01–02 con demo en vivo', tipsLabel:'RECOMENDACIONES', ahzTag:'Finanzas personales · ARS / USD', ahzH:'Sabé en qué se va cada peso.', ahzSub:'Registrá gastos e ingresos en segundos, en pesos o dólares, y mirá tu patrimonio y tus metas al día.', ahzR1:'Sueldo', ahzR2:'Supermercado', ahzR3:'Meta: viaje', ahzNet:'Patrimonio neto', openBrowser:'Abrir en el navegador', live:'EN VIVO', openTab:'Abrir en pestaña nueva', howTry:'CÓMO PROBARLA', demoNote:'Demo con datos inventados. El código de ingreso aparece en pantalla: probá con cualquier celular.', play:'Jugar prototipo', caseSoon:'Caso completo · próximamente',
+    keyDecision:'DECISIÓN CLAVE', contactA:'¿Construimos', contactB:'algo juntos?', cv:'Descargar CV',
+    tourLabel:'RECORRIDO', prev:'Anterior', next:'Siguiente', finish:'Terminar',
+    protoSlot:'Prototipo embebido · pega aquí el enlace del prototipo', previewSlot:'Captura del proyecto'
+  },
+  en: {
+    tourBtn:'Guided tour', kicker:'Portfolio · 2026', h1a:'I design products', h1b:'that connect.',
+    lead:"I'm Andrea Pérez, Product & Technology Leader. I lead digital products and AI-driven solutions, from idea to measurable impact.",
+    ctaProjects:'See projects', ctaTour:'Start tour', ctaAbout:'Get to know me', ctaAboutSub:'Scroll · 2 min', drag:'Move your cursor: the surface responds', blobHint:'Bring your cursor close: the idea moves with you',
+    s1:'Home', sAbout:'About', aboutA:'From execution to', aboutB:'product leadership.', aboutLead:'A technology lover with a UX designer’s DNA. I build bridges between business vision and high-impact technology solutions.', stackLabel:'STRATEGIC STACK', pathTitle:'My log', pathLead:'This path has no end point: always building toward the next level.', skillsTitle:'Key skills', toolsKicker:'WORK STACK', toolsTitle:'Tools I work with', toolsLead:'From design to deploy: with these tools I take an idea all the way to a live product in production.', s2:'Approach', s3:'Projects', s4:'Audits', s5:'Contact',
+    auditTitle:'UX audits for companies', auditLead:'I evaluate live digital products against Nielsen’s 10 heuristics and deliver an improvement plan prioritized by severity and business impact.',
+    reportLabel:'AUDIT REPORT', sampleReport:'Sample data', scan:'Scan again', scanning:'Scanning…', overall:'OVERALL SCORE',
+    heuristic:'HEURISTIC', whatCheck:'WHAT I CHECK', finding:'FINDING', reco:'RECOMMENDATION', deliverable:'DELIVERABLE',
+    auditHint:'← Hover each heuristic to see its finding', auditCta:'Does your product need an outside look? I start with an audit.', auditBtn:'Request an audit',
+    approachTitle:'How I work', approachLead:'Four stages I repeat on every project. Hover each one to see why I do it this way.',
+    why:'WHY', hoverHint:'↑ Hover each stage', projectsTitle:'Selected projects',
+    sampleNote:'01–02 with live demo', tipsLabel:'TIPS', ahzTag:'Personal finance · ARS / USD', ahzH:'Know where every peso goes.', ahzSub:'Log expenses and income in seconds, in pesos or dollars, and keep your net worth and goals up to date.', ahzR1:'Salary', ahzR2:'Groceries', ahzR3:'Goal: trip', ahzNet:'Net worth', openBrowser:'Open in browser', live:'LIVE', openTab:'Open in new tab', howTry:'HOW TO TRY IT', demoNote:'Demo with made-up data. The login code shows on screen: try any phone number.', play:'Play prototype', caseSoon:'Full case · coming soon',
+    keyDecision:'KEY DECISION', contactA:'Shall we build', contactB:'something together?', cv:'Download CV',
+    tourLabel:'TOUR', prev:'Back', next:'Next', finish:'Finish',
+    protoSlot:'Embedded prototype · paste the prototype link here', previewSlot:'Project screenshot'
+  }
+};
+const PHASES = {
+  es:[
+    ['Descubrir','Entrevistas, datos y contexto de negocio para entender el problema real.','Evita construir la solución correcta para el problema equivocado.'],
+    ['Definir','Priorizo con el equipo: qué resolver primero y cómo medir el éxito.','Un objetivo medible alinea a diseño, ingeniería y negocio.'],
+    ['Prototipar','Prototipos interactivos que se prueban con usuarios antes de escribir código.','Validar temprano cuesta menos que corregir en producción.'],
+    ['Medir','Lanzamiento, métricas y aprendizaje para la siguiente iteración.','El producto mejora con cada ciclo, no solo en el lanzamiento.']
+  ],
+  en:[
+    ['Discover','Interviews, data and business context to understand the real problem.','Avoids building the right solution for the wrong problem.'],
+    ['Define','I prioritize with the team: what to solve first and how to measure success.','A measurable goal aligns design, engineering and business.'],
+    ['Prototype','Interactive prototypes tested with users before writing code.','Validating early costs less than fixing in production.'],
+    ['Measure','Launch, metrics and learning for the next iteration.','The product improves with every cycle, not only at launch.']
+  ]
+};
+const PROJECTS = [
+  { glow:'#E9B98A', view:'web', ext:'https://filo-eta.vercel.app/sistema', acts:{ es:['Ver demo','Recorrela aquí como clienta, peluquero o dueño, con datos de ejemplo.','Abrir landing','La página donde Filo se presenta a peluquerías y barberías.'], en:['View demo','Try it here as a client, stylist or owner, with sample data.','Open landing','The page where Filo is pitched to salons and barbershops.'] }, url:'https://filo-eta.vercel.app/', img:'https://filo-eta.vercel.app/sistema/opengraph-image.jpg?opengraph-image.0smza8u0xsjdg.jpg',
+    roles:{ es:[['Cliente','Reservá un turno como lo haría una clienta.'],['Peluquero','Mirá la agenda del día y cobrá un turno.'],['Dueño de peluquería','Todo el local: equipo, turnos y caja.']], en:[['Client','Book an appointment as a customer would.'],['Stylist','Check the day’s schedule and charge an appointment.'],['Salon owner','The whole salon: team, bookings and revenue.']] },
+    es:{title:'Filo · Turnos para peluquerías',meta:'Producto digital · SaaS marca blanca · 2026',p:'Peluquerías y barberías gestionan turnos por WhatsApp, llamadas y cuaderno: mensajes fuera de horario, olvidos y una caja sin visibilidad.',pr:'Separé el producto en tres roles (clienta, peluquero y dueño), diseñé un flujo para cada uno y armé una demo navegable con datos de ejemplo para validar con locales.',s:'App web con la marca de cada local: reserva en 4 pasos desde el celular, agenda por profesional con turno rápido y caja con valor por hora.',i:'Demo en vivo lista para pilotos con locales. Métricas a medir: reservas sin intervención y horas recuperadas por semana.',d:'Ingreso con número de celular y un código, sin contraseñas ni descargas. Para alguien que reserva una vez al mes, cualquier paso extra es motivo de abandono.'},
+    en:{title:'Filo · Salon bookings',meta:'Digital product · White-label SaaS · 2026',p:'Hair salons and barbershops manage bookings over WhatsApp, calls and paper: after-hours messages, no-shows and no visibility on revenue.',pr:'I split the product into three roles (client, stylist and owner), designed a flow for each and built a clickable demo with sample data to validate with salons.',s:'A web app branded per salon: 4-step booking from the phone, per-stylist schedule with quick booking, and revenue with value per hour.',i:'Live demo ready for salon pilots. Metrics to track: bookings without staff involvement and hours recovered per week.',d:'Login with a phone number and a code, no passwords or downloads. For someone who books once a month, every extra step is a reason to drop off.'} },
+  { glow:'#FF6B6B', acts:{ es:['Ver la app','Mirala funcionando aquí, en versión mobile.','Usar Ahorrandy','Entrá a la app real, creá tu cuenta y empezá a registrar tus gastos.'], en:['See the app','Watch it running here, in its mobile version.','Use Ahorrandy','Go to the real app, create an account and start tracking your spending.'] }, icon:true, cover:'ahorrandy', desk:true, tips:{ es:[['Mejor desde el navegador','Para una mejor experiencia (incluido el ingreso con Google), abrí Ahorrandy directamente en el navegador.'],['Tenela a mano en tu teléfono','Agregala como acceso directo: en iPhone, Safari → Compartir → “Agregar a inicio”. En Android, Chrome → menú ⋮ → “Instalar app”. Así registrás cada gasto en el momento.']], en:[['Best in the browser','For the best experience (including Google sign-in), open Ahorrandy directly in your browser.'],['Keep it on your phone','Add it as a shortcut: on iPhone, Safari → Share → “Add to Home Screen”. On Android, Chrome → menu ⋮ → “Install app”. Log every expense on the spot.']] }, note:{es:'App real en producción: tus datos son privados y quedan en tu cuenta.',en:'Real production app: your data is private and stays in your account.'}, url:'https://ahorrandy.vercel.app/nuevo', img:'public/icon-512.png', imgSize:'38%', imgBg:'#FCEDE7',
+    roles:{ es:[['Creá tu cuenta','Registro con email y confirmación real: es la app en producción.'],['Cargá un gasto','Botón “+”, monto, categoría y moneda (ARS o USD).'],['Mirá tu patrimonio','Se actualiza al instante y podés verlo en pesos o dólares.']], en:[['Create an account','Email sign-up with real confirmation: this is the production app.'],['Log an expense','“+” button, amount, category and currency (ARS or USD).'],['Check your net worth','Updates instantly and can be shown in pesos or dollars.']] },
+    es:{title:'Ahorrandy · Finanzas personales',meta:'App web en producción · usuarios reales · 2026',p:'Llevar el control de gastos en Argentina implica dos monedas, gastos compartidos y fijos que se olvidan. Las planillas se abandonan y las apps genéricas no contemplan pesos y dólares.',pr:'Definí la marca y el sistema visual, priorizé un flujo mobile-first para cargar un gasto en segundos e iteré con usuarios reales a partir del registro de actividad y errores.',s:'App web instalable con patrimonio en ARS/USD, gastos fijos del mes, metas de ahorro, cuentas compartidas que dividen gastos, recordatorios push y un recorrido guiado de bienvenida.',i:'En producción y en uso por usuarios reales como gestor de gastos. Cada login, acción y error queda registrado para decidir la próxima iteración con datos.',d:'Cada color significa siempre lo mismo: menta es plata que entra, coral es plata que sale y dorado es lo que ahorrás. Así, de un vistazo, sabés si el mes viene bien sin tener que leer cada monto.'},
+    en:{title:'Ahorrandy · Personal finance',meta:'Production web app · real users · 2026',p:'Tracking expenses in Argentina means two currencies, shared costs and fixed bills that slip. Spreadsheets get abandoned and generic apps don’t handle pesos and dollars.',pr:'I defined the brand and visual system, prioritized a mobile-first flow to log an expense in seconds, and iterated with real users based on activity and error logs.',s:'An installable web app with net worth in ARS/USD, monthly fixed costs, savings goals, shared accounts that split expenses, push reminders and a guided onboarding tour.',i:'Live in production and used by real people to manage their spending. Every login, action and error is logged to decide the next iteration with data.',d:'Each color always means the same thing: mint is money coming in, coral is money going out and gold is what you save. At a glance you know how the month is going without reading every amount.'} },
+  { glow:'#9DB7E8', es:{"title":"CRM para brokers de seguros","meta":"CRM · Liderazgo de producto · En producción","p":"La fuerza de ventas de un broker de seguros necesitaba un seguimiento de clientes adaptado a su modelo comercial diario.","pr":"Analizamos el modelo comercial día a día para diseñar el flujo junto al equipo de ventas.","s":"CRM especializado con seguimiento inteligente de clientes.","i":"En vivo, optimizando las operaciones diarias de toda la fuerza de ventas.","d":"Diseñar el flujo a partir de la rutina comercial real y no adaptar un CRM genérico."}, en:{"title":"CRM for insurance brokers","meta":"CRM · Product leadership · In production","p":"An insurance broker’s sales force needed client follow-up built around its daily sales model.","pr":"We analyzed the day-to-day sales model to design the flow with the sales team.","s":"A specialized CRM with smart client follow-up.","i":"Live, optimizing daily operations for the whole sales force.","d":"Designing the flow from the real sales routine instead of adapting a generic CRM."} },
+  { glow:'#C9B6E4', es:{"title":"Gestión de tareas en cascada","meta":"Operaciones · Diseño y liderazgo · En producción","p":"La dirección necesitaba ver el avance operativo y un circuito claro de aprobaciones.","pr":"Diseño y liderazgo del panel, con una estructura de tareas desde la dirección hasta los operarios.","s":"Panel de tareas en cascada con registro de progreso y aprobaciones en tiempo real.","i":"En producción para el control operacional y la responsabilidad de equipo.","d":"Estructura en cascada: cada nivel ve, avanza y aprueba solo lo que le corresponde."}, en:{"title":"Cascading task management","meta":"Operations · Design & leadership · In production","p":"Leadership needed visibility on operational progress and a clear approval flow.","pr":"I designed and led the dashboard, structuring tasks from leadership down to operators.","s":"A cascading task dashboard with real-time progress logs and approvals.","i":"In production for operational control and team accountability.","d":"A cascading structure: each level sees, advances and approves only what it owns."} },
+  { glow:'#F2CF7E', es:{"title":"Red social industrial B2B","meta":"Networking B2B · Producto · En producción","p":"Las empresas de los parques industriales no tenían un espacio propio para conectarse y encontrar sinergias.","pr":"Diseño de perfiles corporativos, comunidades por sector y un feed de novedades.","s":"Red social de networking exclusiva para parques industriales.","i":"En producción, conectando actores clave de la industria.","d":"Comunidades por sector para que cada empresa vea contenido relevante para su rubro."}, en:{"title":"B2B industrial social network","meta":"B2B networking · Product · In production","p":"Companies in industrial parks had no space of their own to connect and find synergies.","pr":"Designing company profiles, sector communities and an updates feed.","s":"A networking platform built exclusively for industrial parks.","i":"In production, connecting key industry players.","d":"Sector communities so each company sees content relevant to its industry."} },
+];
+const TOUR = {
+  es:[['Portada','Una superficie líquida donde tu cursor es una fuerza: genera ondas a su paso. Desde aquí podés ir a los proyectos o seguir el recorrido.'],['Sobre mí','Quién soy, cómo empecé, cómo lidero y gestiono. Acercá el cursor a la forma: es una idea viva que reacciona a vos.'],['Enfoque','Mi proceso en cuatro etapas. Pasa el cursor para ver la razón detrás de cada una.'],['Proyectos','Abre un proyecto para ver problema, proceso, solución e impacto. Los que tienen demo se pueden probar en vivo.'],['Auditorías','Un reporte de ejemplo: recorre las 10 heurísticas para ver qué hallazgos detecto y cómo los priorizo.'],['Contacto','Si algo resonó, escribime por LinkedIn, email o WhatsApp.']],
+  en:[['Home','A liquid surface where your cursor is a force: it sends ripples as it moves. From here you can jump to projects or follow the tour.'],['About','Who I am, how I started, how I lead and manage. Bring your cursor close to the shape: it’s a living idea that reacts to you.'],['Approach','My four-stage process. Hover to see the reasoning behind each one.'],['Projects','Open a project to see problem, process, solution and impact. Those with a demo can be tried live.'],['Audits','A sample report: go through the 10 heuristics to see what I find and how I prioritize it.'],['Contact','If something resonated, reach me on LinkedIn, email or WhatsApp.']]
+};
+const TIMELINE = [
+  {es:['Cimientos','Dominio del prototipado y la validación.','Design Thinking','Nivel 1 · 2018–2019'],en:['Foundations','Mastering prototyping and validation.','Design Thinking','Level 1 · 2018–2019']},
+  {es:['Expansión','Liderazgo de equipos multidisciplinarios.','Agile & Scrum','Nivel 2 · 2019–2021'],en:['Expansion','Leading multidisciplinary teams.','Agile & Scrum','Level 2 · 2019–2021']},
+  {es:['Especialización','Arquitectura de sistemas complejos.','Product Strategy','Nivel 3 · 2021–2023'],en:['Specialization','Architecture of complex systems.','Product Strategy','Level 3 · 2021–2023']},
+  {es:['Dirección estratégica','Visión de producto end-to-end.','AI Integration','Nivel 4 · 2023–2025'],en:['Strategic direction','End-to-end product vision.','AI Integration','Level 4 · 2023–2025']},
+  {es:['+ Innovación','IA generativa, liderazgo estratégico de producto y tecnologías emergentes.','Next level','Nivel 5 · El futuro'],en:['+ Innovation','Generative AI, strategic product leadership and emerging tech.','Next level','Level 5 · The future']}
+];
+const SKILLS = [
+  {g:0,es:['Visión de producto','Visión de producto y estrategia de negocio','Definición del norte estratégico del ecosistema digital.',['Construcción y priorización del roadmap de producto a corto, mediano y largo plazo.','Análisis continuo de mercado y competidores para identificar oportunidades de innovación.','Cada funcionalidad tiene que generar un impacto directo y medible en los objetivos de la empresa.']],en:['Product vision','Product vision and business strategy','Setting the strategic direction of the digital ecosystem.',['Building and prioritizing the short, mid and long-term product roadmap.','Ongoing market and competitor analysis to spot innovation opportunities.','Every feature must have a direct, measurable impact on company goals.']]},
+  {g:0,es:['Stakeholder Management','Gestión de stakeholders y alineación de negocio','Puentes entre la visión directiva y la ejecución técnica.',['Negociación y comunicación estratégica con la dirección y socios comerciales clave.','Traducción de necesidades de negocio complejas en requerimientos técnicos claros.','Gestión de expectativas y reportes trimestrales de avance e impacto.']],en:['Stakeholder management','Stakeholder management and business alignment','Bridging leadership vision and technical execution.',['Strategic negotiation and communication with leadership and key partners.','Translating complex business needs into clear technical requirements.','Managing expectations and quarterly progress and impact reports.']]},
+  {g:0,es:['Scrum Master','Scrum Master y agilidad organizacional','Optimización de flujos de trabajo y entrega continua.',['Adopción de marcos ágiles (Scrum/Kanban) para coordinar Diseño, Desarrollo y QA.','Eliminación de bloqueos operativos y mejora del time-to-market.','Facilitación de ceremonias para lograr entregables iterativos y de alto valor.']],en:['Scrum Master','Scrum Master and organizational agility','Optimizing workflows and continuous delivery.',['Adopting agile frameworks (Scrum/Kanban) to coordinate Design, Development and QA.','Removing operational blockers and improving time-to-market.','Facilitating ceremonies for iterative, high-value deliverables.']]},
+  {g:1,es:['UX avanzado','UX avanzado y enfoque user-centric','Experiencias digitales intuitivas y memorables.',['Supervisión de research, arquitectura de información y prototipado de alta fidelidad.','Métricas de usabilidad y análisis de comportamiento para la mejora continua.','Consistencia del sistema de diseño en todo el ecosistema de productos.']],en:['Advanced UX','Advanced UX and user-centric focus','Intuitive, memorable digital experiences.',['Overseeing research, information architecture and high-fidelity prototyping.','Usability metrics and behavior analysis for continuous improvement.','Design system consistency across the product ecosystem.']]},
+  {g:1,es:['Frontend (React)','Arquitectura frontend y viabilidad técnica','Supervisión y viabilidad del desarrollo de interfaces.',['Decisiones de arquitectura de interfaz con código limpio, escalable y mantenible.','Coordinación con Frontend para que el diseño se implemente pixel-perfect.','Componentes reutilizables para acelerar los ciclos de desarrollo.']],en:['Frontend (React)','Frontend architecture and technical feasibility','Overseeing interface development.',['Interface architecture decisions for clean, scalable, maintainable code.','Working with Frontend so design ships pixel-perfect.','Reusable components to speed up development cycles.']]},
+  {g:1,es:['IA aplicada','Innovación con IA y eficiencia operativa','Co-pilotaje estratégico y automatización de procesos.',['Herramientas de IA para acelerar el descubrimiento y el diseño de producto.','Automatización de tareas de gestión de proyectos.','Adopción de tecnologías emergentes para mantener al equipo a la vanguardia.']],en:['Applied AI','AI innovation and operational efficiency','Strategic co-piloting and process automation.',['AI tools to speed up product discovery and design.','Automating project management tasks.','Adopting emerging tech to keep the team ahead.']]}
+];
+const IDS = ['s-inicio','s-sobre','s-enfoque','s-proyectos','s-auditorias','s-contacto'];
+const SEV = { es:['Cosmético','Cosmético','Menor','Mayor','Crítico'], en:['Cosmetic','Cosmetic','Minor','Major','Critical'], c:['#A9DCC0','#A9DCC0','#F2CF7E','#F4B39A','#E07A5A'] };
+const HEUR = [
+  {s:5,v:3,es:['Visibilidad del estado del sistema','Indicadores de carga, confirmaciones y progreso en cada acción.','Al enviar un formulario no hay indicador de carga y los usuarios hacen doble clic, generando duplicados.','Estado de carga en el botón y confirmación explícita al terminar.'],en:['Visibility of system status','Loading indicators, confirmations and progress on every action.','Submitting a form shows no loading state, so users double-click and create duplicates.','Loading state on the button and an explicit confirmation when done.']},
+  {s:6,v:2,es:['Relación con el mundo real','Que la interfaz hable el idioma del usuario, no el de la empresa.','La interfaz muestra términos internos como “estado 3” o “ID de transacción”.','Reemplazarlos por lenguaje del cliente, validado en entrevistas.'],en:['Match with the real world','The interface speaks the user’s language, not the company’s.','The UI shows internal terms like “status 3” or “transaction ID”.','Replace them with customer language validated in interviews.']},
+  {s:3,v:4,es:['Control y libertad del usuario','Salidas claras, deshacer y cancelar sin depender de soporte.','Un pedido confirmado no se puede cancelar desde la app: el usuario tiene que llamar.','Ventana para deshacer y cancelación en autoservicio.'],en:['User control and freedom','Clear exits, undo and cancel without needing support.','A confirmed order can’t be cancelled in the app: users have to call.','An undo window and self-service cancellation.']},
+  {s:6,v:2,es:['Consistencia y estándares','Componentes, textos y patrones que se comportan igual en todo el producto.','Conviven tres estilos distintos de botón primario.','Sistema de componentes con un único botón primario.'],en:['Consistency and standards','Components, copy and patterns that behave the same everywhere.','Three different primary button styles coexist.','A component system with a single primary button.']},
+  {s:5,v:3,es:['Prevención de errores','Validaciones y restricciones que evitan el error antes de que ocurra.','Los campos de fecha son texto libre y aceptan formatos inválidos.','Selector de fecha y validación en línea.'],en:['Error prevention','Validation and constraints that stop errors before they happen.','Date fields are free text and accept invalid formats.','A date picker and inline validation.']},
+  {s:7,v:2,es:['Reconocer antes que recordar','Información visible cuando se necesita, sin exigir memoria.','El usuario tiene que recordar su número de cliente en cada paso.','Mostrar el contexto del cliente de forma persistente.'],en:['Recognition over recall','Information visible when needed, without relying on memory.','Users must remember their customer number at every step.','Keep the customer context persistently visible.']},
+  {s:6,v:2,es:['Flexibilidad y eficiencia','Atajos para usuarios frecuentes sin complicar a los nuevos.','La tarea más frecuente requiere 6 clics y no tiene atajos.','Accesos rápidos y “repetir última acción”.'],en:['Flexibility and efficiency','Shortcuts for frequent users without complicating new ones.','The most frequent task takes 6 clicks with no shortcut.','Quick actions and “repeat last action”.']},
+  {s:7,v:1,es:['Diseño estético y minimalista','Jerarquía clara: cada elemento compite por atención.','El inicio muestra 14 métricas con el mismo peso visual.','Tres indicadores clave arriba y el resto bajo demanda.'],en:['Aesthetic and minimalist design','Clear hierarchy: every element competes for attention.','The home screen shows 14 metrics with equal visual weight.','Three key indicators up top, the rest on demand.']},
+  {s:4,v:3,es:['Reconocer y recuperarse de errores','Mensajes de error claros que dicen qué pasó y cómo seguir.','Los errores aparecen como “Error 500” sin indicar qué hacer.','Mensajes en lenguaje claro con la acción siguiente.'],en:['Help recover from errors','Clear error messages that say what happened and what to do.','Errors show as “Error 500” with no next step.','Plain-language messages with the next action.']},
+  {s:8,v:1,es:['Ayuda y documentación','Ayuda contextual en los puntos donde aparece la duda.','La ayuda es un PDF externo, desactualizado.','Ayuda contextual dentro de los flujos críticos.'],en:['Help and documentation','Contextual help where questions arise.','Help is an outdated external PDF.','Contextual help inside critical flows.']}
+];
+const AUDIT_STEPS = {
+  es:[['Relevamiento','Objetivos de negocio, métricas actuales y flujos críticos del producto.','Mapa de flujos'],['Evaluación heurística','Recorro cada flujo contra las 10 heurísticas y documento con capturas.','Hallazgos con evidencia'],['Priorización','Cruzo severidad, impacto en el negocio y esfuerzo de implementación.','Matriz de prioridades'],['Hoja de ruta','Mejoras rápidas y cambios estructurales, presentados al equipo.','Roadmap + presentación']],
+  en:[['Discovery','Business goals, current metrics and the product’s critical flows.','Flow map'],['Heuristic evaluation','I walk each flow against the 10 heuristics and document with screenshots.','Findings with evidence'],['Prioritization','I cross severity, business impact and implementation effort.','Priority matrix'],['Roadmap','Quick wins and structural changes, presented to the team.','Roadmap + presentation']]
+};
+
+const HERO_VS = `varying vec2 vUv; void main(){ vUv=uv; gl_Position=vec4(position.xy,0.,1.); }`;
+const HERO_FS = `precision highp float;
+uniform float uTime; uniform vec2 uRes; uniform vec2 uMouse; uniform float uForce; uniform vec3 uTrail[24];
+varying vec2 vUv;
+float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float noise(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1.,0.)),u.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),u.x),u.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*noise(p);p*=2.02;a*=.5;}return v;}
+void main(){
+  vec2 asp=vec2(uRes.x/uRes.y,1.);
+  vec2 p=vUv*asp; vec2 disp=vec2(0.); float ring=0.;
+  for(int i=0;i<24;i++){
+    vec3 tp=uTrail[i]; float age=uTime-tp.z;
+    if(age<0.||age>2.4) continue;
+    vec2 d=p-tp.xy*asp; float r=length(d);
+    float front=age*0.32; float k=exp(-abs(r-front)*18.)*(1.-age/2.4);
+    float w=sin((r-front)*55.)*k;
+    disp+=normalize(d+1e-5)*w*0.018; ring+=w;
+  }
+  vec2 dm=p-uMouse*asp; float md=length(dm);
+  disp+=normalize(dm+1e-5)*exp(-md*md*14.)*0.06*uForce;
+  vec2 q=p+disp; float t=uTime*0.05;
+  vec2 w1=vec2(fbm(q*1.6+t),fbm(q*1.6-t+3.1));
+  float n=fbm(q*1.4+w1*1.8+vec2(t*2.,-t));
+  vec3 cream=vec3(.969,.961,.945), peach=vec3(.957,.702,.604), coral=vec3(.933,.608,.494), mint=vec3(.663,.863,.753);
+  vec3 col=mix(cream,peach,smoothstep(.35,.75,n));
+  col=mix(col,mint,smoothstep(.45,.85,fbm(q*1.2-w1+9.)));
+  col=mix(col,coral,smoothstep(.72,.95,n)*.6);
+  col=mix(cream,col,smoothstep(.05,.75,vUv.x)*.9+.1);
+  float spec=ring*.5+exp(-md*md*30.)*.15*uForce;
+  col+=vec3(clamp(spec,-.1,.25));
+  col+=(hash(vUv*uRes+uTime)-.5)*.025;
+  gl_FragColor=vec4(col,1.);
+}`;
+const SNOISE = `vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
+vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
+vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
+vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
+float snoise(vec3 v){
+  const vec2 C=vec2(1.0/6.0,1.0/3.0); const vec4 D=vec4(0.0,0.5,1.0,2.0);
+  vec3 i=floor(v+dot(v,C.yyy)); vec3 x0=v-i+dot(i,C.xxx);
+  vec3 g=step(x0.yzx,x0.xyz); vec3 l=1.0-g; vec3 i1=min(g.xyz,l.zxy); vec3 i2=max(g.xyz,l.zxy);
+  vec3 x1=x0-i1+C.xxx; vec3 x2=x0-i2+C.yyy; vec3 x3=x0-D.yyy;
+  i=mod289(i);
+  vec4 p=permute(permute(permute(i.z+vec4(0.0,i1.z,i2.z,1.0))+i.y+vec4(0.0,i1.y,i2.y,1.0))+i.x+vec4(0.0,i1.x,i2.x,1.0));
+  float n_=0.142857142857; vec3 ns=n_*D.wyz-D.xzx;
+  vec4 j=p-49.0*floor(p*ns.z*ns.z);
+  vec4 x_=floor(j*ns.z); vec4 y_=floor(j-7.0*x_);
+  vec4 x=x_*ns.x+ns.yyyy; vec4 y=y_*ns.x+ns.yyyy; vec4 h=1.0-abs(x)-abs(y);
+  vec4 b0=vec4(x.xy,y.xy); vec4 b1=vec4(x.zw,y.zw);
+  vec4 s0=floor(b0)*2.0+1.0; vec4 s1=floor(b1)*2.0+1.0; vec4 sh=-step(h,vec4(0.0));
+  vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy; vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+  vec3 p0=vec3(a0.xy,h.x); vec3 p1=vec3(a0.zw,h.y); vec3 p2=vec3(a1.xy,h.z); vec3 p3=vec3(a1.zw,h.w);
+  vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
+  p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+  vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0); m=m*m;
+  return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
+}`;
+const BLOB_VS = `uniform float uTime; uniform vec3 uMouse; uniform float uForce;
+varying vec3 vPos; varying float vD;
+${SNOISE}
+void main(){
+  vec3 n=normalize(position);
+  float d=snoise(n*1.6+uTime*0.25)*0.2+snoise(n*3.2-uTime*0.35)*0.07;
+  float k=max(0.,dot(n,normalize(uMouse)));
+  d+=pow(k,5.)*0.42*uForce;
+  vec3 pos=position+n*d; vD=d;
+  vec4 mv=modelViewMatrix*vec4(pos,1.); vPos=mv.xyz;
+  gl_Position=projectionMatrix*mv;
+}`;
+const BLOB_FS = `precision highp float;
+varying vec3 vPos; varying float vD;
+void main(){
+  vec3 N=normalize(cross(dFdx(vPos),dFdy(vPos)));
+  vec3 V=normalize(-vPos); vec3 L=normalize(vec3(.4,.8,.6));
+  float fr=pow(1.-max(dot(N,V),0.),2.);
+  float diff=max(dot(N,L),0.)*.45+.6;
+  vec3 peach=vec3(.957,.702,.604), mint=vec3(.663,.863,.753), cream=vec3(.98,.97,.95);
+  vec3 c=mix(peach,mint,smoothstep(-.6,.6,N.y*.6+N.x*.4+vD*2.));
+  c*=diff; c=mix(c,cream,fr*.7);
+  c+=pow(max(dot(reflect(-L,N),V),0.),40.)*.35;
+  gl_FragColor=vec4(c,1.);
+}`;
+const MANIFESTO = {
+  es:'Hola, soy Andrea. Diseño y lidero productos digitales, y me fascina ver una idea *viva*, ya sea en una pantalla o impresa en papel.',
+  en:'Hi, I’m Andrea. I design and lead digital products, and I love seeing an idea come *alive*, whether on a screen or printed on paper.'
+};
+const CHAPTERS = {
+  es:[['Cómo empecé','Empecé a los 27 años diseñando en Illustrator. Las herramientas digitales y sus actualizaciones nunca pararon de crecer, y yo crecí con ellas. Es lo lindo de este rubro: no se detiene.'],
+      ['Aprendo en el camino','No se trata de ser perfecta. Me encanta aprender cosas nuevas y constantemente investigo cómo mejorar lo que ya sé. Cada proyecto me deja algo.'],
+      ['Liderar es acompañar','Liderar es acompañar el impulso de tu entorno a crecer con vos e ir por más, sin conformarse. Es lo que me trajo a grandes equipos, y sigo aprendiendo de ello.'],
+      ['Cómo gestiono','Escucho primero, ordeno prioridades con el equipo y medimos lo que hacemos. Prefiero probar temprano y ajustar en el camino antes que esperar el plan perfecto.']],
+  en:[['How I started','I started at 27, designing in Illustrator. Digital tools and their updates never stopped growing, and I grew with them. That’s the beauty of this field: it never stands still.'],
+      ['Learning along the way','It’s not about being perfect. I love learning new things and I’m always researching how to improve what I already know. Every project teaches me something.'],
+      ['Leading is walking alongside','Leading means supporting the drive of the people around you to grow with you and go further, never settling. That’s what brought me to great teams, and I keep learning from it.'],
+      ['How I manage','I listen first, set priorities with the team and measure what we do. I’d rather test early and adjust along the way than wait for the perfect plan.']]
+};
+
+const TOOLS = [
+  {name:'Figma', w:95, es:['Avanzado','Interfaces, prototipos interactivos y sistemas de diseño.'], en:['Advanced','Interfaces, interactive prototypes and design systems.']},
+  {name:'Claude Code', w:90, ai:true, es:['Avanzado','Desarrollo asistido por IA, del prototipo a producción.'], en:['Advanced','AI-assisted development, from prototype to production.']},
+  {name:'Vercel', w:85, es:['Avanzado','Deploy y publicación de productos en producción.'], en:['Advanced','Deploying and shipping products to production.']},
+  {name:'Visual Studio Code', w:80, es:['Intermedio-avanzado','Edición de código y revisión técnica de interfaces.'], en:['Upper intermediate','Code editing and technical review of interfaces.']},
+  {name:'GitHub', w:80, es:['Intermedio-avanzado','Versionado del código y trabajo colaborativo con el equipo.'], en:['Upper intermediate','Version control and collaborative work with the team.']},
+  {name:'Supabase', w:75, es:['Intermedio','Base de datos, autenticación y datos en tiempo real.'], en:['Intermediate','Database, authentication and real-time data.']}
+];
+class Component extends DCLogic {
+  phoneRef = el => { if(this.pro){ this.pro.disconnect(); this.pro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/390; if(Math.abs(s-(this.state.phoneScale||0))>0.002) this.setState({phoneScale:s}); }; this.pro=new ResizeObserver(fit); this.pro.observe(el); fit(); } };
+  deskRef = el => { if(this.dro){ this.dro.disconnect(); this.dro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/(this.deskW||1440); if(Math.abs(s-(this.state.deskScale||0))>0.002) this.setState({deskScale:s}); }; this.dro=new ResizeObserver(fit); this.dro.observe(el); fit(); } };
+  state = { deskScale: 0.3, scan: 0, hsel: 2, phoneScale: 0.8, lang: null, fills:[0,0,0,0,0,0], skill:0, active:0, phase:-1, hover:0, open:-1, tour:null, modal:null };
+  canvasRef = React.createRef(); blobRef = React.createRef(); ringRef = React.createRef(); dotRef = React.createRef();
+  modalRef = el => { this.modalEl=el; if(!el||!el.animate) return; const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; el.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'}],{duration:900,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); const p=el.firstElementChild; p&&p.animate([{opacity:0,transform:'translateY(80px) scale(.94)'},{opacity:1,transform:'none'}],{duration:1000,delay:300,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); };
+  closeModal(){ const el=this.modalEl; if(!el||!el.animate) return this.setState({modal:null}); const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; const a=el.animate([{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'},{clipPath:'circle(0px at '+cx+'px '+cy+'px)'}],{duration:650,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); a.onfinish=()=>this.setState({modal:null}); }
+
+  componentDidMount(){
+    this.onScroll = () => {
+      const y = window.scrollY + window.innerHeight*0.4;
+      const fills = IDS.map(id => { const el=document.getElementById(id); if(!el) return 0; const top=el.offsetTop, h=el.offsetHeight; return Math.max(0,Math.min(1,(y-top)/h)); });
+      let active=0; fills.forEach((f,i)=>{ if(f>0) active=i; });
+      this.setState({ fills, active });
+      this.updateManifesto();
+    };
+    window.addEventListener('scroll', this.onScroll, { passive:true });
+    this.onScroll();
+    this.cleanups=[]; this.initHero(); this.initBlob(); this.initCursor(); this.initReveal();
+    const au=document.getElementById('s-auditorias');
+    if(au && 'IntersectionObserver' in window){ this.io=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ this.runScan(); this.io.disconnect(); } },{threshold:0.25}); this.io.observe(au); } else this.setState({scan:10});
+  }
+  runScan(){ clearInterval(this.scanT); this.setState({scan:0}); this.scanT=setInterval(()=>{ if(this.state.scan>=10){ clearInterval(this.scanT); return; } this.setState(s=>({scan:s.scan+1})); },160); }
+  componentWillUnmount(){
+    clearInterval(this.scanT); this.io && this.io.disconnect();
+    window.removeEventListener('scroll', this.onScroll);
+    clearTimeout(this.retry); clearTimeout(this.retry2); (this.cleanups||[]).forEach(f=>f()); this.cleanups=[]; this.revIO && this.revIO.disconnect(); clearTimeout(this.revT);
+  }
+  componentDidUpdate(prev){
+    if(prev.show3d !== this.props.show3d || prev.cursorFx !== this.props.cursorFx){
+      (this.cleanups||[]).forEach(f=>f()); this.cleanups=[]; this.initHero(); this.initBlob(); this.initCursor();
+    }
+  }
+  initHero(){
+    const T=window.THREE, el=this.canvasRef.current;
+    if(!T||!el){ this.retry=setTimeout(()=>this.initHero(),120); return; }
+    if(this.props.show3d===false) return;
+    const renderer=new T.WebGLRenderer({antialias:false,alpha:false,powerPreference:'high-performance'});
+    const sz=()=>{ const r=el.getBoundingClientRect(); return [Math.max(1,Math.round(r.width||el.parentElement.clientWidth||innerWidth)), Math.max(1,Math.round(r.height||el.parentElement.clientHeight||innerHeight))]; };
+    let [W0,H0]=sz();
+    renderer.setPixelRatio(1); renderer.setSize(W0,H0);
+    renderer.domElement.style.display='block'; el.appendChild(renderer.domElement);
+    const scene=new T.Scene(), cam=new T.OrthographicCamera(-1,1,1,-1,0,1);
+    const trail=Array.from({length:24},()=>new T.Vector3(0,0,-99));
+    const u={uTime:{value:0},uRes:{value:new T.Vector2(W0,H0)},uMouse:{value:new T.Vector2(0.7,0.5)},uForce:{value:0},uTrail:{value:trail}};
+    const geo=new T.PlaneGeometry(2,2), mat=new T.ShaderMaterial({uniforms:u,vertexShader:HERO_VS,fragmentShader:HERO_FS});
+    scene.add(new T.Mesh(geo,mat));
+    const clock=new T.Clock(), target=new T.Vector2(0.7,0.5);
+    let ti=0, lx=-1, ly=-1, lastT=0, force=0, inside=false, raf=0, visible=true;
+    const push=(x,y,t)=>{ trail[ti%24].set(x,y,t); ti++; lx=x; ly=y; lastT=t; };
+    const onMove=e=>{ const r=el.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width, y=1-(e.clientY-r.top)/r.height; inside=x>=0&&x<=1&&y>=0&&y<=1; if(!inside) return; target.set(x,y); const now=clock.getElapsedTime(); if(Math.hypot(x-lx,y-ly)>0.035||now-lastT>0.14) push(x,y,now); force=Math.min(1,force+0.12); };
+    window.addEventListener('pointermove',onMove,{passive:true});
+    const loop=()=>{ cancelAnimationFrame(raf); if(!visible) return; const t=clock.getElapsedTime(); u.uTime.value=t;
+      if(!inside){ const ix=0.7+0.16*Math.sin(t*0.37), iy=0.5+0.22*Math.sin(t*0.53+1); target.set(ix,iy); if(t-lastT>0.6) push(ix,iy,t); }
+      u.uMouse.value.lerp(target,0.08); force*=0.96; u.uForce.value+=((inside?0.6:0.25)+force*0.6-u.uForce.value)*0.06;
+      renderer.render(scene,cam); raf=requestAnimationFrame(loop); };
+    const io=new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible) loop(); }); io.observe(el);
+    const fit=()=>{ const [W,H]=sz(); renderer.setSize(W,H); u.uRes.value.set(W,H); renderer.render(scene,cam); };
+    loop(); fit();
+    const ro=new ResizeObserver(fit); ro.observe(el); const ft=setTimeout(fit,400);
+    this.cleanups.push(()=>clearTimeout(ft));
+    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
+  }
+  initBlob(){
+    const T=window.THREE, el=this.blobRef.current;
+    if(!T||!el){ this.retry2=setTimeout(()=>this.initBlob(),150); return; }
+    if(this.props.show3d===false) return;
+    const renderer=new T.WebGLRenderer({antialias:true,alpha:true});
+    const bsz=()=>{ const r=el.getBoundingClientRect(); const s=Math.max(1,Math.round(r.width||el.parentElement.clientWidth*1.12||400)); return [s, Math.max(1,Math.round(r.height||s))]; };
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2)); renderer.setSize(...bsz());
+    renderer.domElement.style.display='block'; el.appendChild(renderer.domElement);
+    const scene=new T.Scene(), cam=new T.PerspectiveCamera(35,1,0.1,50); cam.position.z=6;
+    const u={uTime:{value:0},uMouse:{value:new T.Vector3(0.3,0.4,1)},uForce:{value:0}};
+    const geo=new T.IcosahedronGeometry(1.3,48), mat=new T.ShaderMaterial({uniforms:u,vertexShader:BLOB_VS,fragmentShader:BLOB_FS,extensions:{derivatives:true}});
+    scene.add(new T.Mesh(geo,mat));
+    const target=new T.Vector3(0.3,0.4,1), clock=new T.Clock(); let near=false, f=0, raf=0, visible=false;
+    const onMove=e=>{ const r=el.getBoundingClientRect(); const mx=((e.clientX-r.left)/r.width-0.5)*2, my=-((e.clientY-r.top)/r.height-0.5)*2; near=Math.hypot(mx,my)<1.25; if(near) target.set(mx*1.6,my*1.6,1); };
+    window.addEventListener('pointermove',onMove,{passive:true});
+    const loop=()=>{ cancelAnimationFrame(raf); if(!visible) return; const t=clock.getElapsedTime(); u.uTime.value=t;
+      if(!near) target.set(Math.sin(t*0.4)*0.8,Math.cos(t*0.3)*0.6,1);
+      u.uMouse.value.lerp(target,0.07); f+=((near?1:0.35)-f)*0.05; u.uForce.value=f;
+      renderer.render(scene,cam); raf=requestAnimationFrame(loop); };
+    const io=new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible) loop(); }); io.observe(el);
+    const bfit=()=>{ const [W,H]=bsz(); renderer.setSize(W,H); cam.aspect=W/H; cam.updateProjectionMatrix(); renderer.render(scene,cam); };
+    bfit(); const ro=new ResizeObserver(bfit); ro.observe(el); const bt=setTimeout(bfit,400);
+    this.cleanups.push(()=>clearTimeout(bt));
+    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
+  }
+  initCursor(){
+    if(this.props.cursorFx===false || !window.matchMedia('(pointer:fine)').matches) return;
+    const cv=this.ringRef.current, dot=this.dotRef.current; if(!cv||!dot) return;
+    cv.style.display='block'; dot.style.display='block';
+    document.documentElement.classList.add('ap-cursor');
+    const ctx=cv.getContext('2d'); let dpr=1, W=0, H=0;
+    const size=()=>{ dpr=Math.min(devicePixelRatio,2); W=innerWidth; H=innerHeight; cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); };
+    size(); window.addEventListener('resize',size);
+    const N=22, pts=Array.from({length:N},()=>({x:innerWidth/2,y:innerHeight/2}));
+    let x=innerWidth/2, y=innerHeight/2, hot=false, raf=0, energy=0, lx=x, ly=y;
+    const ease='transform .5s cubic-bezier(.16,1,.3,1)';
+    const onMove=e=>{ x=e.clientX; y=e.clientY;
+      const h=!!(e.target&&e.target.closest&&e.target.closest('a,button,[data-tilt]'));
+      if(h!==hot){ hot=h; const s=h?64:10; dot.style.width=dot.style.height=s+'px'; dot.style.margin=(-s/2)+'px 0 0 '+(-s/2)+'px'; dot.style.background=h?'rgba(238,155,126,0.55)':'#1E2430'; }
+      document.querySelectorAll('[data-magnet]').forEach(m=>{ const r=m.getBoundingClientRect(), dx=x-(r.left+r.width/2), dy=y-(r.top+r.height/2); const nr=Math.abs(dx)<r.width/2+36&&Math.abs(dy)<r.height/2+36; m.style.transition=ease; m.style.transform=nr?'translate('+(dx*0.25).toFixed(1)+'px,'+(dy*0.32).toFixed(1)+'px)':''; });
+      document.querySelectorAll('[data-tilt]').forEach(m=>{ const r=m.getBoundingClientRect(); const ins=x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom; m.style.transition=ease; m.style.transform=ins?'perspective(900px) rotateY('+(((x-r.left)/r.width-0.5)*10).toFixed(2)+'deg) rotateX('+(-((y-r.top)/r.height-0.5)*10).toFixed(2)+'deg) scale(1.02)':''; });
+    };
+    window.addEventListener('pointermove',onMove,{passive:true});
+    const loop=()=>{
+      pts[0].x+=(x-pts[0].x)*0.55; pts[0].y+=(y-pts[0].y)*0.55;
+      for(let i=1;i<N;i++){ pts[i].x+=(pts[i-1].x-pts[i].x)*0.42; pts[i].y+=(pts[i-1].y-pts[i].y)*0.42; }
+      const sp=Math.hypot(x-lx,y-ly); lx=x; ly=y; energy+=(Math.min(sp/18,1)-energy)*0.12;
+      ctx.clearRect(0,0,W,H);
+      if(energy>0.01){
+        ctx.lineCap='round'; ctx.lineJoin='round';
+        for(let i=N-1;i>0;i--){
+          const u=1-i/N, a=pts[i], b=pts[i-1];
+          ctx.strokeStyle='rgba('+Math.round(238-(238-127)*(1-u))+','+Math.round(155+(200-155)*(1-u))+','+Math.round(126+(165-126)*(1-u))+','+(0.75*u*energy).toFixed(3)+')';
+          ctx.lineWidth=2+u*22*energy;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+      dot.style.transform='translate3d('+x+'px,'+y+'px,0)';
+      raf=requestAnimationFrame(loop);
+    };
+    loop();
+    this.cleanups.push(()=>{ cancelAnimationFrame(raf); window.removeEventListener('pointermove',onMove); window.removeEventListener('resize',size); document.documentElement.classList.remove('ap-cursor'); cv.style.display='none'; dot.style.display='none'; });
+  }
+  initReveal(){
+    if(!('IntersectionObserver' in window) || !Element.prototype.animate) return;
+    this.revIO=new IntersectionObserver(es=>(this.ioFired=true, es).forEach(en=>{ if(en.isIntersecting){ en.target.__rv&&en.target.__rv.play(); this.revIO.unobserve(en.target); } }),{threshold:0.15});
+    document.querySelectorAll('[data-reveal]').forEach(el=>{ const d=+(el.getAttribute('data-reveal')||0); const a=el.animate([{opacity:0,transform:'translateY(56px)'},{opacity:1,transform:'none'}],{duration:1100,delay:d*110,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; const r=el.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) a.play(); else this.revIO.observe(el); });
+    document.querySelectorAll('[data-bar]').forEach(el=>{ const d=+(el.getAttribute('data-bar')||0); const a=el.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:1400,delay:200+d*120,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; this.revIO.observe(el); });
+    this.revT=setTimeout(()=>!this.ioFired && document.querySelectorAll('[data-reveal],[data-bar]').forEach(el=>{ if(el.__rv&&el.__rv.playState==='paused'){ el.__rv.finish(); } }),1500);
+  }
+  updateManifesto(){
+    const el=document.querySelector('[data-manifesto]'); if(!el) return;
+    const r=el.getBoundingClientRect(), vh=window.innerHeight;
+    const p=Math.max(0,Math.min(1,(vh*0.85-r.top)/(r.height+vh*0.35)));
+    const ws=el.querySelectorAll('[data-w]'), lit=Math.round(p*ws.length);
+    ws.forEach((w,i)=>{ const o=i<lit?'1':'0.16'; if(w.style.opacity!==o) w.style.opacity=o; });
+  }
+  scrollTo(i){ const el=document.getElementById(IDS[i]); if(el) window.scrollTo({ top: el.offsetTop - (i===0?0:70), behavior:'smooth' }); }
+
+  renderVals(){
+    const lang = this.state.lang ?? this.props.lang ?? 'es';
+    const t = COPY[lang], didactic = this.props.didactic ?? true;
+    const { fills, active, phase, hover, open, tour, modal } = this.state;
+    const steps = [t.s1,t.sAbout,t.s2,t.s3,t.s4,t.s5].map((label,i)=>({ n:'0'+(i+1), label, fill:Math.round(fills[i]*100)+'%', op: i===active?1:0.55, go:()=>this.scrollTo(i) }));
+    const phases = PHASES[lang].map((p,i)=>({ n:'0'+(i+1), title:p[0], body:p[1], why:p[2], showWhy: didactic && phase===i, bg: phase===i ? (i%2?'#E3F2EA':'#FBE6DC') : '#F7F5F1', enter:()=>this.setState({phase:i}) }));
+    const L = { es:['PROBLEMA','PROCESO','SOLUCIÓN','IMPACTO'], en:['PROBLEM','PROCESS','SOLUTION','IMPACT'] }[lang];
+    const projects = PROJECTS.map((p,i)=>{ const c=p[lang]; return {
+      n:'0'+(i+1), title:c.title, meta:c.meta, live: !!p.url, url: p.url||'', extUrl: p.ext||p.url||'', a1: p.acts?p.acts[lang][0]:t.play, a1h: p.acts?p.acts[lang][1]:'', a2: p.acts?p.acts[lang][2]:t.openTab, a2h: p.acts?p.acts[lang][3]:'', open: open===i, sign: open===i?'−':'+',
+      bg: hover===i ? 'rgba(247,245,241,0.05)' : 'transparent',
+      blocks:[c.p,c.pr,c.s,c.i].map((x,k)=>({ label:L[k], text:x, color: k===3?'#A9DCC0':'#F4B39A' })),
+      enter:()=>this.setState({hover:i}), toggle:()=>this.setState({open: open===i?-1:i, hover:i}),
+      play:(e)=>{ this.clickPt = e && e.clientX!=null ? [e.clientX,e.clientY] : null; this.setState({modal:i}); } }; });
+    const hp = PROJECTS[hover];
+    const preview = { title: hp[lang].title, decision: hp[lang].d, glow:`radial-gradient(60% 60% at 70% 30%, ${hp.glow}, transparent 70%)`, slot: t.previewSlot+' · '+hp[lang].title, hasPhoto: !!hp.img && !hp.icon, isIcon: !!hp.icon && !hp.cover, isAhorrandy: hp.cover==='ahorrandy', bgImg: hp.img ? 'url("'+hp.img+'")' : 'none', imgSize: hp.imgSize||'cover', imgBg: hp.imgBg||'transparent' };
+    const goTour = i => { this.setState({tour:i}); if(i>0 || window.scrollY>40) this.scrollTo(i); };
+    const tv = tour!==null ? { pos:(tour+1)+' / 6', title:TOUR[lang][tour][0], body:TOUR[lang][tour][1], nextLabel: tour===5?t.finish:t.next, prevOp: tour===0?0.4:1, dots:[0,1,2,3,4,5].map(k=>({c:k<=tour?'#1E2430':'rgba(30,36,48,0.15)'})) } : {};
+    const { scan, hsel } = this.state, done = scan>=10;
+    const scoreC = s => s<=4?'#E07A5A':s<=6?'#F2CF7E':'#7FC8A5';
+    const heur = HEUR.map((x,i)=>{ const seen=i<scan, sel=i===hsel; return { code:'H'+(i+1), name:x[lang][0], scoreTxt: seen? x.s+'/10':'—', barW: seen? (x.s*10)+'%':'0%', barC: scoreC(x.s), bg: sel?'#1E2430':'#FFFFFF', fg: sel?'#F7F5F1':'#1E2430', bd: sel?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.hsel!==i) this.setState({hsel:i}); } }; });
+    const hx = HEUR[hsel];
+    const det = { code:'H'+(hsel+1), name:hx[lang][0], check:hx[lang][1], finding:hx[lang][2], rec:hx[lang][3], sevLabel: SEV[lang][hx.v]+' · '+hx.v+'/4', sevC: SEV.c[hx.v] };
+    const shown = HEUR.slice(0,scan);
+    const avgTxt = scan ? (shown.reduce((a,x)=>a+x.s,0)/scan).toFixed(1) : '—';
+    const sevCounts = [4,3,2,1].map(v=>({ c:SEV.c[v], label:SEV[lang][v], n: shown.filter(x=> v===1 ? x.v<=1 : x.v===v).length }));
+    const auditSteps = AUDIT_STEPS[lang].map((a,i)=>({ n:'0'+(i+1), title:a[0], body:a[1], out:a[2] }));
+    const tlStyle = [['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#1E2430','#F7F5F1','#1E2430','rgba(247,245,241,0.14)'],['linear-gradient(135deg,#F4B39A,#A9DCC0)','#1E2430','transparent','rgba(255,255,255,0.55)']];
+    const timeline = TIMELINE.map((x,i)=>({ title:x[lang][0], text:x[lang][1], skill:x[lang][2], lvl:x[lang][3], bg:tlStyle[i][0], fg:tlStyle[i][1], bd:tlStyle[i][2], chip:tlStyle[i][3] }));
+    const si = this.state.skill;
+    const skillGroups = [0,1].map(g=>({ label: g? (lang==='es'?'UX/UI Y TECH':'UX/UI & TECH') : (lang==='es'?'ESTRATEGIA Y LIDERAZGO':'STRATEGY & LEADERSHIP'), c: g?'#7FC8A5':'#EE9B7E', items: SKILLS.map((s,i)=>({s,i})).filter(o=>o.s.g===g).map(({s,i})=>({ name:s[lang][0], bg: si===i?'#1E2430':'#FFFFFF', fg: si===i?'#F7F5F1':'#1E2430', bd: si===i?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.skill!==i) this.setState({skill:i}); } })) }));
+    const sk = SKILLS[si][lang];
+    const skill = { title: sk[1], scope: sk[2], items: sk[3].map(x=>({t:x})) };
+    return {
+      timeline, skillGroups, skill,
+      heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(5),
+      t, steps, phases, projects, preview, didactic, phoneRef:this.phoneRef, deskRef:this.deskRef, deskTransform:'scale('+this.state.deskScale.toFixed(4)+')', phoneTransform:'scale('+this.state.phoneScale.toFixed(4)+')',
+      canvasRef:this.canvasRef,
+      esBg: lang==='es'?'#1E2430':'transparent', esFg: lang==='es'?'#F7F5F1':'#1E2430',
+      enBg: lang==='en'?'#1E2430':'transparent', enFg: lang==='en'?'#F7F5F1':'#1E2430',
+      setEs:()=>this.setState({lang:'es'}), setEn:()=>this.setState({lang:'en'}),
+      clearPhase:()=>this.setState({phase:-1}),
+      goProjects:()=>this.scrollTo(3), goAbout:()=>this.scrollTo(1),
+      startTour:()=>goTour(0), endTour:()=>this.setState({tour:null}),
+      tourNext:()=> tour===5 ? this.setState({tour:null}) : goTour(tour+1),
+      tourPrev:()=> tour>0 && goTour(tour-1),
+      tourOn: tour!==null, tour: tv,
+      modalOn: modal!==null, modal: modal!==null ? (()=>{ const m=PROJECTS[modal]; const cs=['#F4B39A','#A9DCC0','#E9D9B8']; const desk = !!m.desk, web = m.view==='web'; this.deskW = web?1024:1440; return { colH: web?'auto':'min(720px,calc(100vh - 130px))', leftFlex: web?'0 1 260px':'1 1 300px', rightFlex: web?'3 1 560px':'1.6 1 420px', webMain: web, showPhone: !web, host: (m.url||'').replace(/^https?:\/\//,'').replace(/\/$/,''), hasDesk: desk, phR: desk?'0':'50%', phT: desk?'none':'translateX(50%)', hasTips: !!m.tips, noTips: !m.tips, tips: m.tips ? m.tips[lang].map(x=>({title:x[0],body:x[1]})) : [], title:m[lang].title, note: m.note ? m.note[lang] : t.demoNote, url:m.url||'', hasUrl:!!m.url, noUrl:!m.url, roles:(m.roles?m.roles[lang]:[]).map((r,k)=>({n:k+1,title:r[0],body:r[1],c:cs[k]})) }; })() : {},
+      closeModal:()=>this.closeModal(), blobRef:this.blobRef, ringRef:this.ringRef, dotRef:this.dotRef, modalRef:this.modalRef,
+      manifesto: MANIFESTO[lang].split(' ').map(w=>({ t:w.replace(/\*/g,''), c: w.includes('*')?'#B4553A':'#1E2430' })),
+      tools: TOOLS.map((x,i)=>({ i, name:x.name, ai:!!x.ai, w:x.w+'%', level:x[lang][0], use:x[lang][1] })),
+      chapters: CHAPTERS[lang].map((c,i)=>({ n:'0'+(i+1), i, title:c[0], body:c[1] })),
+      stop:e=>e.stopPropagation()
+    };
+  }
+}
+</script>
+
+
+
+</body></html>
