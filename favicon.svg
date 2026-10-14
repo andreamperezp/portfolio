@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#1E2430"/><text x="32" y="41" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="800" fill="#F7F5F1">AP</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1E2430"/><text x="9" y="44" font-family="Manrope,'Arial Black',Arial,Helvetica,sans-serif" font-size="34" font-weight="800" letter-spacing="-2" fill="#F7F5F1">ap</text><circle cx="51.5" cy="40.5" r="5" fill="#EE9B7E"/></svg>

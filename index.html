@@ -529,17 +529,28 @@ a{color:#1E2430;text-decoration:underline;text-underline-offset:3px}
 a:hover{color:#B4553A}
 *{box-sizing:border-box}
 html.ap-cursor,html.ap-cursor *{cursor:none!important}
+.ap-menu-btn,.ap-progress{display:none}
+@media (max-width:760px){
+  .ap-nav-desk,.ap-actions-desk,.ap-head-sub{display:none!important}
+  .ap-menu-btn{display:inline-flex!important}
+  .ap-progress{display:block!important}
+  .ap-head-row{flex-wrap:nowrap!important;justify-content:space-between}
+}
+@keyframes apMenuIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.ap-menu-panel{animation:apMenuIn .35s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.ap-menu-panel{animation:none}}
 </style>
 </helmet>
 <div style="min-height:100vh;background:#F7F5F1">
 
 <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,245,241,0.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,36,48,0.08)">
-  <div style="max-width:1280px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;gap:24px;flex-wrap:wrap">
-    <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
-      <div style="width:32px;height:32px;border-radius:50%;background:#1E2430;color:#F7F5F1;display:grid;place-items:center;font-weight:800;font-size:12px;letter-spacing:0.02em">AP</div>
-      <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-weight:700;font-size:15px">Andrea Pérez</span><span style="font:500 11px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></span>
-    </div>
-    <nav style="flex:1 1 360px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px">
+  <div class="ap-head-row" style="max-width:1280px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <button sc-camel-on-click="{{ goTop }}" aria-label="Andrea Pérez, Product Design Lead" style="display:flex;align-items:center;gap:12px;flex:0 0 auto;background:none;border:0;padding:0;cursor:pointer;color:#1E2430;text-align:left">
+      <span aria-hidden="true" style="display:inline-flex;align-items:baseline;font:800 26px/1 Manrope,sans-serif;letter-spacing:-0.05em;color:#1E2430">ap<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#EE9B7E;margin-left:2px"></span></span>
+      <span style="display:flex;flex-direction:column;line-height:1.15;padding-left:12px;border-left:1px solid rgba(30,36,48,0.15)"><span style="font-weight:700;font-size:15px">Andrea Pérez</span><span class="ap-head-sub" style="font:500 11px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></span>
+    </button>
+    <button class="ap-menu-btn" sc-camel-on-click="{{ openMenu }}" aria-label="{{ t.menu }}" style="align-items:center;gap:8px;border:1px solid #1E2430;border-radius:999px;padding:8px 14px;background:none;color:#1E2430;font:700 13px Manrope,sans-serif;cursor:pointer">{{ t.menu }} <span aria-hidden="true" style="display:inline-flex;flex-direction:column;gap:3px"><span style="display:block;width:14px;height:1.5px;background:#1E2430"></span><span style="display:block;width:10px;height:1.5px;background:#1E2430"></span></span></button>
+    <nav class="ap-nav-desk" style="flex:1 1 360px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px">
       <sc-for list="{{ steps }}" as="s" hint-placeholder-count="7">
         <button sc-camel-on-click="{{ s.go }}" style="background:none;border:0;padding:0;text-align:left;cursor:pointer;color:#1E2430;font-family:inherit;display:flex;flex-direction:column;gap:6px">
           <span title="{{ s.n }} {{ s.label }}" style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:{{ s.op }}">{{ s.label }}</span>
@@ -547,7 +558,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
         </button>
       </sc-for>
     </nav>
-    <div style="display:flex;align-items:center;gap:8px;flex:0 0 auto">
+    <div class="ap-actions-desk" style="display:flex;align-items:center;gap:8px;flex:0 0 auto">
       <div style="display:flex;border:1px solid rgba(30,36,48,0.15);border-radius:999px;padding:2px">
         <button sc-camel-on-click="{{ setEs }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ esBg }};color:{{ esFg }}">ES</button>
         <button sc-camel-on-click="{{ setEn }}" style="border:0;border-radius:999px;padding:6px 10px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ enBg }};color:{{ enFg }}">EN</button>
@@ -556,7 +567,35 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
       <button sc-camel-on-click="{{ startTour }}" style="white-space:nowrap;flex:0 0 auto;border:0;border-radius:999px;padding:9px 16px;background:#1E2430;color:#F7F5F1;font:600 13px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.tourBtn }}</button>
     </div>
   </div>
+  <div class="ap-progress" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:-1px;height:2px;background:rgba(30,36,48,0.06)"><div style="height:100%;width:{{ prog }};background:linear-gradient(90deg,#EE9B7E,#7FC8A5);transition:width .15s linear"></div></div>
 </header>
+
+<sc-if value="{{ menuOn }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="{{ t.menu }}" style="position:fixed;inset:0;z-index:90;background:#1E2430;color:#F7F5F1;overflow-y:auto">
+    <div class="ap-menu-panel" style="min-height:100%;display:flex;flex-direction:column;padding:14px clamp(16px,4vw,40px) 28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid rgba(247,245,241,0.12)">
+        <span aria-hidden="true" style="display:inline-flex;align-items:baseline;font:800 26px/1 Manrope,sans-serif;letter-spacing:-0.05em;color:#F7F5F1">ap<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#EE9B7E;margin-left:2px"></span></span>
+        <button sc-camel-on-click="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(247,245,241,0.4);border-radius:999px;padding:8px 14px;background:none;color:#F7F5F1;font:700 13px Manrope,sans-serif;cursor:pointer">{{ t.close }} <span aria-hidden="true" style="font-size:16px;line-height:1">×</span></button>
+      </div>
+      <nav style="display:flex;flex-direction:column;padding:12px 0;flex:1">
+        <sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="7">
+          <button sc-camel-on-click="{{ m.go }}" style="display:flex;align-items:baseline;gap:16px;padding:12px 0;background:none;border:0;border-bottom:1px solid rgba(247,245,241,0.08);color:#F7F5F1;text-align:left;cursor:pointer;font-family:inherit">
+            <span style="font:500 12px 'JetBrains Mono',monospace;color:{{ m.nc }};min-width:22px">{{ m.n }}</span>
+            <span style="font-size:28px;font-weight:{{ m.fw }};letter-spacing:-0.02em;line-height:1.1">{{ m.label }}</span>
+          </button>
+        </sc-for>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:16px">
+        <div style="display:flex;border:1px solid rgba(247,245,241,0.3);border-radius:999px;padding:2px">
+          <button sc-camel-on-click="{{ setEs }}" style="border:0;border-radius:999px;padding:7px 12px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ esBgD }};color:{{ esFgD }}">ES</button>
+          <button sc-camel-on-click="{{ setEn }}" style="border:0;border-radius:999px;padding:7px 12px;font:600 12px 'JetBrains Mono',monospace;cursor:pointer;background:{{ enBgD }};color:{{ enFgD }}">EN</button>
+        </div>
+        <a href="{{ cvHref }}" download="" style="border:1px solid rgba(247,245,241,0.4);border-radius:999px;padding:9px 16px;color:#F7F5F1;font:600 13px Manrope,sans-serif;text-decoration:none">CV ↓</a>
+        <button sc-camel-on-click="{{ menuTour }}" style="border:0;border-radius:999px;padding:10px 16px;background:#F7F5F1;color:#1E2430;font:700 13px Manrope,sans-serif;cursor:pointer">{{ t.tourBtn }}</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
 
 <section id="s-inicio" data-screen-label="01 Inicio" style="position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;background:radial-gradient(60% 70% at 0% 0%,rgba(244,179,154,0.45),transparent 60%),radial-gradient(55% 70% at 100% 100%,rgba(169,220,192,0.5),transparent 60%),#F7F5F1">
   <div ref="{{ canvasRef }}" style="position:absolute;inset:0"></div>
@@ -832,7 +871,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
 </section>
 
 <section id="s-auditorias" data-screen-label="06 Auditorías" style="background:#F7F5F1">
-  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
+  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px) 88px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end;margin-bottom:48px">
       <div style="display:flex;flex-direction:column;gap:16px">
         <span style="font-family:'JetBrains Mono',monospace;font-size:13px">06 — {{ t.s4 }}</span>
@@ -919,7 +958,8 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </div>
 </section>
 
-<section id="s-contacto" data-screen-label="07 Contacto" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px) 120px">
+<section id="s-contacto" data-screen-label="07 Contacto" style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,40px) 120px">
+  <div aria-hidden="true" style="display:flex;align-items:center;gap:14px;margin-bottom:88px"><span style="flex:1;height:1px;background:linear-gradient(90deg,#EE9B7E,rgba(127,200,165,0.6))"></span><span style="width:7px;height:7px;border-radius:50%;background:#7FC8A5"></span></div>
   <div style="display:flex;flex-direction:column;gap:24px;max-width:780px">
     <span style="font-family:'JetBrains Mono',monospace;font-size:13px">07 — {{ t.s5 }}</span>
     <h2 data-reveal="0" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-0.03em;font-weight:500">{{ t.contactA }} <span style="font-weight:800">{{ t.contactB }}</span></h2>
@@ -938,8 +978,8 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   <div style="max-width:1280px;margin:0 auto;padding:48px clamp(16px,4vw,40px) 32px;display:flex;flex-direction:column;gap:36px">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap">
       <div style="display:flex;align-items:center;gap:12px">
-        <div style="width:40px;height:40px;border-radius:50%;background:#F7F5F1;color:#1E2430;display:grid;place-items:center;font-weight:800;font-size:13px">AP</div>
-        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:700;font-size:16px">Andrea Pérez</span><span style="font:500 12px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></div>
+        <span aria-hidden="true" style="display:inline-flex;align-items:baseline;font:800 34px/1 Manrope,sans-serif;letter-spacing:-0.05em;color:#F7F5F1">ap<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#EE9B7E;margin-left:3px"></span></span>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-left:14px;border-left:1px solid rgba(247,245,241,0.2)"><span style="font-weight:700;font-size:16px">Andrea Pérez</span><span style="font:500 12px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:6px">
         <span style="font:500 11px 'JetBrains Mono',monospace;letter-spacing:0.06em;color:#A9DCC0">{{ t.footTime }}</span>
@@ -1058,7 +1098,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es'|'en'&quot;},&quot;didactic&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;show3d&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;},&quot;cursorFx&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;}}">
 const COPY = {
   es: {
-    tourBtn:'Recorrido guiado', kicker:'Product Design Lead · CRMs & SaaS', h1a:'Diseño y lidero', h1b:'productos digitales complejos.',
+    tourBtn:'Recorrido guiado', menu:'Menú', close:'Cerrar', kicker:'Product Design Lead · CRMs & SaaS', h1a:'Diseño y lidero', h1b:'productos digitales complejos.',
     lead:'Del research al deploy. 8 años liderando equipos de diseño y desarrollo.',
     ctaProjects:'Ver proyectos', ctaTour:'Iniciar recorrido', ctaAbout:'Conocé mi historia', ctaAboutSub:'Scroll · 2 min', drag:'Mové el cursor: la superficie reacciona', blobHint:'Acercá el cursor: la idea se mueve con vos',
     s1:'Inicio', sAbout:'Sobre mí', sExp:'Experiencia', expA:'Dónde lideré', expB:'producto, diseño y desarrollo.', expTeam:'EQUIPO', expNow:'ACTUAL', aboutA:'De la ejecución a la', aboutB:'dirección de producto.', aboutLead:'Amante de la tecnología y con ADN de UX Designer. Construyo puentes entre la visión de negocio y soluciones tecnológicas de impacto.', stackLabel:'STACK ESTRATÉGICO', pathTitle:'Mi bitácora', pathLead:'Esta trayectoria no tiene punto final: siempre construyendo hacia el siguiente nivel.', skillsTitle:'Competencias clave', toolsKicker:'STACK DE TRABAJO', toolsTitle:'Herramientas con las que trabajo', toolsLead:'Del diseño al deploy: con estas herramientas llevo una idea hasta un producto vivo en producción.', s2:'Enfoque', s3:'Proyectos', s4:'Auditorías', s5:'Contacto',
@@ -1074,7 +1114,7 @@ const COPY = {
     protoSlot:'Prototipo embebido · pega aquí el enlace del prototipo', previewSlot:'Captura del proyecto'
   },
   en: {
-    tourBtn:'Guided tour', kicker:'Product Design Lead · CRMs & SaaS', h1a:'I design and lead', h1b:'complex digital products.',
+    tourBtn:'Guided tour', menu:'Menu', close:'Close', kicker:'Product Design Lead · CRMs & SaaS', h1a:'I design and lead', h1b:'complex digital products.',
     lead:'From research to deploy. 8 years leading design and development teams.',
     ctaProjects:'See projects', ctaTour:'Start tour', ctaAbout:'Get to know me', ctaAboutSub:'Scroll · 2 min', drag:'Move your cursor: the surface responds', blobHint:'Bring your cursor close: the idea moves with you',
     s1:'Home', sAbout:'About', sExp:'Experience', expA:'Where I led', expB:'product, design and development.', expTeam:'TEAM', expNow:'CURRENT', aboutA:'From execution to', aboutB:'product leadership.', aboutLead:'A technology lover with a UX designer’s DNA. I build bridges between business vision and high-impact technology solutions.', stackLabel:'STRATEGIC STACK', pathTitle:'My log', pathLead:'This path has no end point: always building toward the next level.', skillsTitle:'Key skills', toolsKicker:'WORK STACK', toolsTitle:'Tools I work with', toolsLead:'From design to deploy: with these tools I take an idea all the way to a live product in production.', s2:'Approach', s3:'Projects', s4:'Audits', s5:'Contact',
@@ -1320,7 +1360,7 @@ const TOOLS = [
 class Component extends DCLogic {
   phoneRef = el => { if(this.pro){ this.pro.disconnect(); this.pro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/390; if(Math.abs(s-(this.state.phoneScale||0))>0.002) this.setState({phoneScale:s}); }; this.pro=new ResizeObserver(fit); this.pro.observe(el); fit(); } };
   deskRef = el => { if(this.dro){ this.dro.disconnect(); this.dro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/(this.deskW||1440); if(Math.abs(s-(this.state.deskScale||0))>0.002) this.setState({deskScale:s}); }; this.dro=new ResizeObserver(fit); this.dro.observe(el); fit(); } };
-  state = { deskScale: 0.3, scan: 0, hsel: 2, phoneScale: 0.8, lang: null, fills:[0,0,0,0,0,0,0], skill:0, active:0, phase:-1, hover:0, open:-1, tour:null, modal:null };
+  state = { deskScale: 0.3, scan: 0, hsel: 2, phoneScale: 0.8, lang: null, fills:[0,0,0,0,0,0,0], menu:false, prog:0, skill:0, active:0, phase:-1, hover:0, open:-1, tour:null, modal:null };
   canvasRef = React.createRef(); blobRef = React.createRef(); ringRef = React.createRef(); dotRef = React.createRef();
   modalRef = el => { this.modalEl=el; if(!el||!el.animate) return; const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; el.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'}],{duration:TOUCH?550:900,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); const p=el.firstElementChild; p&&p.animate([{opacity:0,transform:TOUCH?'translateY(24px)':'translateY(80px) scale(.94)'},{opacity:1,transform:'none'}],{duration:TOUCH?500:1000,delay:TOUCH?150:300,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); };
   closeModal(){ const el=this.modalEl; if(!el||!el.animate) return this.setState({modal:null}); const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; const a=el.animate([{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'},{clipPath:'circle(0px at '+cx+'px '+cy+'px)'}],{duration:650,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); a.onfinish=()=>this.setState({modal:null}); }
@@ -1333,8 +1373,10 @@ class Component extends DCLogic {
         const y = window.scrollY + window.innerHeight*0.4;
         const fills = IDS.map(id => { const el=document.getElementById(id); if(!el) return 0; const top=el.offsetTop, h=el.offsetHeight; return Math.round(Math.max(0,Math.min(1,(y-top)/h))*100)/100; });
         let active=0; fills.forEach((f,i)=>{ if(f>0) active=i; });
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const prog = max > 0 ? Math.round(Math.min(1, window.scrollY / max) * 100) : 0;
         const prev = this.state.fills;
-        if (active !== this.state.active || fills.some((f,i)=>f!==prev[i])) this.setState({ fills, active });
+        if (active !== this.state.active || prog !== this.state.prog || fills.some((f,i)=>f!==prev[i])) this.setState({ fills, active, prog });
         this.updateManifesto();
       });
     };
@@ -1342,12 +1384,14 @@ class Component extends DCLogic {
     this.onScroll();
     this.cleanups=[]; this.initHero(); this.initBlob(); this.initCursor(); this.initReveal();
     this.clockT=setInterval(()=>this.setState({now:Date.now()}),30000);
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    window.addEventListener('keydown', this.onKey);
     const au=document.getElementById('s-auditorias');
     if(au && 'IntersectionObserver' in window){ this.io=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ this.runScan(); this.io.disconnect(); } },{threshold:0.25}); this.io.observe(au); } else this.setState({scan:10});
   }
   runScan(){ clearInterval(this.scanT); this.setState({scan:0}); this.scanT=setInterval(()=>{ if(this.state.scan>=10){ clearInterval(this.scanT); return; } this.setState(s=>({scan:s.scan+1})); },160); }
   componentWillUnmount(){
-    clearInterval(this.scanT); clearInterval(this.clockT); this.io && this.io.disconnect();
+    clearInterval(this.scanT); clearInterval(this.clockT); window.removeEventListener('keydown', this.onKey); document.documentElement.style.overflow=''; this.io && this.io.disconnect();
     window.removeEventListener('scroll', this.onScroll); cancelAnimationFrame(this.scrollRaf);
     clearTimeout(this.retry); clearTimeout(this.retry2); (this.cleanups||[]).forEach(f=>f()); this.cleanups=[]; this.revIO && this.revIO.disconnect(); clearTimeout(this.revT);
   }
@@ -1466,6 +1510,7 @@ class Component extends DCLogic {
     const ws=el.querySelectorAll('[data-w]'), lit=Math.round(p*ws.length);
     ws.forEach((w,i)=>{ const o=i<lit?'1':'0.16'; if(w.style.opacity!==o) w.style.opacity=o; });
   }
+  setMenu(open){ document.documentElement.style.overflow = open ? 'hidden' : ''; this.setState({ menu: open }); }
   scrollTo(i){ const el=document.getElementById(IDS[i]); if(el) window.scrollTo({ top: el.offsetTop - (i===0?0:70), behavior:'smooth' }); }
 
   renderVals(){
@@ -1507,6 +1552,12 @@ class Component extends DCLogic {
       cvHref: 'cv/CV-Andrea-Perez-'+lang.toUpperCase()+'.pdf',
       laTime: new Date().toLocaleTimeString(lang==='es'?'es-AR':'en-US',{timeZone:'America/Argentina/Buenos_Aires',hour:'2-digit',minute:'2-digit',hour12:lang!=='es'}),
       year: new Date().getFullYear(), goTop:()=>this.scrollTo(0),
+      prog: (this.state.prog||0)+'%', menuOn: !!this.state.menu,
+      openMenu:()=>this.setMenu(true), closeMenu:()=>this.setMenu(false),
+      menuTour:()=>{ this.setMenu(false); setTimeout(()=>goTour(0),40); },
+      menuItems: steps.map((st,i)=>({ n:st.n, label:st.label, nc: i===active?'#A9DCC0':'#EE9B7E', fw: i===active?800:500, go:()=>{ this.setMenu(false); setTimeout(()=>this.scrollTo(i),40); } })),
+      esBgD: lang==='es'?'#F7F5F1':'transparent', esFgD: lang==='es'?'#1E2430':'#F7F5F1',
+      enBgD: lang==='en'?'#F7F5F1':'transparent', enFgD: lang==='en'?'#1E2430':'#F7F5F1',
       t, steps, phases, projects, preview, didactic, phoneRef:this.phoneRef, deskRef:this.deskRef, deskTransform:'scale('+this.state.deskScale.toFixed(4)+')', phoneTransform:'scale('+this.state.phoneScale.toFixed(4)+')',
       canvasRef:this.canvasRef,
       esBg: lang==='es'?'#1E2430':'transparent', esFg: lang==='es'?'#F7F5F1':'#1E2430',
