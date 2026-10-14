@@ -2,10 +2,10 @@
 <html><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Andrea Pérez · Product &amp; Technology Leader</title>
-<meta name="description" content="Portfolio de Andrea Pérez — Product &amp; Technology Leader. Product Management, productos digitales y soluciones con IA.">
-<meta property="og:title" content="Andrea Pérez · Product &amp; Technology Leader">
-<meta property="og:description" content="Product Management, productos digitales y soluciones con IA.">
+<title>Andrea Pérez · Product Design Lead</title>
+<meta name="description" content="Product Design Lead. Diseño y lidero productos digitales complejos: CRMs, SaaS y sistemas de gestión.">
+<meta property="og:title" content="Andrea Pérez · Product Design Lead">
+<meta property="og:description" content="Product Design Lead. Diseño y lidero productos digitales complejos: CRMs, SaaS y sistemas de gestión.">
 <meta property="og:image" content="assets/img/andrea-perez.png">
 <meta name="theme-color" content="#F7F5F1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -537,10 +537,10 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   <div style="max-width:1280px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;gap:24px;flex-wrap:wrap">
     <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
       <div style="width:32px;height:32px;border-radius:50%;background:#1E2430;color:#F7F5F1;display:grid;place-items:center;font-weight:800;font-size:12px;letter-spacing:0.02em">AP</div>
-      <span style="font-weight:700;font-size:15px">Andrea Pérez</span>
+      <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-weight:700;font-size:15px">Andrea Pérez</span><span style="font:500 11px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></span>
     </div>
-    <nav style="flex:1 1 360px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px">
-      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+    <nav style="flex:1 1 360px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="7">
         <button sc-camel-on-click="{{ s.go }}" style="background:none;border:0;padding:0;text-align:left;cursor:pointer;color:#1E2430;font-family:inherit;display:flex;flex-direction:column;gap:6px">
           <span title="{{ s.n }} {{ s.label }}" style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:{{ s.op }}">{{ s.label }}</span>
           <span style="display:block;height:3px;border-radius:2px;background:rgba(30,36,48,0.1);overflow:hidden"><span style="display:block;height:100%;width:{{ s.fill }};background:linear-gradient(90deg,#EE9B7E,#7FC8A5);transition:width .2s"></span></span>
@@ -574,7 +574,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
         </button>
       </div>
       <div style="display:flex;gap:28px;flex-wrap:wrap;font-size:14px;padding-top:12px;border-top:1px solid rgba(30,36,48,0.12)">
-        <span>Product &amp; Technology Leader</span>
+        <span>Product Design Lead</span>
         <span>La Plata, Argentina</span>
         
       </div>
@@ -597,7 +597,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
           <sc-for list="{{ manifesto }}" as="w" hint-placeholder-count="24"><span data-w="1" style="display:inline-block;margin-right:0.26em;opacity:0.16;color:{{ w.c }};transition:opacity .35s ease">{{ w.t }}</span></sc-for>
         </p>
         <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px;padding-top:16px;border-top:1px solid rgba(30,36,48,0.12)">
-          <span style="font-weight:700">Andrea Pérez</span><span>Product &amp; Technology Leader</span><span>La Plata, Argentina</span>
+          <span style="font-weight:700">Andrea Pérez</span><span>Product Design Lead</span><span>La Plata, Argentina</span>
         </div>
       </div>
     </div>
@@ -610,6 +610,35 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
           <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">{{ ch.body }}</p>
         </div>
       </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="s-experiencia" data-screen-label="03 Experiencia" style="background:#FFFFFF;border-top:1px solid rgba(30,36,48,0.08)">
+  <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:80px">
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:20px;max-width:780px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">03 — {{ t.sExp }}</span>
+        <h2 data-reveal="0" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-0.03em;font-weight:500">{{ t.expA }} <span style="font-weight:800">{{ t.expB }}</span></h2>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="4">
+          <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px clamp(24px,4vw,64px);padding:32px 0;border-top:2px solid #1E2430">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;color:#B4553A">{{ j.dates }}<sc-if value="{{ j.current }}" hint-placeholder-val="{{ false }}"><span style="font-size:10px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#A9DCC0;color:#1E2430">{{ t.expNow }}</span></sc-if></span>
+              <span style="font-size:clamp(24px,2.4vw,32px);font-weight:800;letter-spacing:-0.02em;line-height:1.1">{{ j.co }}</span>
+              <span style="font-size:14px;opacity:0.75">{{ j.place }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px;grid-column:span 2;min-width:min(100%,260px)">
+              <h3 style="margin:0;font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em;line-height:1.2">{{ j.role }}</h3>
+              <div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#F7F5F1">{{ t.expTeam }}</span><span>{{ j.team }}</span></div>
+              <sc-for list="{{ j.items }}" as="it" hint-placeholder-count="3">
+                <div style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;font-size:16px;line-height:1.55"><span style="color:#2F8F68;font-weight:800">→</span><span>{{ it.t }}</span></div>
+              </sc-for>
+            </div>
+          </article>
+        </sc-for>
+      </div>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:28px">
@@ -677,17 +706,17 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </div>
 </section>
 
-<section id="s-enfoque" data-screen-label="03 Enfoque" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
+<section id="s-enfoque" data-screen-label="04 Enfoque" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end;margin-bottom:56px">
     <div style="display:flex;flex-direction:column;gap:16px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:13px">03 — {{ t.s2 }}</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px">04 — {{ t.s2 }}</span>
       <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.approachTitle }}</h2>
     </div>
     <p style="margin:0;font-size:17px;line-height:1.6;max-width:480px;text-wrap:pretty">{{ t.approachLead }}</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:rgba(30,36,48,0.12);border:1px solid rgba(30,36,48,0.12);border-radius:20px;overflow:hidden">
     <sc-for list="{{ phases }}" as="p" hint-placeholder-count="4">
-      <div sc-camel-on-mouse-enter="{{ p.enter }}" sc-camel-on-mouse-leave="{{ clearPhase }}" style="background:{{ p.bg }};padding:28px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .25s;cursor:default">
+      <div sc-camel-on-click="{{ p.enter }}" sc-camel-on-mouse-enter="{{ p.enter }}" sc-camel-on-mouse-leave="{{ clearPhase }}" style="background:{{ p.bg }};padding:28px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .25s;cursor:default">
         <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ p.n }}</span>
         <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.01em">{{ p.title }}</h3>
         <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ p.body }}</p>
@@ -702,11 +731,11 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </sc-if>
 </section>
 
-<section id="s-proyectos" data-screen-label="04 Proyectos" style="background:#1E2430;color:#F7F5F1">
+<section id="s-proyectos" data-screen-label="05 Proyectos" style="background:#1E2430;color:#F7F5F1">
   <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
     <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">04 — {{ t.s3 }}</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">05 — {{ t.s3 }}</span>
         <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.projectsTitle }}</h2>
       </div>
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px;border:1px dashed rgba(247,245,241,0.45);border-radius:999px;padding:6px 12px;white-space:nowrap">{{ t.sampleNote }}</span>
@@ -802,11 +831,11 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </div>
 </section>
 
-<section id="s-auditorias" data-screen-label="05 Auditorías" style="background:#F7F5F1">
+<section id="s-auditorias" data-screen-label="06 Auditorías" style="background:#F7F5F1">
   <div style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px)">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:end;margin-bottom:48px">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">05 — {{ t.s4 }}</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px">06 — {{ t.s4 }}</span>
         <h2 data-reveal="0" style="margin:0;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.025em;font-weight:700">{{ t.auditTitle }}</h2>
       </div>
       <p style="margin:0;font-size:17px;line-height:1.6;max-width:500px;text-wrap:pretty">{{ t.auditLead }}</p>
@@ -890,9 +919,9 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </div>
 </section>
 
-<section id="s-contacto" data-screen-label="06 Contacto" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px) 160px">
+<section id="s-contacto" data-screen-label="07 Contacto" style="max-width:1280px;margin:0 auto;padding:120px clamp(16px,4vw,40px) 120px">
   <div style="display:flex;flex-direction:column;gap:24px;max-width:780px">
-    <span style="font-family:'JetBrains Mono',monospace;font-size:13px">06 — {{ t.s5 }}</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px">07 — {{ t.s5 }}</span>
     <h2 data-reveal="0" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1.02;letter-spacing:-0.03em;font-weight:500">{{ t.contactA }} <span style="font-weight:800">{{ t.contactB }}</span></h2>
     <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:17px;font-weight:600">
       <a href="https://www.linkedin.com/in/andreamariange/" target="_blank" rel="noopener">LinkedIn</a>
@@ -905,14 +934,39 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
   </div>
 </section>
 
+<footer style="background:#1E2430;color:#F7F5F1">
+  <div style="max-width:1280px;margin:0 auto;padding:48px clamp(16px,4vw,40px) 32px;display:flex;flex-direction:column;gap:36px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:40px;height:40px;border-radius:50%;background:#F7F5F1;color:#1E2430;display:grid;place-items:center;font-weight:800;font-size:13px">AP</div>
+        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:700;font-size:16px">Andrea Pérez</span><span style="font:500 12px 'JetBrains Mono',monospace;opacity:0.75">Product Design Lead</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px 'JetBrains Mono',monospace;letter-spacing:0.06em;color:#A9DCC0">{{ t.footTime }}</span>
+        <span style="display:flex;align-items:center;gap:10px;font-size:24px;font-weight:700;letter-spacing:-0.01em"><span style="width:8px;height:8px;border-radius:50%;background:#7FC8A5;box-shadow:0 0 0 4px rgba(127,200,165,0.25)"></span>{{ laTime }} <span style="font:500 12px 'JetBrains Mono',monospace;opacity:0.75">GMT−3</span></span>
+        <span style="font-size:14px;opacity:0.85">{{ t.footOpen }}</span>
+      </div>
+      <nav style="display:flex;gap:20px;flex-wrap:wrap;font-size:15px;font-weight:600">
+        <a href="mailto:andreamperezp31@gmail.com" style="color:#F7F5F1">Email</a>
+        <a href="https://www.linkedin.com/in/andreamariange/" target="_blank" rel="noopener" style="color:#F7F5F1">LinkedIn</a>
+        <a href="{{ cvHref }}" download="" style="color:#F7F5F1">CV ↓</a>
+      </nav>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(247,245,241,0.14);font:500 12px 'JetBrains Mono',monospace">
+      <span style="opacity:0.7">© {{ year }} Andrea Pérez · La Plata, Argentina</span>
+      <button sc-camel-on-click="{{ goTop }}" style="border:1px solid rgba(247,245,241,0.3);border-radius:999px;padding:8px 14px;background:none;color:#F7F5F1;font:600 12px 'JetBrains Mono',monospace;cursor:pointer" style-hover="background:#F7F5F1;color:#1E2430">{{ t.footTop }} ↑</button>
+    </div>
+  </div>
+</footer>
+
 <sc-if value="{{ tourOn }}" hint-placeholder-val="{{ false }}">
   <div style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:95;width:min(520px,calc(100vw - 32px));background:#FFFFFF;color:#1E2430;border-radius:20px;box-shadow:0 20px 60px rgba(30,36,48,0.25);padding:22px 24px;display:flex;flex-direction:column;gap:12px">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px">{{ t.tourLabel }} · {{ tour.pos }}</span>
       <button sc-camel-on-click="{{ endTour }}" style="border:0;background:none;font-size:20px;cursor:pointer;color:#1E2430;line-height:1">×</button>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px">
-      <sc-for list="{{ tour.dots }}" as="d" hint-placeholder-count="6">
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px">
+      <sc-for list="{{ tour.dots }}" as="d" hint-placeholder-count="7">
         <span style="height:3px;border-radius:2px;background:{{ d.c }}"></span>
       </sc-for>
     </div>
@@ -1004,10 +1058,10 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es'|'en'&quot;},&quot;didactic&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;show3d&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;},&quot;cursorFx&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Efectos&quot;}}">
 const COPY = {
   es: {
-    tourBtn:'Recorrido guiado', kicker:'Portfolio · 2026', h1a:'Diseño productos', h1b:'que conectan.',
-    lead:'Soy Andrea Pérez, Product & Technology Leader. Lidero productos digitales y soluciones con IA, desde la idea hasta el impacto medible.',
+    tourBtn:'Recorrido guiado', kicker:'Product Design Lead · CRMs & SaaS', h1a:'Diseño y lidero', h1b:'productos digitales complejos.',
+    lead:'Del research al deploy. 8 años liderando equipos de diseño y desarrollo.',
     ctaProjects:'Ver proyectos', ctaTour:'Iniciar recorrido', ctaAbout:'Conocé mi historia', ctaAboutSub:'Scroll · 2 min', drag:'Mové el cursor: la superficie reacciona', blobHint:'Acercá el cursor: la idea se mueve con vos',
-    s1:'Inicio', sAbout:'Sobre mí', aboutA:'De la ejecución a la', aboutB:'dirección de producto.', aboutLead:'Amante de la tecnología y con ADN de UX Designer. Construyo puentes entre la visión de negocio y soluciones tecnológicas de impacto.', stackLabel:'STACK ESTRATÉGICO', pathTitle:'Mi bitácora', pathLead:'Esta trayectoria no tiene punto final: siempre construyendo hacia el siguiente nivel.', skillsTitle:'Competencias clave', toolsKicker:'STACK DE TRABAJO', toolsTitle:'Herramientas con las que trabajo', toolsLead:'Del diseño al deploy: con estas herramientas llevo una idea hasta un producto vivo en producción.', s2:'Enfoque', s3:'Proyectos', s4:'Auditorías', s5:'Contacto',
+    s1:'Inicio', sAbout:'Sobre mí', sExp:'Experiencia', expA:'Dónde lideré', expB:'producto, diseño y desarrollo.', expTeam:'EQUIPO', expNow:'ACTUAL', aboutA:'De la ejecución a la', aboutB:'dirección de producto.', aboutLead:'Amante de la tecnología y con ADN de UX Designer. Construyo puentes entre la visión de negocio y soluciones tecnológicas de impacto.', stackLabel:'STACK ESTRATÉGICO', pathTitle:'Mi bitácora', pathLead:'Esta trayectoria no tiene punto final: siempre construyendo hacia el siguiente nivel.', skillsTitle:'Competencias clave', toolsKicker:'STACK DE TRABAJO', toolsTitle:'Herramientas con las que trabajo', toolsLead:'Del diseño al deploy: con estas herramientas llevo una idea hasta un producto vivo en producción.', s2:'Enfoque', s3:'Proyectos', s4:'Auditorías', s5:'Contacto',
     auditTitle:'Auditorías UX para empresas', auditLead:'Evalúo productos digitales en uso con las 10 heurísticas de Nielsen y entrego un plan de mejoras priorizado por severidad e impacto en el negocio.',
     reportLabel:'REPORTE DE AUDITORÍA', sampleReport:'Datos de ejemplo', scan:'Volver a escanear', scanning:'Escaneando…', overall:'PUNTAJE GENERAL',
     heuristic:'HEURÍSTICA', whatCheck:'QUÉ REVISO', finding:'HALLAZGO', reco:'RECOMENDACIÓN', deliverable:'ENTREGABLE',
@@ -1015,15 +1069,15 @@ const COPY = {
     approachTitle:'Cómo trabajo', approachLead:'Cuatro etapas que se repiten en cada proyecto. Pasa el cursor sobre cada una para ver por qué la hago así.',
     why:'POR QUÉ', hoverHint:'↑ Pasa el cursor sobre cada etapa', projectsTitle:'Proyectos seleccionados',
     sampleNote:'01–02 con demo en vivo', tipsLabel:'RECOMENDACIONES', ahzTag:'Finanzas personales · ARS / USD', ahzH:'Sabé en qué se va cada peso.', ahzSub:'Registrá gastos e ingresos en segundos, en pesos o dólares, y mirá tu patrimonio y tus metas al día.', ahzR1:'Sueldo', ahzR2:'Supermercado', ahzR3:'Meta: viaje', ahzNet:'Patrimonio neto', openBrowser:'Abrir en el navegador', live:'EN VIVO', openTab:'Abrir en pestaña nueva', howTry:'CÓMO PROBARLA', demoNote:'Demo con datos inventados. El código de ingreso aparece en pantalla: probá con cualquier celular.', play:'Jugar prototipo', caseSoon:'Caso completo · próximamente',
-    keyDecision:'DECISIÓN CLAVE', contactA:'¿Construimos', contactB:'algo juntos?', cv:'Descargar CV',
+    keyDecision:'DECISIÓN CLAVE', contactA:'¿Construimos', contactB:'algo juntos?', cv:'Descargar CV', footTime:'HORA EN LA PLATA', footOpen:'Abierta a trabajo remoto y proyectos freelance.', footTop:'Volver arriba',
     tourLabel:'RECORRIDO', prev:'Anterior', next:'Siguiente', finish:'Terminar',
     protoSlot:'Prototipo embebido · pega aquí el enlace del prototipo', previewSlot:'Captura del proyecto'
   },
   en: {
-    tourBtn:'Guided tour', kicker:'Portfolio · 2026', h1a:'I design products', h1b:'that connect.',
-    lead:"I'm Andrea Pérez, Product & Technology Leader. I lead digital products and AI-driven solutions, from idea to measurable impact.",
+    tourBtn:'Guided tour', kicker:'Product Design Lead · CRMs & SaaS', h1a:'I design and lead', h1b:'complex digital products.',
+    lead:'From research to deploy. 8 years leading design and development teams.',
     ctaProjects:'See projects', ctaTour:'Start tour', ctaAbout:'Get to know me', ctaAboutSub:'Scroll · 2 min', drag:'Move your cursor: the surface responds', blobHint:'Bring your cursor close: the idea moves with you',
-    s1:'Home', sAbout:'About', aboutA:'From execution to', aboutB:'product leadership.', aboutLead:'A technology lover with a UX designer’s DNA. I build bridges between business vision and high-impact technology solutions.', stackLabel:'STRATEGIC STACK', pathTitle:'My log', pathLead:'This path has no end point: always building toward the next level.', skillsTitle:'Key skills', toolsKicker:'WORK STACK', toolsTitle:'Tools I work with', toolsLead:'From design to deploy: with these tools I take an idea all the way to a live product in production.', s2:'Approach', s3:'Projects', s4:'Audits', s5:'Contact',
+    s1:'Home', sAbout:'About', sExp:'Experience', expA:'Where I led', expB:'product, design and development.', expTeam:'TEAM', expNow:'CURRENT', aboutA:'From execution to', aboutB:'product leadership.', aboutLead:'A technology lover with a UX designer’s DNA. I build bridges between business vision and high-impact technology solutions.', stackLabel:'STRATEGIC STACK', pathTitle:'My log', pathLead:'This path has no end point: always building toward the next level.', skillsTitle:'Key skills', toolsKicker:'WORK STACK', toolsTitle:'Tools I work with', toolsLead:'From design to deploy: with these tools I take an idea all the way to a live product in production.', s2:'Approach', s3:'Projects', s4:'Audits', s5:'Contact',
     auditTitle:'UX audits for companies', auditLead:'I evaluate live digital products against Nielsen’s 10 heuristics and deliver an improvement plan prioritized by severity and business impact.',
     reportLabel:'AUDIT REPORT', sampleReport:'Sample data', scan:'Scan again', scanning:'Scanning…', overall:'OVERALL SCORE',
     heuristic:'HEURISTIC', whatCheck:'WHAT I CHECK', finding:'FINDING', reco:'RECOMMENDATION', deliverable:'DELIVERABLE',
@@ -1031,7 +1085,7 @@ const COPY = {
     approachTitle:'How I work', approachLead:'Four stages I repeat on every project. Hover each one to see why I do it this way.',
     why:'WHY', hoverHint:'↑ Hover each stage', projectsTitle:'Selected projects',
     sampleNote:'01–02 with live demo', tipsLabel:'TIPS', ahzTag:'Personal finance · ARS / USD', ahzH:'Know where every peso goes.', ahzSub:'Log expenses and income in seconds, in pesos or dollars, and keep your net worth and goals up to date.', ahzR1:'Salary', ahzR2:'Groceries', ahzR3:'Goal: trip', ahzNet:'Net worth', openBrowser:'Open in browser', live:'LIVE', openTab:'Open in new tab', howTry:'HOW TO TRY IT', demoNote:'Demo with made-up data. The login code shows on screen: try any phone number.', play:'Play prototype', caseSoon:'Full case · coming soon',
-    keyDecision:'KEY DECISION', contactA:'Shall we build', contactB:'something together?', cv:'Download CV',
+    keyDecision:'KEY DECISION', contactA:'Shall we build', contactB:'something together?', cv:'Download CV', footTime:'LOCAL TIME IN LA PLATA', footOpen:'Open to remote roles and freelance projects.', footTop:'Back to top',
     tourLabel:'TOUR', prev:'Back', next:'Next', finish:'Finish',
     protoSlot:'Embedded prototype · paste the prototype link here', previewSlot:'Project screenshot'
   }
@@ -1064,8 +1118,8 @@ const PROJECTS = [
   { glow:'#F2CF7E', es:{"title":"Red social industrial B2B","meta":"Networking B2B · Producto · En producción","p":"Las empresas de los parques industriales no tenían un espacio propio para conectarse y encontrar sinergias.","pr":"Diseño de perfiles corporativos, comunidades por sector y un feed de novedades.","s":"Red social de networking exclusiva para parques industriales.","i":"En producción, conectando actores clave de la industria.","d":"Comunidades por sector para que cada empresa vea contenido relevante para su rubro."}, en:{"title":"B2B industrial social network","meta":"B2B networking · Product · In production","p":"Companies in industrial parks had no space of their own to connect and find synergies.","pr":"Designing company profiles, sector communities and an updates feed.","s":"A networking platform built exclusively for industrial parks.","i":"In production, connecting key industry players.","d":"Sector communities so each company sees content relevant to its industry."} },
 ];
 const TOUR = {
-  es:[['Portada','Una superficie líquida donde tu cursor es una fuerza: genera ondas a su paso. Desde aquí podés ir a los proyectos o seguir el recorrido.'],['Sobre mí','Quién soy, cómo empecé, cómo lidero y gestiono. Acercá el cursor a la forma: es una idea viva que reacciona a vos.'],['Enfoque','Mi proceso en cuatro etapas. Pasa el cursor para ver la razón detrás de cada una.'],['Proyectos','Abre un proyecto para ver problema, proceso, solución e impacto. Los que tienen demo se pueden probar en vivo.'],['Auditorías','Un reporte de ejemplo: recorre las 10 heurísticas para ver qué hallazgos detecto y cómo los priorizo.'],['Contacto','Si algo resonó, escribime por LinkedIn, email o WhatsApp.']],
-  en:[['Home','A liquid surface where your cursor is a force: it sends ripples as it moves. From here you can jump to projects or follow the tour.'],['About','Who I am, how I started, how I lead and manage. Bring your cursor close to the shape: it’s a living idea that reacts to you.'],['Approach','My four-stage process. Hover to see the reasoning behind each one.'],['Projects','Open a project to see problem, process, solution and impact. Those with a demo can be tried live.'],['Audits','A sample report: go through the 10 heuristics to see what I find and how I prioritize it.'],['Contact','If something resonated, reach me on LinkedIn, email or WhatsApp.']]
+  es:[['Portada','Una superficie líquida donde tu cursor es una fuerza: genera ondas a su paso. Desde aquí podés ir a los proyectos o seguir el recorrido.'],['Sobre mí','Quién soy y cómo trabajo, en cuatro datos. Acercá el cursor a la forma: es una idea viva que reacciona a vos.'],['Experiencia','Dónde trabajé, qué rol tuve y qué logré en cada puesto. Debajo, mi bitácora, competencias y herramientas.'],['Enfoque','Mi proceso en cuatro etapas. Pasa el cursor para ver la razón detrás de cada una.'],['Proyectos','Abre un proyecto para ver problema, proceso, solución e impacto. Los que tienen demo se pueden probar en vivo.'],['Auditorías','Un reporte de ejemplo: recorre las 10 heurísticas para ver qué hallazgos detecto y cómo los priorizo.'],['Contacto','Si algo resonó, escribime por LinkedIn, email o WhatsApp.']],
+  en:[['Home','A liquid surface where your cursor is a force: it sends ripples as it moves. From here you can jump to projects or follow the tour.'],['About','Who I am and how I work, in four facts. Bring your cursor close to the shape: it’s a living idea that reacts to you.'],['Experience','Where I have worked, my role and what I achieved in each position. Below: my log, skills and tools.'],['Approach','My four-stage process. Hover to see the reasoning behind each one.'],['Projects','Open a project to see problem, process, solution and impact. Those with a demo can be tried live.'],['Audits','A sample report: go through the 10 heuristics to see what I find and how I prioritize it.'],['Contact','If something resonated, reach me on LinkedIn, email or WhatsApp.']]
 };
 const TIMELINE = [
   {es:['Cimientos','Dominio del prototipado y la validación.','Design Thinking','Nivel 1 · 2018–2019'],en:['Foundations','Mastering prototyping and validation.','Design Thinking','Level 1 · 2018–2019']},
@@ -1082,7 +1136,40 @@ const SKILLS = [
   {g:1,es:['Frontend (React)','Arquitectura frontend y viabilidad técnica','Supervisión y viabilidad del desarrollo de interfaces.',['Decisiones de arquitectura de interfaz con código limpio, escalable y mantenible.','Coordinación con Frontend para que el diseño se implemente pixel-perfect.','Componentes reutilizables para acelerar los ciclos de desarrollo.']],en:['Frontend (React)','Frontend architecture and technical feasibility','Overseeing interface development.',['Interface architecture decisions for clean, scalable, maintainable code.','Working with Frontend so design ships pixel-perfect.','Reusable components to speed up development cycles.']]},
   {g:1,es:['IA aplicada','Innovación con IA y eficiencia operativa','Co-pilotaje estratégico y automatización de procesos.',['Herramientas de IA para acelerar el descubrimiento y el diseño de producto.','Automatización de tareas de gestión de proyectos.','Adopción de tecnologías emergentes para mantener al equipo a la vanguardia.']],en:['Applied AI','AI innovation and operational efficiency','Strategic co-piloting and process automation.',['AI tools to speed up product discovery and design.','Automating project management tasks.','Adopting emerging tech to keep the team ahead.']]}
 ];
-const IDS = ['s-inicio','s-sobre','s-enfoque','s-proyectos','s-auditorias','s-contacto'];
+// Pantallas táctiles (sin hover): textos y efectos adaptados
+const TOUCH = !!(window.matchMedia && window.matchMedia('(hover: none), (pointer: coarse)').matches);
+const REDUCED = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+const TOUCH_COPY = {
+  es: { drag:'Tocá la superficie: genera ondas', blobHint:'Tocá la forma: la idea reacciona', auditHint:'Tocá cada heurística para ver su hallazgo', approachLead:'Cuatro etapas que se repiten en cada proyecto. Tocá cada una para ver por qué la hago así.', hoverHint:'Tocá cada etapa' },
+  en: { drag:'Tap the surface: it sends ripples', blobHint:'Tap the shape: the idea responds', auditHint:'Tap each heuristic to see its finding', approachLead:'Four stages I repeat on every project. Tap each one to see why I do it this way.', hoverHint:'Tap each stage' }
+};
+const TOUR_TOUCH = {
+  es: { 0:'Una superficie líquida que reacciona al tacto: tocala y genera ondas. Desde aquí podés ir a los proyectos o seguir el recorrido.', 1:'Quién soy y cómo trabajo, en cuatro datos. Tocá la forma: es una idea viva que reacciona a vos.', 3:'Mi proceso en cuatro etapas. Tocá cada una para ver la razón detrás.' },
+  en: { 0:'A liquid surface that reacts to touch: tap it to send ripples. From here you can jump to projects or follow the tour.', 1:'Who I am and how I work, in four facts. Tap the shape: it’s a living idea that reacts to you.', 3:'My four-stage process. Tap each one to see the reasoning behind it.' }
+};
+const JOBS = [
+  { co:'Delsud', current:true,
+    es:{ role:'Directora de Producto y Tecnología', dates:'may. 2025 – Actualidad', place:'Argentina', team:'[COMPLETAR: cantidad y composición, ej. 6 devs + 2 diseñadoras]',
+      items:['Lidero un equipo multidisciplinario de diseño, desarrollo y producto con Scrum y Kanban.','Defino la estrategia de producto y el roadmap, alineados con los objetivos de negocio.','Incorporé agentes de IA y automatizaciones para acortar los tiempos de entrega.'] },
+    en:{ role:'Director of Product & Technology', dates:'May 2025 – Present', place:'Argentina', team:'[COMPLETAR: size and makeup, e.g. 6 devs + 2 designers]',
+      items:['I lead a cross-functional design, development and product team using Scrum and Kanban.','I define the product strategy and roadmap, aligned with business goals.','I introduced AI agents and automation to shorten delivery times.'] } },
+  { co:'LIMBO',
+    es:{ role:'Project Manager', dates:'ene. 2022 – may. 2025', place:'Argentina', team:'[COMPLETAR: cantidad y composición del equipo]',
+      items:['Dirigí proyectos digitales end-to-end con Scrum y Design Thinking.','Coordiné equipos de diseño, desarrollo y QA, mejorando la eficiencia operativa del área.','Gestioné clientes y stakeholders para entregar soluciones de alto valor.'] },
+    en:{ role:'Project Manager', dates:'Jan 2022 – May 2025', place:'Argentina', team:'[COMPLETAR: team size and makeup]',
+      items:['Managed digital projects end-to-end with Scrum and Design Thinking.','Coordinated design, development and QA teams, improving operational efficiency.','Managed clients and stakeholders to deliver high-value solutions.'] } },
+  { co:'Albanghu',
+    es:{ role:'Diseñadora Web y Desarrolladora Frontend', dates:'jun. 2024 – jul. 2024', place:'Remoto', team:'[COMPLETAR: trabajo individual o con equipo]',
+      items:['Diseñé y desarrollé una landing page estratégica que reforzó la identidad visual de la empresa.','Personalicé un sistema en Bootstrap para que el producto escale.'] },
+    en:{ role:'Web Designer & Frontend Developer', dates:'Jun 2024 – Jul 2024', place:'Remote', team:'[COMPLETAR: solo or with a team]',
+      items:['Designed and built a strategic landing page that strengthened the company’s visual identity.','Customized a Bootstrap-based system so the product could scale.'] } },
+  { co:'iMCreate LLC',
+    es:{ role:'UX/UI Designer Senior', dates:'2020 – 2022', place:'Nueva York, EE. UU. · Remoto', team:'[COMPLETAR: cantidad y composición del equipo]',
+      items:['Lideré proyectos internacionales con diseño centrado en el usuario.','Supervisé equipos de diseño y desarrollo, mejorando la usabilidad de los productos.'] },
+    en:{ role:'Senior UX/UI Designer', dates:'2020 – 2022', place:'New York, USA · Remote', team:'[COMPLETAR: team size and makeup]',
+      items:['Led international projects with a user-centered design approach.','Supervised design and development teams, improving product usability.'] } }
+];
+const IDS = ['s-inicio','s-sobre','s-experiencia','s-enfoque','s-proyectos','s-auditorias','s-contacto'];
 const SEV = { es:['Cosmético','Cosmético','Menor','Mayor','Crítico'], en:['Cosmetic','Cosmetic','Minor','Major','Critical'], c:['#A9DCC0','#A9DCC0','#F2CF7E','#F4B39A','#E07A5A'] };
 const HEUR = [
   {s:5,v:3,es:['Visibilidad del estado del sistema','Indicadores de carga, confirmaciones y progreso en cada acción.','Al enviar un formulario no hay indicador de carga y los usuarios hacen doble clic, generando duplicados.','Estado de carga en el botón y confirmación explícita al terminar.'],en:['Visibility of system status','Loading indicators, confirmations and progress on every action.','Submitting a form shows no loading state, so users double-click and create duplicates.','Loading state on the button and an explicit confirmation when done.']},
@@ -1113,14 +1200,14 @@ void main(){
   vec2 p=vUv*asp; vec2 disp=vec2(0.); float ring=0.;
   for(int i=0;i<24;i++){
     vec3 tp=uTrail[i]; float age=uTime-tp.z;
-    if(age<0.||age>2.4) continue;
+    if(age<0.||age>1.8) continue;
     vec2 d=p-tp.xy*asp; float r=length(d);
-    float front=age*0.32; float k=exp(-abs(r-front)*18.)*(1.-age/2.4);
-    float w=sin((r-front)*55.)*k;
-    disp+=normalize(d+1e-5)*w*0.018; ring+=w;
+    float front=age*0.32; float k=exp(-abs(r-front)*22.)*(1.-age/1.8);
+    float w=sin((r-front)*30.)*k;
+    disp+=normalize(d+1e-5)*w*0.005; ring+=w;
   }
   vec2 dm=p-uMouse*asp; float md=length(dm);
-  disp+=normalize(dm+1e-5)*exp(-md*md*14.)*0.06*uForce;
+  disp+=normalize(dm+1e-5)*exp(-md*md*14.)*0.022*uForce;
   vec2 q=p+disp; float t=uTime*0.05;
   vec2 w1=vec2(fbm(q*1.6+t),fbm(q*1.6-t+3.1));
   float n=fbm(q*1.4+w1*1.8+vec2(t*2.,-t));
@@ -1129,8 +1216,8 @@ void main(){
   col=mix(col,mint,smoothstep(.45,.85,fbm(q*1.2-w1+9.)));
   col=mix(col,coral,smoothstep(.72,.95,n)*.6);
   col=mix(cream,col,smoothstep(.05,.75,vUv.x)*.9+.1);
-  float spec=ring*.5+exp(-md*md*30.)*.15*uForce;
-  col+=vec3(clamp(spec,-.1,.25));
+  float spec=ring*.12+exp(-md*md*30.)*.06*uForce;
+  col+=vec3(clamp(spec,-.05,.1));
   col+=(hash(vUv*uRes+uTime)-.5)*.025;
   gl_FragColor=vec4(col,1.);
 }`;
@@ -1188,14 +1275,14 @@ const MANIFESTO = {
   en:'Hi, I’m Andrea. I design and lead digital products, and I love seeing an idea come *alive*, whether on a screen or printed on paper.'
 };
 const CHAPTERS = {
-  es:[['Cómo empecé','Empecé a los 27 años diseñando en Illustrator. Las herramientas digitales y sus actualizaciones nunca pararon de crecer, y yo crecí con ellas. Es lo lindo de este rubro: no se detiene.'],
-      ['Aprendo en el camino','No se trata de ser perfecta. Me encanta aprender cosas nuevas y constantemente investigo cómo mejorar lo que ya sé. Cada proyecto me deja algo.'],
-      ['Liderar es acompañar','Liderar es acompañar el impulso de tu entorno a crecer con vos e ir por más, sin conformarse. Es lo que me trajo a grandes equipos, y sigo aprendiendo de ello.'],
-      ['Cómo gestiono','Escucho primero, ordeno prioridades con el equipo y medimos lo que hacemos. Prefiero probar temprano y ajustar en el camino antes que esperar el plan perfecto.']],
-  en:[['How I started','I started at 27, designing in Illustrator. Digital tools and their updates never stopped growing, and I grew with them. That’s the beauty of this field: it never stands still.'],
-      ['Learning along the way','It’s not about being perfect. I love learning new things and I’m always researching how to improve what I already know. Every project teaches me something.'],
-      ['Leading is walking alongside','Leading means supporting the drive of the people around you to grow with you and go further, never settling. That’s what brought me to great teams, and I keep learning from it.'],
-      ['How I manage','I listen first, set priorities with the team and measure what we do. I’d rather test early and adjust along the way than wait for the perfect plan.']]
+  es:[['8 años liderando equipos','Desde 2018 diseño productos digitales y lidero equipos de diseño y desarrollo, del research al deploy.'],
+      ['CRMs, SaaS y sistemas de gestión','Productos con lógica de negocio compleja: un CRM para brokers de seguros, un sistema de tareas en cascada, una red B2B y Filo, un SaaS de turnos.'],
+      ['Equipos multidisciplinarios','Lidero diseñadores, desarrolladores y product managers. [COMPLETAR: tamaño y composición del equipo, ej. 6 devs + 2 diseñadoras]'],
+      ['Diseño pensando en el código','Componentes reutilizables, revisión técnica de interfaces y Scrum compartido con Desarrollo y QA. También publico código: mis productos propios están en producción.']],
+  en:[['8 years leading teams','Since 2018 I have designed digital products and led design and development teams, from research to deploy.'],
+      ['CRMs, SaaS and management systems','Products with complex business logic: a CRM for insurance brokers, a cascading task system, a B2B network and Filo, a booking SaaS.'],
+      ['Cross-functional teams','I lead designers, developers and product managers. [COMPLETAR: team size and makeup, e.g. 6 devs + 2 designers]'],
+      ['Designing with code in mind','Reusable components, technical review of interfaces and shared Scrum with Development and QA. I also ship code: my own products are live in production.']]
 };
 
 const TOOLS = [
@@ -1209,29 +1296,35 @@ const TOOLS = [
 class Component extends DCLogic {
   phoneRef = el => { if(this.pro){ this.pro.disconnect(); this.pro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/390; if(Math.abs(s-(this.state.phoneScale||0))>0.002) this.setState({phoneScale:s}); }; this.pro=new ResizeObserver(fit); this.pro.observe(el); fit(); } };
   deskRef = el => { if(this.dro){ this.dro.disconnect(); this.dro=null; } if(el){ const fit=()=>{ const s=el.clientWidth/(this.deskW||1440); if(Math.abs(s-(this.state.deskScale||0))>0.002) this.setState({deskScale:s}); }; this.dro=new ResizeObserver(fit); this.dro.observe(el); fit(); } };
-  state = { deskScale: 0.3, scan: 0, hsel: 2, phoneScale: 0.8, lang: null, fills:[0,0,0,0,0,0], skill:0, active:0, phase:-1, hover:0, open:-1, tour:null, modal:null };
+  state = { deskScale: 0.3, scan: 0, hsel: 2, phoneScale: 0.8, lang: null, fills:[0,0,0,0,0,0,0], skill:0, active:0, phase:-1, hover:0, open:-1, tour:null, modal:null };
   canvasRef = React.createRef(); blobRef = React.createRef(); ringRef = React.createRef(); dotRef = React.createRef();
-  modalRef = el => { this.modalEl=el; if(!el||!el.animate) return; const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; el.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'}],{duration:900,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); const p=el.firstElementChild; p&&p.animate([{opacity:0,transform:'translateY(80px) scale(.94)'},{opacity:1,transform:'none'}],{duration:1000,delay:300,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); };
+  modalRef = el => { this.modalEl=el; if(!el||!el.animate) return; const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; el.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'}],{duration:TOUCH?550:900,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); const p=el.firstElementChild; p&&p.animate([{opacity:0,transform:TOUCH?'translateY(24px)':'translateY(80px) scale(.94)'},{opacity:1,transform:'none'}],{duration:TOUCH?500:1000,delay:TOUCH?150:300,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); };
   closeModal(){ const el=this.modalEl; if(!el||!el.animate) return this.setState({modal:null}); const [cx,cy]=this.clickPt||[innerWidth/2,innerHeight/2]; const a=el.animate([{clipPath:'circle(150vmax at '+cx+'px '+cy+'px)'},{clipPath:'circle(0px at '+cx+'px '+cy+'px)'}],{duration:650,easing:'cubic-bezier(.7,0,.2,1)',fill:'both'}); a.onfinish=()=>this.setState({modal:null}); }
 
   componentDidMount(){
     this.onScroll = () => {
-      const y = window.scrollY + window.innerHeight*0.4;
-      const fills = IDS.map(id => { const el=document.getElementById(id); if(!el) return 0; const top=el.offsetTop, h=el.offsetHeight; return Math.max(0,Math.min(1,(y-top)/h)); });
-      let active=0; fills.forEach((f,i)=>{ if(f>0) active=i; });
-      this.setState({ fills, active });
-      this.updateManifesto();
+      if (this.scrollRaf) return;
+      this.scrollRaf = requestAnimationFrame(() => {
+        this.scrollRaf = 0;
+        const y = window.scrollY + window.innerHeight*0.4;
+        const fills = IDS.map(id => { const el=document.getElementById(id); if(!el) return 0; const top=el.offsetTop, h=el.offsetHeight; return Math.round(Math.max(0,Math.min(1,(y-top)/h))*100)/100; });
+        let active=0; fills.forEach((f,i)=>{ if(f>0) active=i; });
+        const prev = this.state.fills;
+        if (active !== this.state.active || fills.some((f,i)=>f!==prev[i])) this.setState({ fills, active });
+        this.updateManifesto();
+      });
     };
     window.addEventListener('scroll', this.onScroll, { passive:true });
     this.onScroll();
     this.cleanups=[]; this.initHero(); this.initBlob(); this.initCursor(); this.initReveal();
+    this.clockT=setInterval(()=>this.setState({now:Date.now()}),30000);
     const au=document.getElementById('s-auditorias');
     if(au && 'IntersectionObserver' in window){ this.io=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ this.runScan(); this.io.disconnect(); } },{threshold:0.25}); this.io.observe(au); } else this.setState({scan:10});
   }
   runScan(){ clearInterval(this.scanT); this.setState({scan:0}); this.scanT=setInterval(()=>{ if(this.state.scan>=10){ clearInterval(this.scanT); return; } this.setState(s=>({scan:s.scan+1})); },160); }
   componentWillUnmount(){
-    clearInterval(this.scanT); this.io && this.io.disconnect();
-    window.removeEventListener('scroll', this.onScroll);
+    clearInterval(this.scanT); clearInterval(this.clockT); this.io && this.io.disconnect();
+    window.removeEventListener('scroll', this.onScroll); cancelAnimationFrame(this.scrollRaf);
     clearTimeout(this.retry); clearTimeout(this.retry2); (this.cleanups||[]).forEach(f=>f()); this.cleanups=[]; this.revIO && this.revIO.disconnect(); clearTimeout(this.revT);
   }
   componentDidUpdate(prev){
@@ -1246,7 +1339,7 @@ class Component extends DCLogic {
     const renderer=new T.WebGLRenderer({antialias:false,alpha:false,powerPreference:'high-performance'});
     const sz=()=>{ const r=el.getBoundingClientRect(); return [Math.max(1,Math.round(r.width||el.parentElement.clientWidth||innerWidth)), Math.max(1,Math.round(r.height||el.parentElement.clientHeight||innerHeight))]; };
     let [W0,H0]=sz();
-    renderer.setPixelRatio(1); renderer.setSize(W0,H0);
+    renderer.setPixelRatio(TOUCH?0.5:1); renderer.setSize(W0,H0);
     renderer.domElement.style.display='block'; el.appendChild(renderer.domElement);
     const scene=new T.Scene(), cam=new T.OrthographicCamera(-1,1,1,-1,0,1);
     const trail=Array.from({length:24},()=>new T.Vector3(0,0,-99));
@@ -1256,18 +1349,19 @@ class Component extends DCLogic {
     const clock=new T.Clock(), target=new T.Vector2(0.7,0.5);
     let ti=0, lx=-1, ly=-1, lastT=0, force=0, inside=false, raf=0, visible=true;
     const push=(x,y,t)=>{ trail[ti%24].set(x,y,t); ti++; lx=x; ly=y; lastT=t; };
-    const onMove=e=>{ const r=el.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width, y=1-(e.clientY-r.top)/r.height; inside=x>=0&&x<=1&&y>=0&&y<=1; if(!inside) return; target.set(x,y); const now=clock.getElapsedTime(); if(Math.hypot(x-lx,y-ly)>0.035||now-lastT>0.14) push(x,y,now); force=Math.min(1,force+0.12); };
-    window.addEventListener('pointermove',onMove,{passive:true});
+    const onMove=e=>{ const r=el.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width, y=1-(e.clientY-r.top)/r.height; inside=x>=0&&x<=1&&y>=0&&y<=1; if(!inside) return; target.set(x,y); const now=clock.getElapsedTime(); if(Math.hypot(x-lx,y-ly)>0.08||now-lastT>0.35) push(x,y,now); force=Math.min(1,force+0.06); };
+    window.addEventListener('pointermove',onMove,{passive:true}); window.addEventListener('pointerdown',onMove,{passive:true});
+    const onUp=e=>{ if(e.pointerType!=='mouse') inside=false; }; window.addEventListener('pointerup',onUp,{passive:true}); window.addEventListener('pointercancel',onUp,{passive:true});
     const loop=()=>{ cancelAnimationFrame(raf); if(!visible) return; const t=clock.getElapsedTime(); u.uTime.value=t;
-      if(!inside){ const ix=0.7+0.16*Math.sin(t*0.37), iy=0.5+0.22*Math.sin(t*0.53+1); target.set(ix,iy); if(t-lastT>0.6) push(ix,iy,t); }
-      u.uMouse.value.lerp(target,0.08); force*=0.96; u.uForce.value+=((inside?0.6:0.25)+force*0.6-u.uForce.value)*0.06;
+      if(!inside){ const ix=0.7+0.16*Math.sin(t*0.37), iy=0.5+0.22*Math.sin(t*0.53+1); target.set(ix,iy); if(t-lastT>2.2) push(ix,iy,t); }
+      u.uMouse.value.lerp(target,0.08); force*=0.96; u.uForce.value+=((inside?0.4:0.2)+force*0.4-u.uForce.value)*0.05;
       renderer.render(scene,cam); raf=requestAnimationFrame(loop); };
     const io=new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible) loop(); }); io.observe(el);
     const fit=()=>{ const [W,H]=sz(); renderer.setSize(W,H); u.uRes.value.set(W,H); renderer.render(scene,cam); };
     loop(); fit();
     const ro=new ResizeObserver(fit); ro.observe(el); const ft=setTimeout(fit,400);
     this.cleanups.push(()=>clearTimeout(ft));
-    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
+    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); window.removeEventListener('pointerdown',onMove); window.removeEventListener('pointerup',onUp); window.removeEventListener('pointercancel',onUp); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
   }
   initBlob(){
     const T=window.THREE, el=this.blobRef.current;
@@ -1275,7 +1369,7 @@ class Component extends DCLogic {
     if(this.props.show3d===false) return;
     const renderer=new T.WebGLRenderer({antialias:true,alpha:true});
     const bsz=()=>{ const r=el.getBoundingClientRect(); const s=Math.max(1,Math.round(r.width||el.parentElement.clientWidth*1.12||400)); return [s, Math.max(1,Math.round(r.height||s))]; };
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2)); renderer.setSize(...bsz());
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,TOUCH?1.5:2)); renderer.setSize(...bsz());
     renderer.domElement.style.display='block'; el.appendChild(renderer.domElement);
     const scene=new T.Scene(), cam=new T.PerspectiveCamera(35,1,0.1,50); cam.position.z=6;
     const u={uTime:{value:0},uMouse:{value:new T.Vector3(0.3,0.4,1)},uForce:{value:0}};
@@ -1283,7 +1377,8 @@ class Component extends DCLogic {
     scene.add(new T.Mesh(geo,mat));
     const target=new T.Vector3(0.3,0.4,1), clock=new T.Clock(); let near=false, f=0, raf=0, visible=false;
     const onMove=e=>{ const r=el.getBoundingClientRect(); const mx=((e.clientX-r.left)/r.width-0.5)*2, my=-((e.clientY-r.top)/r.height-0.5)*2; near=Math.hypot(mx,my)<1.25; if(near) target.set(mx*1.6,my*1.6,1); };
-    window.addEventListener('pointermove',onMove,{passive:true});
+    window.addEventListener('pointermove',onMove,{passive:true}); window.addEventListener('pointerdown',onMove,{passive:true});
+    const onUp=e=>{ if(e.pointerType!=='mouse') setTimeout(()=>{ near=false; },900); }; window.addEventListener('pointerup',onUp,{passive:true});
     const loop=()=>{ cancelAnimationFrame(raf); if(!visible) return; const t=clock.getElapsedTime(); u.uTime.value=t;
       if(!near) target.set(Math.sin(t*0.4)*0.8,Math.cos(t*0.3)*0.6,1);
       u.uMouse.value.lerp(target,0.07); f+=((near?1:0.35)-f)*0.05; u.uForce.value=f;
@@ -1292,7 +1387,7 @@ class Component extends DCLogic {
     const bfit=()=>{ const [W,H]=bsz(); renderer.setSize(W,H); cam.aspect=W/H; cam.updateProjectionMatrix(); renderer.render(scene,cam); };
     bfit(); const ro=new ResizeObserver(bfit); ro.observe(el); const bt=setTimeout(bfit,400);
     this.cleanups.push(()=>clearTimeout(bt));
-    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
+    this.cleanups.push(()=>{ visible=false; cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); window.removeEventListener('pointermove',onMove); window.removeEventListener('pointerdown',onMove); window.removeEventListener('pointerup',onUp); geo.dispose(); mat.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove(); });
   }
   initCursor(){
     if(this.props.cursorFx===false || !window.matchMedia('(pointer:fine)').matches) return;
@@ -1333,10 +1428,11 @@ class Component extends DCLogic {
     this.cleanups.push(()=>{ cancelAnimationFrame(raf); window.removeEventListener('pointermove',onMove); window.removeEventListener('resize',size); document.documentElement.classList.remove('ap-cursor'); cv.style.display='none'; dot.style.display='none'; });
   }
   initReveal(){
-    if(!('IntersectionObserver' in window) || !Element.prototype.animate) return;
+    if(!('IntersectionObserver' in window) || !Element.prototype.animate || REDUCED) return;
+    const dy = TOUCH ? 16 : 56, dur = TOUCH ? 650 : 1100, step = TOUCH ? 60 : 110;
     this.revIO=new IntersectionObserver(es=>(this.ioFired=true, es).forEach(en=>{ if(en.isIntersecting){ en.target.__rv&&en.target.__rv.play(); this.revIO.unobserve(en.target); } }),{threshold:0.15});
-    document.querySelectorAll('[data-reveal]').forEach(el=>{ const d=+(el.getAttribute('data-reveal')||0); const a=el.animate([{opacity:0,transform:'translateY(56px)'},{opacity:1,transform:'none'}],{duration:1100,delay:d*110,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; const r=el.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) a.play(); else this.revIO.observe(el); });
-    document.querySelectorAll('[data-bar]').forEach(el=>{ const d=+(el.getAttribute('data-bar')||0); const a=el.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:1400,delay:200+d*120,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; this.revIO.observe(el); });
+    document.querySelectorAll('[data-reveal]').forEach(el=>{ const d=+(el.getAttribute('data-reveal')||0); const a=el.animate([{opacity:0,transform:'translateY('+dy+'px)'},{opacity:1,transform:'none'}],{duration:dur,delay:d*step,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; const r=el.getBoundingClientRect(); if(r.top<innerHeight&&r.bottom>0) a.play(); else this.revIO.observe(el); });
+    document.querySelectorAll('[data-bar]').forEach(el=>{ const d=+(el.getAttribute('data-bar')||0); const a=el.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:TOUCH?800:1400,delay:(TOUCH?100:200)+d*(TOUCH?60:120),easing:'cubic-bezier(.16,1,.3,1)',fill:'both'}); a.pause(); el.__rv=a; this.revIO.observe(el); });
     this.revT=setTimeout(()=>!this.ioFired && document.querySelectorAll('[data-reveal],[data-bar]').forEach(el=>{ if(el.__rv&&el.__rv.playState==='paused'){ el.__rv.finish(); } }),1500);
   }
   updateManifesto(){
@@ -1350,9 +1446,9 @@ class Component extends DCLogic {
 
   renderVals(){
     const lang = this.state.lang ?? this.props.lang ?? 'es';
-    const t = COPY[lang], didactic = this.props.didactic ?? true;
+    const t = TOUCH ? { ...COPY[lang], ...TOUCH_COPY[lang] } : COPY[lang], didactic = this.props.didactic ?? true;
     const { fills, active, phase, hover, open, tour, modal } = this.state;
-    const steps = [t.s1,t.sAbout,t.s2,t.s3,t.s4,t.s5].map((label,i)=>({ n:'0'+(i+1), label, fill:Math.round(fills[i]*100)+'%', op: i===active?1:0.55, go:()=>this.scrollTo(i) }));
+    const steps = [t.s1,t.sAbout,t.sExp,t.s2,t.s3,t.s4,t.s5].map((label,i)=>({ n:'0'+(i+1), label, fill:Math.round(fills[i]*100)+'%', op: i===active?1:0.55, go:()=>this.scrollTo(i) }));
     const phases = PHASES[lang].map((p,i)=>({ n:'0'+(i+1), title:p[0], body:p[1], why:p[2], showWhy: didactic && phase===i, bg: phase===i ? (i%2?'#E3F2EA':'#FBE6DC') : '#F7F5F1', enter:()=>this.setState({phase:i}) }));
     const L = { es:['PROBLEMA','PROCESO','SOLUCIÓN','IMPACTO'], en:['PROBLEM','PROCESS','SOLUTION','IMPACT'] }[lang];
     const projects = PROJECTS.map((p,i)=>{ const c=p[lang]; return {
@@ -1364,7 +1460,7 @@ class Component extends DCLogic {
     const hp = PROJECTS[hover];
     const preview = { title: hp[lang].title, decision: hp[lang].d, glow:`radial-gradient(60% 60% at 70% 30%, ${hp.glow}, transparent 70%)`, slot: t.previewSlot+' · '+hp[lang].title, hasPhoto: !!hp.img && !hp.icon, isIcon: !!hp.icon && !hp.cover, isAhorrandy: hp.cover==='ahorrandy', bgImg: hp.img ? 'url("'+hp.img+'")' : 'none', imgSize: hp.imgSize||'cover', imgBg: hp.imgBg||'transparent' };
     const goTour = i => { this.setState({tour:i}); if(i>0 || window.scrollY>40) this.scrollTo(i); };
-    const tv = tour!==null ? { pos:(tour+1)+' / 6', title:TOUR[lang][tour][0], body:TOUR[lang][tour][1], nextLabel: tour===5?t.finish:t.next, prevOp: tour===0?0.4:1, dots:[0,1,2,3,4,5].map(k=>({c:k<=tour?'#1E2430':'rgba(30,36,48,0.15)'})) } : {};
+    const tv = tour!==null ? { pos:(tour+1)+' / '+IDS.length, title:TOUR[lang][tour][0], body:(TOUCH && TOUR_TOUCH[lang][tour]) || TOUR[lang][tour][1], nextLabel: tour===IDS.length-1?t.finish:t.next, prevOp: tour===0?0.4:1, dots:IDS.map((_,k)=>k).map(k=>({c:k<=tour?'#1E2430':'rgba(30,36,48,0.15)'})) } : {};
     const { scan, hsel } = this.state, done = scan>=10;
     const scoreC = s => s<=4?'#E07A5A':s<=6?'#F2CF7E':'#7FC8A5';
     const heur = HEUR.map((x,i)=>{ const seen=i<scan, sel=i===hsel; return { code:'H'+(i+1), name:x[lang][0], scoreTxt: seen? x.s+'/10':'—', barW: seen? (x.s*10)+'%':'0%', barC: scoreC(x.s), bg: sel?'#1E2430':'#FFFFFF', fg: sel?'#F7F5F1':'#1E2430', bd: sel?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.hsel!==i) this.setState({hsel:i}); } }; });
@@ -1382,17 +1478,20 @@ class Component extends DCLogic {
     const skill = { title: sk[1], scope: sk[2], items: sk[3].map(x=>({t:x})) };
     return {
       timeline, skillGroups, skill,
-      heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(5),
+      heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(IDS.length-1),
+      jobs: JOBS.map(j=>({ co:j.co, current:!!j.current, role:j[lang].role, dates:j[lang].dates, place:j[lang].place, team:j[lang].team, items:j[lang].items.map(x=>({t:x})) })),
       cvHref: 'cv/CV-Andrea-Perez-'+lang.toUpperCase()+'.pdf',
+      laTime: new Date().toLocaleTimeString(lang==='es'?'es-AR':'en-US',{timeZone:'America/Argentina/Buenos_Aires',hour:'2-digit',minute:'2-digit',hour12:lang!=='es'}),
+      year: new Date().getFullYear(), goTop:()=>this.scrollTo(0),
       t, steps, phases, projects, preview, didactic, phoneRef:this.phoneRef, deskRef:this.deskRef, deskTransform:'scale('+this.state.deskScale.toFixed(4)+')', phoneTransform:'scale('+this.state.phoneScale.toFixed(4)+')',
       canvasRef:this.canvasRef,
       esBg: lang==='es'?'#1E2430':'transparent', esFg: lang==='es'?'#F7F5F1':'#1E2430',
       enBg: lang==='en'?'#1E2430':'transparent', enFg: lang==='en'?'#F7F5F1':'#1E2430',
       setEs:()=>this.setState({lang:'es'}), setEn:()=>this.setState({lang:'en'}),
       clearPhase:()=>this.setState({phase:-1}),
-      goProjects:()=>this.scrollTo(3), goAbout:()=>this.scrollTo(1),
+      goProjects:()=>this.scrollTo(IDS.indexOf('s-proyectos')), goAbout:()=>this.scrollTo(1),
       startTour:()=>goTour(0), endTour:()=>this.setState({tour:null}),
-      tourNext:()=> tour===5 ? this.setState({tour:null}) : goTour(tour+1),
+      tourNext:()=> tour===IDS.length-1 ? this.setState({tour:null}) : goTour(tour+1),
       tourPrev:()=> tour>0 && goTour(tour-1),
       tourOn: tour!==null, tour: tv,
       modalOn: modal!==null, modal: modal!==null ? (()=>{ const m=PROJECTS[modal]; const cs=['#F4B39A','#A9DCC0','#E9D9B8']; const desk = !!m.desk, web = m.view==='web'; this.deskW = web?1024:1440; return { colH: web?'auto':'min(720px,calc(100vh - 130px))', leftFlex: web?'0 1 260px':'1 1 300px', rightFlex: web?'3 1 560px':'1.6 1 420px', webMain: web, showPhone: !web, host: (m.url||'').replace(/^https?:\/\//,'').replace(/\/$/,''), hasDesk: desk, phR: desk?'0':'50%', phT: desk?'none':'translateX(50%)', hasTips: !!m.tips, noTips: !m.tips, tips: m.tips ? m.tips[lang].map(x=>({title:x[0],body:x[1]})) : [], title:m[lang].title, note: m.note ? m.note[lang] : t.demoNote, url:m.url||'', hasUrl:!!m.url, noUrl:!m.url, roles:(m.roles?m.roles[lang]:[]).map((r,k)=>({n:k+1,title:r[0],body:r[1],c:cs[k]})) }; })() : {},

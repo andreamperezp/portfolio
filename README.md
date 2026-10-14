@@ -1,6 +1,6 @@
 # Portfolio · Andrea Pérez
 
-Product & Technology Leader · Product Management · Digital Products · AI-driven solutions
+Product Design Lead · CRMs & SaaS
 
 Portfolio interactivo de una sola página con escenas 3D en three.js, versión ES/EN y recorrido guiado.
 Es un sitio estático: no necesita build.
