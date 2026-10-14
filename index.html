@@ -631,7 +631,7 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
             </div>
             <div style="display:flex;flex-direction:column;gap:14px;grid-column:span 2;min-width:min(100%,260px)">
               <h3 style="margin:0;font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em;line-height:1.2">{{ j.role }}</h3>
-              <div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#F7F5F1">{{ t.expTeam }}</span><span>{{ j.team }}</span></div>
+              <div style="display:flex;gap:10px;align-items:baseline;font-size:14px;line-height:1.5"><span style="flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;padding:4px 8px;border-radius:999px;background:#F7F5F1">{{ t.expTeam }}</span><span style="flex:1 1 auto;min-width:0">{{ j.team }}</span></div>
               <sc-for list="{{ j.items }}" as="it" hint-placeholder-count="3">
                 <div style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;font-size:16px;line-height:1.55"><span style="color:#2F8F68;font-weight:800">→</span><span>{{ it.t }}</span></div>
               </sc-for>
@@ -1149,25 +1149,49 @@ const TOUR_TOUCH = {
 };
 const JOBS = [
   { co:'Delsud', current:true,
-    es:{ role:'Directora de Producto y Tecnología', dates:'may. 2025 – Actualidad', place:'Argentina', team:'[COMPLETAR: cantidad y composición, ej. 6 devs + 2 diseñadoras]',
-      items:['Lidero un equipo multidisciplinario de diseño, desarrollo y producto con Scrum y Kanban.','Defino la estrategia de producto y el roadmap, alineados con los objetivos de negocio.','Incorporé agentes de IA y automatizaciones para acortar los tiempos de entrega.'] },
-    en:{ role:'Director of Product & Technology', dates:'May 2025 – Present', place:'Argentina', team:'[COMPLETAR: size and makeup, e.g. 6 devs + 2 designers]',
-      items:['I lead a cross-functional design, development and product team using Scrum and Kanban.','I define the product strategy and roadmap, aligned with business goals.','I introduced AI agents and automation to shorten delivery times.'] } },
+    es:{ role:'Directora de Producto y Tecnología', dates:'may. 2025 – Actualidad', place:'Argentina',
+      team:'16 personas · 9 devs (frontend, backend y fullstack), 2 diseñadoras UX/UI, 2 QA, 1 DevOps, 1 PM y 1 coordinador',
+      items:['Cuido de punta a punta billeteras virtuales nativas: desde el primer boceto hasta que llegan a las manos de la gente en Google Play y App Store.',
+             'Junto al líder técnico, bajo las ideas del owner a tareas claras para el equipo: qué construimos, por qué y en qué orden.',
+             'Acompaño al equipo con Scrum y Kanban, y defino la estrategia y el roadmap de producto alineados al negocio.',
+             'Sumé agentes de IA y automatizaciones al día a día para acortar los tiempos de entrega.'] },
+    en:{ role:'Director of Product & Technology', dates:'May 2025 – Present', place:'Argentina',
+      team:'16 people · 9 devs (frontend, backend and fullstack), 2 UX/UI designers, 2 QA, 1 DevOps, 1 PM and 1 coordinator',
+      items:['I look after native digital wallets end to end: from the first sketch until they reach people’s hands on Google Play and the App Store.',
+             'Together with the tech lead, I turn the owner’s ideas into clear tasks for the team: what we build, why and in what order.',
+             'I guide the team with Scrum and Kanban, and define the product strategy and roadmap in line with the business.',
+             'I brought AI agents and automation into the daily workflow to shorten delivery times.'] } },
   { co:'LIMBO',
-    es:{ role:'Project Manager', dates:'ene. 2022 – may. 2025', place:'Argentina', team:'[COMPLETAR: cantidad y composición del equipo]',
-      items:['Dirigí proyectos digitales end-to-end con Scrum y Design Thinking.','Coordiné equipos de diseño, desarrollo y QA, mejorando la eficiencia operativa del área.','Gestioné clientes y stakeholders para entregar soluciones de alto valor.'] },
-    en:{ role:'Project Manager', dates:'Jan 2022 – May 2025', place:'Argentina', team:'[COMPLETAR: team size and makeup]',
-      items:['Managed digital projects end-to-end with Scrum and Design Thinking.','Coordinated design, development and QA teams, improving operational efficiency.','Managed clients and stakeholders to deliver high-value solutions.'] } },
+    es:{ role:'Project Manager', dates:'ene. 2022 – may. 2025', place:'Argentina',
+      team:'7 personas · 2 frontend, 2 backend, 1 QA, 1 DevOps y 1 PM',
+      items:['Llevé proyectos digitales de principio a fin con Scrum y Design Thinking, del discovery a la entrega.',
+             'Junto al líder técnico, traducía las ideas del owner en un plan que diseño, desarrollo y QA podían construir.',
+             'Ordené el trabajo entre equipos para ganar eficiencia y entregar soluciones de valor a clientes y stakeholders.'] },
+    en:{ role:'Project Manager', dates:'Jan 2022 – May 2025', place:'Argentina',
+      team:'7 people · 2 frontend, 2 backend, 1 QA, 1 DevOps and 1 PM',
+      items:['Ran digital projects from start to finish with Scrum and Design Thinking, from discovery to delivery.',
+             'Together with the tech lead, I turned the owner’s ideas into a plan that design, development and QA could build.',
+             'Organized work across teams to gain efficiency and deliver real value to clients and stakeholders.'] } },
   { co:'Albanghu',
-    es:{ role:'Diseñadora Web y Desarrolladora Frontend', dates:'jun. 2024 – jul. 2024', place:'Remoto', team:'[COMPLETAR: trabajo individual o con equipo]',
-      items:['Diseñé y desarrollé una landing page estratégica que reforzó la identidad visual de la empresa.','Personalicé un sistema en Bootstrap para que el producto escale.'] },
-    en:{ role:'Web Designer & Frontend Developer', dates:'Jun 2024 – Jul 2024', place:'Remote', team:'[COMPLETAR: solo or with a team]',
-      items:['Designed and built a strategic landing page that strengthened the company’s visual identity.','Customized a Bootstrap-based system so the product could scale.'] } },
+    es:{ role:'Diseñadora Web y Desarrolladora Frontend', dates:'jun. 2024 – jul. 2024', place:'Remoto',
+      team:'Trabajo individual, mano a mano con el owner',
+      items:['Diseñé y desarrollé una landing page estratégica que reforzó la identidad visual de la marca.',
+             'Personalicé un sistema en Bootstrap para que el producto pueda crecer sin rehacerse.'] },
+    en:{ role:'Web Designer & Frontend Developer', dates:'Jun 2024 – Jul 2024', place:'Remote',
+      team:'Solo, working hand in hand with the owner',
+      items:['Designed and built a strategic landing page that strengthened the brand’s visual identity.',
+             'Customized a Bootstrap-based system so the product could grow without being rebuilt.'] } },
   { co:'iMCreate LLC',
-    es:{ role:'UX/UI Designer Senior', dates:'2020 – 2022', place:'Nueva York, EE. UU. · Remoto', team:'[COMPLETAR: cantidad y composición del equipo]',
-      items:['Lideré proyectos internacionales con diseño centrado en el usuario.','Supervisé equipos de diseño y desarrollo, mejorando la usabilidad de los productos.'] },
-    en:{ role:'Senior UX/UI Designer', dates:'2020 – 2022', place:'New York, USA · Remote', team:'[COMPLETAR: team size and makeup]',
-      items:['Led international projects with a user-centered design approach.','Supervised design and development teams, improving product usability.'] } }
+    es:{ role:'UX/UI Designer Senior', dates:'2020 – 2022', place:'Nueva York, EE. UU. · Remoto',
+      team:'10 personas · 4 diseñadores, 4 devs (2 frontend y 2 backend) y 2 editores de video',
+      items:['Fui el puente entre el owner y el equipo: bajaba sus ideas a diseño, desarrollo y video.',
+             'Lideré proyectos internacionales con diseño centrado en el usuario, trabajando en remoto con Nueva York.',
+             'Supervisé el trabajo de diseño y desarrollo para mejorar la usabilidad de cada producto.'] },
+    en:{ role:'Senior UX/UI Designer', dates:'2020 – 2022', place:'New York, USA · Remote',
+      team:'10 people · 4 designers, 4 devs (2 frontend and 2 backend) and 2 video editors',
+      items:['I was the bridge between the owner and the team, turning ideas into design, development and video work.',
+             'Led international projects with a user-centered approach, working remotely with New York.',
+             'Supervised design and development work to improve the usability of every product.'] } }
 ];
 const IDS = ['s-inicio','s-sobre','s-experiencia','s-enfoque','s-proyectos','s-auditorias','s-contacto'];
 const SEV = { es:['Cosmético','Cosmético','Menor','Mayor','Crítico'], en:['Cosmetic','Cosmetic','Minor','Major','Critical'], c:['#A9DCC0','#A9DCC0','#F2CF7E','#F4B39A','#E07A5A'] };
@@ -1276,12 +1300,12 @@ const MANIFESTO = {
 };
 const CHAPTERS = {
   es:[['8 años liderando equipos','Desde 2018 diseño productos digitales y lidero equipos de diseño y desarrollo, del research al deploy.'],
-      ['CRMs, SaaS y sistemas de gestión','Productos con lógica de negocio compleja: un CRM para brokers de seguros, un sistema de tareas en cascada, una red B2B y Filo, un SaaS de turnos.'],
-      ['Equipos multidisciplinarios','Lidero diseñadores, desarrolladores y product managers. [COMPLETAR: tamaño y composición del equipo, ej. 6 devs + 2 diseñadoras]'],
+      ['CRMs, SaaS y billeteras virtuales','Productos con lógica de negocio compleja: billeteras nativas para Android e iOS, un CRM para brokers de seguros, un sistema de tareas en cascada y Filo, un SaaS de turnos.'],
+      ['Equipos de hasta 16 personas','Desarrollo, diseño, QA y DevOps. Junto al líder técnico, convierto las ideas del owner en un plan que el equipo entiende y puede construir.'],
       ['Diseño pensando en el código','Componentes reutilizables, revisión técnica de interfaces y Scrum compartido con Desarrollo y QA. También publico código: mis productos propios están en producción.']],
   en:[['8 years leading teams','Since 2018 I have designed digital products and led design and development teams, from research to deploy.'],
-      ['CRMs, SaaS and management systems','Products with complex business logic: a CRM for insurance brokers, a cascading task system, a B2B network and Filo, a booking SaaS.'],
-      ['Cross-functional teams','I lead designers, developers and product managers. [COMPLETAR: team size and makeup, e.g. 6 devs + 2 designers]'],
+      ['CRMs, SaaS and digital wallets','Products with complex business logic: native wallets for Android and iOS, a CRM for insurance brokers, a cascading task system and Filo, a booking SaaS.'],
+      ['Teams of up to 16 people','Development, design, QA and DevOps. Together with the tech lead, I turn the owner’s ideas into a plan the team understands and can build.'],
       ['Designing with code in mind','Reusable components, technical review of interfaces and shared Scrum with Development and QA. I also ship code: my own products are live in production.']]
 };
 
@@ -1397,7 +1421,7 @@ class Component extends DCLogic {
     const ctx=cv.getContext('2d'); let dpr=1, W=0, H=0;
     const size=()=>{ dpr=Math.min(devicePixelRatio,2); W=innerWidth; H=innerHeight; cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); };
     size(); window.addEventListener('resize',size);
-    const N=22, pts=Array.from({length:N},()=>({x:innerWidth/2,y:innerHeight/2}));
+    const N=12, pts=Array.from({length:N},()=>({x:innerWidth/2,y:innerHeight/2}));
     let x=innerWidth/2, y=innerHeight/2, hot=false, raf=0, energy=0, lx=x, ly=y;
     const ease='transform .5s cubic-bezier(.16,1,.3,1)';
     const onMove=e=>{ x=e.clientX; y=e.clientY;
@@ -1416,8 +1440,8 @@ class Component extends DCLogic {
         ctx.lineCap='round'; ctx.lineJoin='round';
         for(let i=N-1;i>0;i--){
           const u=1-i/N, a=pts[i], b=pts[i-1];
-          ctx.strokeStyle='rgba('+Math.round(238-(238-127)*(1-u))+','+Math.round(155+(200-155)*(1-u))+','+Math.round(126+(165-126)*(1-u))+','+(0.75*u*energy).toFixed(3)+')';
-          ctx.lineWidth=2+u*22*energy;
+          ctx.strokeStyle='rgba('+Math.round(238-(238-127)*(1-u))+','+Math.round(155+(200-155)*(1-u))+','+Math.round(126+(165-126)*(1-u))+','+(0.28*u*energy).toFixed(3)+')';
+          ctx.lineWidth=1.5+u*7*energy;
           ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
         }
       }
