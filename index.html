@@ -939,7 +939,10 @@ html{touch-action:pan-y}
 
     <div style="margin-top:56px;border-radius:24px;padding:32px clamp(20px,3vw,40px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:radial-gradient(70% 120% at 0% 0%,rgba(244,179,154,0.55),transparent 60%),radial-gradient(70% 120% at 100% 100%,rgba(169,220,192,0.6),transparent 60%),#F2EEE7">
       <p style="margin:0;font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-0.015em;max-width:620px;text-wrap:pretty">{{ t.auditCta }}</p>
-      <button sc-camel-on-click="{{ goContact }}" style="white-space:nowrap;border:0;border-radius:999px;padding:14px 24px;background:#1E2430;color:#F7F5F1;font:700 15px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.auditBtn }}</button>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <a data-magnet="1" href="{{ auditWa }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;border-radius:999px;padding:14px 24px;background:#1E2430;color:#F7F5F1;font:700 15px Manrope,sans-serif;text-decoration:none" style-hover="background:#333B4B;color:#F7F5F1"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path></svg>{{ t.auditBtn }}</a>
+        <a href="https://t.me/andreamperezp" target="_blank" rel="noopener" style="font-size:14px;font-weight:600;color:#1E2430">{{ t.auditTg }}</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1093,7 +1096,7 @@ const COPY = {
     auditTitle:'Auditorías UX para empresas', auditLead:'Evalúo productos digitales en uso con las 10 heurísticas de Nielsen y entrego un plan de mejoras priorizado por severidad e impacto en el negocio.',
     reportLabel:'REPORTE DE AUDITORÍA', sampleReport:'Datos de ejemplo', scan:'Volver a escanear', scanning:'Escaneando…', overall:'PUNTAJE GENERAL',
     heuristic:'HEURÍSTICA', whatCheck:'QUÉ REVISO', finding:'HALLAZGO', reco:'RECOMENDACIÓN', deliverable:'ENTREGABLE',
-    auditHint:'← Pasa el cursor por cada heurística para ver su hallazgo', auditCta:'¿Tu producto necesita una mirada externa? Empiezo con una auditoría.', auditBtn:'Solicitar auditoría',
+    auditHint:'← Pasa el cursor por cada heurística para ver su hallazgo', auditCta:'¿Tu producto necesita una mirada externa? Empiezo con una auditoría.', auditBtn:'Solicitar auditoría', auditTg:'o escribime por Telegram', auditMsg:'Hola Andrea, vi tu portfolio y me interesa una auditoría UX para mi producto.',
     approachTitle:'Cómo trabajo', approachLead:'Cuatro etapas que se repiten en cada proyecto. Pasa el cursor sobre cada una para ver por qué la hago así.',
     why:'POR QUÉ', hoverHint:'↑ Pasa el cursor sobre cada etapa', projectsTitle:'Proyectos seleccionados',
     sampleNote:'01–02 con demo en vivo', tipsLabel:'RECOMENDACIONES', ahzTag:'Finanzas personales · ARS / USD', ahzH:'Sabé en qué se va cada peso.', ahzSub:'Registrá gastos e ingresos en segundos, en pesos o dólares, y mirá tu patrimonio y tus metas al día.', ahzR1:'Sueldo', ahzR2:'Supermercado', ahzR3:'Meta: viaje', ahzNet:'Patrimonio neto', openBrowser:'Abrir en el navegador', live:'EN VIVO', openTab:'Abrir en pestaña nueva', howTry:'CÓMO PROBARLA', demoNote:'Demo con datos inventados. El código de ingreso aparece en pantalla: probá con cualquier celular.', play:'Jugar prototipo', caseSoon:'Caso completo · próximamente',
@@ -1109,7 +1112,7 @@ const COPY = {
     auditTitle:'UX audits for companies', auditLead:'I evaluate live digital products against Nielsen’s 10 heuristics and deliver an improvement plan prioritized by severity and business impact.',
     reportLabel:'AUDIT REPORT', sampleReport:'Sample data', scan:'Scan again', scanning:'Scanning…', overall:'OVERALL SCORE',
     heuristic:'HEURISTIC', whatCheck:'WHAT I CHECK', finding:'FINDING', reco:'RECOMMENDATION', deliverable:'DELIVERABLE',
-    auditHint:'← Hover each heuristic to see its finding', auditCta:'Does your product need an outside look? I start with an audit.', auditBtn:'Request an audit',
+    auditHint:'← Hover each heuristic to see its finding', auditCta:'Does your product need an outside look? I start with an audit.', auditBtn:'Request an audit', auditTg:'or message me on Telegram', auditMsg:'Hi Andrea, I saw your portfolio and I’m interested in a UX audit for my product.',
     approachTitle:'How I work', approachLead:'Four stages I repeat on every project. Hover each one to see why I do it this way.',
     why:'WHY', hoverHint:'↑ Hover each stage', projectsTitle:'Selected projects',
     sampleNote:'01–02 with live demo', tipsLabel:'TIPS', ahzTag:'Personal finance · ARS / USD', ahzH:'Know where every peso goes.', ahzSub:'Log expenses and income in seconds, in pesos or dollars, and keep your net worth and goals up to date.', ahzR1:'Salary', ahzR2:'Groceries', ahzR3:'Goal: trip', ahzNet:'Net worth', openBrowser:'Open in browser', live:'LIVE', openTab:'Open in new tab', howTry:'HOW TO TRY IT', demoNote:'Demo with made-up data. The login code shows on screen: try any phone number.', play:'Play prototype', caseSoon:'Full case · coming soon',
@@ -1528,6 +1531,7 @@ class Component extends DCLogic {
       skillGroups, skill,
       heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(IDS.length-1),
       jobs: JOBS.map(j=>({ co:j.co, current:!!j.current, role:j[lang].role, dates:j[lang].dates, place:j[lang].place, team:j[lang].team, items:j[lang].items.map(x=>({t:x})) })),
+      auditWa: 'https://wa.me/5492213512482?text='+encodeURIComponent(t.auditMsg),
       cvHref: 'cv/CV-Andrea-Perez-'+lang.toUpperCase()+'.pdf',
       laTime: new Date().toLocaleTimeString(lang==='es'?'es-AR':'en-US',{timeZone:'America/Argentina/Buenos_Aires',hour:'2-digit',minute:'2-digit',hour12:lang!=='es'}),
       year: new Date().getFullYear(), goTop:()=>this.scrollTo(0),
