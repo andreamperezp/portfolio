@@ -50,6 +50,22 @@ async function readLimited(res) {
 const count = (html, re) => (html.match(re) || []).length;
 const attr = (tag, name) => { const m = tag.match(new RegExp('\\s' + name + '\\s*=\\s*("([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i')); return m ? (m[2] ?? m[3] ?? m[4] ?? '') : null; };
 
+// Links y botones sin nombre: no tienen texto, aria-label, title ni una imagen con alt adentro
+function namedControls(html) {
+  const unnamed = re => (html.match(re) || []).filter(m => {
+    const open = (m.match(/^<[^>]*>/) || [''])[0];
+    if (attr(open, 'aria-label') || attr(open, 'aria-labelledby') || attr(open, 'title')) return false;
+    if (/<img\b[^>]*\salt\s*=\s*["'][^"']+["']/i.test(m)) return false;
+    return !m.replace(/<[^>]+>/g, '').replace(/&nbsp;|\s/g, '');
+  }).length;
+  return {
+    links: count(html, /<a\b[^>]*href/gi),
+    linksNoText: unnamed(/<a\b[^>]*href[^>]*>[\s\S]*?<\/a>/gi),
+    buttons: count(html, /<button\b/gi),
+    buttonsNoText: unnamed(/<button\b[^>]*>[\s\S]*?<\/button>/gi),
+  };
+}
+
 function analyze(html) {
   const head = (html.match(/<head[\s\S]*?<\/head>/i) || [html])[0];
   const title = ((head.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '').replace(/\s+/g, ' ').trim();
@@ -80,6 +96,11 @@ function analyze(html) {
     inputsNoLabel: outside.filter(t => !attr(t, 'aria-label') && !attr(t, 'aria-labelledby') && !(attr(t, 'id') && labelFor.has(attr(t, 'id')))).length,
     ogImage: !!ogImage,
     favicon: /<link\b[^>]*rel\s*=\s*["'][^"']*icon/i.test(head),
+    appleIcon: /<link\b[^>]*rel\s*=\s*["']apple-touch-icon/i.test(head),
+    h2: count(html, /<h2\b/gi),
+    main: /<main\b|role\s*=\s*["']main/i.test(html),
+    nav: /<nav\b|role\s*=\s*["']navigation/i.test(html),
+    ...namedControls(html),
     textChars: body.length,
   };
 }
