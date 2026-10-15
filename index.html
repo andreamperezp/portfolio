@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Andrea Pérez · Product Design Lead</title>
 <meta name="description" content="Product Design Lead. Diseño y lidero productos digitales complejos: CRMs, SaaS y sistemas de gestión.">
 <meta property="og:title" content="Andrea Pérez · Product Design Lead">
@@ -10,6 +10,7 @@
 <meta name="theme-color" content="#F7F5F1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"vendor/react-dom.production.min.js"};</script>
+<script>/* iOS ignora user-scalable=no: bloquea el pellizco */ document.addEventListener('gesturestart',function(e){e.preventDefault();},{passive:false});</script>
 <script src="vendor/three.min.js"></script>
 <script src="vendor/dc-runtime.js"></script>
 </head>
@@ -529,6 +530,8 @@ a{color:#1E2430;text-decoration:underline;text-underline-offset:3px}
 a:hover{color:#B4553A}
 *{box-sizing:border-box}
 html.ap-cursor,html.ap-cursor *{cursor:none!important}
+html,body{overflow-x:clip;max-width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{touch-action:pan-y}
 .ap-menu-btn,.ap-progress{display:none}
 @media (max-width:760px){
   .ap-nav-desk,.ap-actions-desk,.ap-head-sub{display:none!important}
@@ -676,23 +679,6 @@ html.ap-cursor,html.ap-cursor *{cursor:none!important}
               </sc-for>
             </div>
           </article>
-        </sc-for>
-      </div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:28px">
-      <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
-        <h3 style="margin:0;font-size:clamp(24px,2.6vw,34px);font-weight:700;letter-spacing:-0.02em">{{ t.pathTitle }}</h3>
-        <p style="margin:0;font-size:15px;max-width:440px;text-wrap:pretty">{{ t.pathLead }}</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
-        <sc-for list="{{ timeline }}" as="tl" hint-placeholder-count="5">
-          <div style="border-radius:18px;padding:20px;background:{{ tl.bg }};color:{{ tl.fg }};border:1px solid {{ tl.bd }};display:flex;flex-direction:column;gap:10px;transition:transform .25s" style-hover="transform:translateY(-4px)">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ tl.lvl }}</span>
-            <span style="font-size:19px;font-weight:800;letter-spacing:-0.01em">{{ tl.title }}</span>
-            <span style="font-size:14px;line-height:1.5;text-wrap:pretty">{{ tl.text }}</span>
-            <span style="margin-top:auto;align-self:flex-start;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:{{ tl.chip }}">{{ tl.skill }}</span>
-          </div>
         </sc-for>
       </div>
     </div>
@@ -1158,16 +1144,9 @@ const PROJECTS = [
   { glow:'#F2CF7E', es:{"title":"Red social industrial B2B","meta":"Networking B2B · Producto · En producción","p":"Las empresas de los parques industriales no tenían un espacio propio para conectarse y encontrar sinergias.","pr":"Diseño de perfiles corporativos, comunidades por sector y un feed de novedades.","s":"Red social de networking exclusiva para parques industriales.","i":"En producción, conectando actores clave de la industria.","d":"Comunidades por sector para que cada empresa vea contenido relevante para su rubro."}, en:{"title":"B2B industrial social network","meta":"B2B networking · Product · In production","p":"Companies in industrial parks had no space of their own to connect and find synergies.","pr":"Designing company profiles, sector communities and an updates feed.","s":"A networking platform built exclusively for industrial parks.","i":"In production, connecting key industry players.","d":"Sector communities so each company sees content relevant to its industry."} },
 ];
 const TOUR = {
-  es:[['Portada','Una superficie líquida donde tu cursor es una fuerza: genera ondas a su paso. Desde aquí podés ir a los proyectos o seguir el recorrido.'],['Sobre mí','Quién soy y cómo trabajo, en cuatro datos. Acercá el cursor a la forma: es una idea viva que reacciona a vos.'],['Experiencia','Dónde trabajé, qué rol tuve y qué logré en cada puesto. Debajo, mi bitácora, competencias y herramientas.'],['Enfoque','Mi proceso en cuatro etapas. Pasa el cursor para ver la razón detrás de cada una.'],['Proyectos','Abre un proyecto para ver problema, proceso, solución e impacto. Los que tienen demo se pueden probar en vivo.'],['Auditorías','Un reporte de ejemplo: recorre las 10 heurísticas para ver qué hallazgos detecto y cómo los priorizo.'],['Contacto','Si algo resonó, escribime por LinkedIn, email o WhatsApp.']],
-  en:[['Home','A liquid surface where your cursor is a force: it sends ripples as it moves. From here you can jump to projects or follow the tour.'],['About','Who I am and how I work, in four facts. Bring your cursor close to the shape: it’s a living idea that reacts to you.'],['Experience','Where I have worked, my role and what I achieved in each position. Below: my log, skills and tools.'],['Approach','My four-stage process. Hover to see the reasoning behind each one.'],['Projects','Open a project to see problem, process, solution and impact. Those with a demo can be tried live.'],['Audits','A sample report: go through the 10 heuristics to see what I find and how I prioritize it.'],['Contact','If something resonated, reach me on LinkedIn, email or WhatsApp.']]
+  es:[['Portada','Una superficie líquida donde tu cursor es una fuerza: genera ondas a su paso. Desde aquí podés ir a los proyectos o seguir el recorrido.'],['Sobre mí','Quién soy y cómo trabajo, en cuatro datos. Acercá el cursor a la forma: es una idea viva que reacciona a vos.'],['Experiencia','Dónde trabajé, qué rol tuve y qué logré en cada puesto. Debajo, mis competencias y herramientas.'],['Enfoque','Mi proceso en cuatro etapas. Pasa el cursor para ver la razón detrás de cada una.'],['Proyectos','Abre un proyecto para ver problema, proceso, solución e impacto. Los que tienen demo se pueden probar en vivo.'],['Auditorías','Un reporte de ejemplo: recorre las 10 heurísticas para ver qué hallazgos detecto y cómo los priorizo.'],['Contacto','Si algo resonó, escribime por LinkedIn, email o WhatsApp.']],
+  en:[['Home','A liquid surface where your cursor is a force: it sends ripples as it moves. From here you can jump to projects or follow the tour.'],['About','Who I am and how I work, in four facts. Bring your cursor close to the shape: it’s a living idea that reacts to you.'],['Experience','Where I have worked, my role and what I achieved in each position. Below: my skills and tools.'],['Approach','My four-stage process. Hover to see the reasoning behind each one.'],['Projects','Open a project to see problem, process, solution and impact. Those with a demo can be tried live.'],['Audits','A sample report: go through the 10 heuristics to see what I find and how I prioritize it.'],['Contact','If something resonated, reach me on LinkedIn, email or WhatsApp.']]
 };
-const TIMELINE = [
-  {es:['Cimientos','Dominio del prototipado y la validación.','Design Thinking','Nivel 1 · 2018–2019'],en:['Foundations','Mastering prototyping and validation.','Design Thinking','Level 1 · 2018–2019']},
-  {es:['Expansión','Liderazgo de equipos multidisciplinarios.','Agile & Scrum','Nivel 2 · 2019–2021'],en:['Expansion','Leading multidisciplinary teams.','Agile & Scrum','Level 2 · 2019–2021']},
-  {es:['Especialización','Arquitectura de sistemas complejos.','Product Strategy','Nivel 3 · 2021–2023'],en:['Specialization','Architecture of complex systems.','Product Strategy','Level 3 · 2021–2023']},
-  {es:['Dirección estratégica','Visión de producto end-to-end.','AI Integration','Nivel 4 · 2023–2025'],en:['Strategic direction','End-to-end product vision.','AI Integration','Level 4 · 2023–2025']},
-  {es:['+ Innovación','IA generativa, liderazgo estratégico de producto y tecnologías emergentes.','Next level','Nivel 5 · El futuro'],en:['+ Innovation','Generative AI, strategic product leadership and emerging tech.','Next level','Level 5 · The future']}
-];
 const SKILLS = [
   {g:0,es:['Visión de producto','Visión de producto y estrategia de negocio','Definición del norte estratégico del ecosistema digital.',['Construcción y priorización del roadmap de producto a corto, mediano y largo plazo.','Análisis continuo de mercado y competidores para identificar oportunidades de innovación.','Cada funcionalidad tiene que generar un impacto directo y medible en los objetivos de la empresa.']],en:['Product vision','Product vision and business strategy','Setting the strategic direction of the digital ecosystem.',['Building and prioritizing the short, mid and long-term product roadmap.','Ongoing market and competitor analysis to spot innovation opportunities.','Every feature must have a direct, measurable impact on company goals.']]},
   {g:0,es:['Stakeholder Management','Gestión de stakeholders y alineación de negocio','Puentes entre la visión directiva y la ejecución técnica.',['Negociación y comunicación estratégica con la dirección y socios comerciales clave.','Traducción de necesidades de negocio complejas en requerimientos técnicos claros.','Gestión de expectativas y reportes trimestrales de avance e impacto.']],en:['Stakeholder management','Stakeholder management and business alignment','Bridging leadership vision and technical execution.',['Strategic negotiation and communication with leadership and key partners.','Translating complex business needs into clear technical requirements.','Managing expectations and quarterly progress and impact reports.']]},
@@ -1539,14 +1518,12 @@ class Component extends DCLogic {
     const avgTxt = scan ? (shown.reduce((a,x)=>a+x.s,0)/scan).toFixed(1) : '—';
     const sevCounts = [4,3,2,1].map(v=>({ c:SEV.c[v], label:SEV[lang][v], n: shown.filter(x=> v===1 ? x.v<=1 : x.v===v).length }));
     const auditSteps = AUDIT_STEPS[lang].map((a,i)=>({ n:'0'+(i+1), title:a[0], body:a[1], out:a[2] }));
-    const tlStyle = [['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#F7F5F1','#1E2430','rgba(30,36,48,0.1)','#FFFFFF'],['#1E2430','#F7F5F1','#1E2430','rgba(247,245,241,0.14)'],['linear-gradient(135deg,#F4B39A,#A9DCC0)','#1E2430','transparent','rgba(255,255,255,0.55)']];
-    const timeline = TIMELINE.map((x,i)=>({ title:x[lang][0], text:x[lang][1], skill:x[lang][2], lvl:x[lang][3], bg:tlStyle[i][0], fg:tlStyle[i][1], bd:tlStyle[i][2], chip:tlStyle[i][3] }));
     const si = this.state.skill;
     const skillGroups = [0,1].map(g=>({ label: g? (lang==='es'?'UX/UI Y TECH':'UX/UI & TECH') : (lang==='es'?'ESTRATEGIA Y LIDERAZGO':'STRATEGY & LEADERSHIP'), c: g?'#7FC8A5':'#EE9B7E', items: SKILLS.map((s,i)=>({s,i})).filter(o=>o.s.g===g).map(({s,i})=>({ name:s[lang][0], bg: si===i?'#1E2430':'#FFFFFF', fg: si===i?'#F7F5F1':'#1E2430', bd: si===i?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.skill!==i) this.setState({skill:i}); } })) }));
     const sk = SKILLS[si][lang];
     const skill = { title: sk[1], scope: sk[2], items: sk[3].map(x=>({t:x})) };
     return {
-      timeline, skillGroups, skill,
+      skillGroups, skill,
       heur, det, avgTxt, sevCounts, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(IDS.length-1),
       jobs: JOBS.map(j=>({ co:j.co, current:!!j.current, role:j[lang].role, dates:j[lang].dates, place:j[lang].place, team:j[lang].team, items:j[lang].items.map(x=>({t:x})) })),
       cvHref: 'cv/CV-Andrea-Perez-'+lang.toUpperCase()+'.pdf',
