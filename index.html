@@ -472,7 +472,7 @@ html{touch-action:pan-y}
 <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em">{{ t.reportLabel }}</span>
 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;border:{{ rep.chipBd }};background:{{ rep.chipBg }};border-radius:999px;padding:4px 10px">{{ rep.chip }}</span>
 </div>
-<button sc-camel-on-click="{{ rescan }}" style="white-space:nowrap;border:1px solid #1E2430;border-radius:999px;padding:9px 16px;background:transparent;color:#1E2430;font:700 13px Manrope,sans-serif;cursor:pointer" style-hover="background:rgba(30,36,48,0.06)">↻ {{ scanBtn }}</button>
+<sc-if value="{{ rep.real }}" hint-placeholder-val="{{ false }}"><button sc-camel-on-click="{{ rescan }}" style="white-space:nowrap;border:1px solid #1E2430;border-radius:999px;padding:9px 16px;background:transparent;color:#1E2430;font:700 13px Manrope,sans-serif;cursor:pointer" style-hover="background:rgba(30,36,48,0.06)">↻ {{ scanBtn }}</button></sc-if>
 </div>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
@@ -483,11 +483,13 @@ html{touch-action:pan-y}
 <span style="font-size:56px;font-weight:800;letter-spacing:-0.03em;line-height:1">{{ avgTxt }}<span style="font-size:20px;font-weight:600;opacity:0.5">/10</span></span>
 <sc-if value="{{ rep.real }}" hint-placeholder-val="{{ false }}"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;opacity:0.7">{{ rep.note }}</span></sc-if>
 </div>
+<sc-if value="{{ rep.real }}" hint-placeholder-val="{{ false }}">
 <div style="display:flex;gap:14px;flex-wrap:wrap;padding-bottom:6px">
 <sc-for list="{{ sevCounts }}" as="c" hint-placeholder-count="4">
 <span style="display:flex;align-items:center;gap:6px;font-size:13px"><span style="width:10px;height:10px;border-radius:3px;background:{{ c.c }}"></span><strong>{{ c.n }}</strong> {{ c.label }}</span>
 </sc-for>
 </div>
+</sc-if>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px">
 <sc-for list="{{ heur }}" as="hh" hint-placeholder-count="10">
@@ -512,6 +514,15 @@ html{touch-action:pan-y}
 <span style="font-family:'JetBrains Mono',monospace;font-size:11px">{{ t.whatCheck }}</span>
 <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ det.check }}</p>
 </div>
+<sc-if value="{{ det.empty }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:22px;border-radius:14px;border:1.5px dashed rgba(30,36,48,0.22);background:#FFFFFF">
+<span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B4553A">{{ t.finding }} · {{ t.reco }}</span>
+<p style="margin:0;font-size:16px;line-height:1.55;font-weight:600;text-wrap:pretty">{{ t.audEmptyT }}</p>
+<p style="margin:0;font-size:14px;line-height:1.55;opacity:0.8;text-wrap:pretty">{{ t.audEmptyL }}</p>
+<button sc-camel-on-click="{{ focusAudit }}" style="display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 20px;background:#1E2430;color:#F7F5F1;font:700 14px Manrope,sans-serif;cursor:pointer" style-hover="background:#333B4B">{{ t.audEmptyBtn }} ↑</button>
+</div>
+</sc-if>
+<sc-if value="{{ det.full }}" hint-placeholder-val="{{ true }}">
 <div style="display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:14px;background:#FFFFFF;border:1px solid rgba(30,36,48,0.08)">
 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B4553A">{{ t.finding }}</span>
 <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty;white-space:pre-line">{{ det.finding }}</p>
@@ -520,6 +531,7 @@ html{touch-action:pan-y}
 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#2F6B50">{{ t.reco }}</span>
 <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ det.rec }}</p>
 </div>
+</sc-if>
 <sc-if value="{{ det.locked }}" hint-placeholder-val="{{ false }}">
 <a href="{{ aud.wa }}" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 20px;background:#1E2430;color:#F7F5F1;font:700 14px Manrope,sans-serif;text-decoration:none" style-hover="background:#333B4B;color:#F7F5F1">{{ t.audMoreBtn }}</a>
 </sc-if>
@@ -694,7 +706,7 @@ const COPY = {
     lead:'Del research al deploy. 8 años liderando equipos de diseño y desarrollo.',
     ctaProjects:'Ver proyectos', ctaTour:'Iniciar recorrido', ctaAbout:'Conocé mi historia', ctaAboutSub:'Scroll · 2 min', drag:'Mové el cursor: la superficie reacciona', blobHint:'Acercá el cursor: la idea se mueve con vos',
     s1:'Inicio', sAbout:'Sobre mí', sExp:'Experiencia', expA:'Dónde lideré', expB:'producto, diseño y desarrollo.', expTeam:'EQUIPO', expNow:'ACTUAL', aboutA:'De la ejecución a la', aboutB:'dirección de producto.', aboutLead:'Amante de la tecnología y con ADN de UX Designer. Construyo puentes entre la visión de negocio y soluciones tecnológicas de impacto.', stackLabel:'STACK ESTRATÉGICO', pathTitle:'Mi bitácora', pathLead:'Esta trayectoria no tiene punto final: siempre construyendo hacia el siguiente nivel.', skillsTitle:'Competencias clave', toolsKicker:'STACK DE TRABAJO', toolsTitle:'Herramientas con las que trabajo', toolsLead:'Del diseño al deploy: con estas herramientas llevo una idea hasta un producto vivo en producción.', s2:'Enfoque', s3:'Proyectos', s4:'Auditorías', s5:'Contacto',
-    auditTitle:'Auditorías UX para empresas', auditLead:'Una mirada externa a tu producto digital: lo recorro como lo haría tu cliente, encuentro dónde se traba y te entrego un plan claro para mejorarlo, ordenado por lo que más impacta en tu negocio.', audTryK:'PROBALO CON TU WEB', audTryT:'Un adelanto de tu auditoría en segundos', audTryL:'Pegá el link de tu web y hago una revisión automática y rápida: celulares, accesibilidad, contenido y velocidad. Es un abrebocas; la auditoría completa recorre tu producto pantalla por pantalla.', audLabel:'Link de tu web', audPh:'tuweb.com', audGo:'Analizar', audLoading:'Leyendo tu web…', audDocK:'INFORME PRELIMINAR', audDocLabel:'Informe preliminar de auditoría', audMoreT:'Esto es solo la primera mitad', audMoreL:'El informe completo revisa tu producto con las 10 heurísticas de Nielsen, con capturas, severidad de cada hallazgo y un plan priorizado.', audMoreBtn:'Quiero el informe completo', audSeeDetail:'Ver el detalle por heurística', audSampleT:'Así se ve una auditoría completa', audSampleL:'Un reporte de ejemplo con datos ficticios: recorré las 10 heurísticas para ver cómo presento cada hallazgo.',
+    auditTitle:'Auditorías UX para empresas', auditLead:'Una mirada externa a tu producto digital: lo recorro como lo haría tu cliente, encuentro dónde se traba y te entrego un plan claro para mejorarlo, ordenado por lo que más impacta en tu negocio.', audTryK:'PROBALO CON TU WEB', audTryT:'Un adelanto de tu auditoría en segundos', audTryL:'Pegá el link de tu web y hago una revisión automática y rápida: celulares, accesibilidad, contenido y velocidad. Es un abrebocas; la auditoría completa recorre tu producto pantalla por pantalla.', audLabel:'Link de tu web', audPh:'tuweb.com', audGo:'Analizar', audLoading:'Leyendo tu web…', audDocK:'INFORME PRELIMINAR', audDocLabel:'Informe preliminar de auditoría', audMoreT:'Esto es solo la primera mitad', audMoreL:'El informe completo revisa tu producto con las 10 heurísticas de Nielsen, con capturas, severidad de cada hallazgo y un plan priorizado.', audMoreBtn:'Quiero el informe completo', audSeeDetail:'Ver el detalle por heurística', audEmptyT:'Tu hallazgo para esta heurística aparece acá.', audEmptyL:'Pegá el link de tu web en el analizador y este reporte se completa con tus resultados: puntaje, qué encontré y qué te recomiendo.', audEmptyBtn:'Analizar mi web', audSampleT:'Así se ve una auditoría completa', audSampleL:'Un reporte de ejemplo con datos ficticios: recorré las 10 heurísticas para ver cómo presento cada hallazgo.',
     reportLabel:'REPORTE DE AUDITORÍA', sampleReport:'Datos de ejemplo', scan:'Volver a escanear', scanning:'Escaneando…', overall:'PUNTAJE GENERAL',
     heuristic:'HEURÍSTICA', whatCheck:'QUÉ REVISO', finding:'HALLAZGO', reco:'RECOMENDACIÓN', deliverable:'ENTREGABLE',
     auditHint:'← Pasa el cursor por cada heurística para ver su hallazgo', auditCta:'¿Tu producto necesita una mirada externa? Empiezo con una auditoría.', auditBtn:'Solicitar auditoría', auditTg:'o escribime por Telegram', auditMsg:'Hola Andrea, vi tu portfolio y me interesa una auditoría UX para mi producto.',
@@ -710,7 +722,7 @@ const COPY = {
     lead:'From research to deploy. 8 years leading design and development teams.',
     ctaProjects:'See projects', ctaTour:'Start tour', ctaAbout:'Get to know me', ctaAboutSub:'Scroll · 2 min', drag:'Move your cursor: the surface responds', blobHint:'Bring your cursor close: the idea moves with you',
     s1:'Home', sAbout:'About', sExp:'Experience', expA:'Where I led', expB:'product, design and development.', expTeam:'TEAM', expNow:'CURRENT', aboutA:'From execution to', aboutB:'product leadership.', aboutLead:'A technology lover with a UX designer’s DNA. I build bridges between business vision and high-impact technology solutions.', stackLabel:'STRATEGIC STACK', pathTitle:'My log', pathLead:'This path has no end point: always building toward the next level.', skillsTitle:'Key skills', toolsKicker:'WORK STACK', toolsTitle:'Tools I work with', toolsLead:'From design to deploy: with these tools I take an idea all the way to a live product in production.', s2:'Approach', s3:'Projects', s4:'Audits', s5:'Contact',
-    auditTitle:'UX audits for companies', auditLead:'An outside look at your digital product: I go through it the way your customers do, find where they get stuck and hand you a clear plan to improve it, ordered by what matters most to your business.', audTryK:'TRY IT WITH YOUR SITE', audTryT:'A preview of your audit in seconds', audTryL:'Paste your site’s link and I’ll run a quick automatic check: mobile, accessibility, content and speed. It’s a taste; the full audit goes through your product screen by screen.', audLabel:'Your site’s link', audPh:'yoursite.com', audGo:'Analyze', audLoading:'Reading your site…', audDocK:'PRELIMINARY REPORT', audDocLabel:'Preliminary audit report', audMoreT:'This is only the first half', audMoreL:'The full report reviews your product against Nielsen’s 10 heuristics, with screenshots, the severity of each finding and a prioritized plan.', audMoreBtn:'I want the full report', audSeeDetail:'See the detail by heuristic', audSampleT:'What a full audit looks like', audSampleL:'A sample report with made-up data: go through the 10 heuristics to see how I present each finding.',
+    auditTitle:'UX audits for companies', auditLead:'An outside look at your digital product: I go through it the way your customers do, find where they get stuck and hand you a clear plan to improve it, ordered by what matters most to your business.', audTryK:'TRY IT WITH YOUR SITE', audTryT:'A preview of your audit in seconds', audTryL:'Paste your site’s link and I’ll run a quick automatic check: mobile, accessibility, content and speed. It’s a taste; the full audit goes through your product screen by screen.', audLabel:'Your site’s link', audPh:'yoursite.com', audGo:'Analyze', audLoading:'Reading your site…', audDocK:'PRELIMINARY REPORT', audDocLabel:'Preliminary audit report', audMoreT:'This is only the first half', audMoreL:'The full report reviews your product against Nielsen’s 10 heuristics, with screenshots, the severity of each finding and a prioritized plan.', audMoreBtn:'I want the full report', audSeeDetail:'See the detail by heuristic', audEmptyT:'Your finding for this heuristic shows up here.', audEmptyL:'Paste your site’s link in the analyzer and this report fills in with your results: score, what I found and what I recommend.', audEmptyBtn:'Analyze my site', audSampleT:'What a full audit looks like', audSampleL:'A sample report with made-up data: go through the 10 heuristics to see how I present each finding.',
     reportLabel:'AUDIT REPORT', sampleReport:'Sample data', scan:'Scan again', scanning:'Scanning…', overall:'OVERALL SCORE',
     heuristic:'HEURISTIC', whatCheck:'WHAT I CHECK', finding:'FINDING', reco:'RECOMMENDATION', deliverable:'DELIVERABLE',
     auditHint:'← Hover each heuristic to see its finding', auditCta:'Does your product need an outside look? I start with an audit.', auditBtn:'Request an audit', auditTg:'or message me on Telegram', auditMsg:'Hi Andrea, I saw your portfolio and I’m interested in a UX audit for my product.',
@@ -1188,17 +1200,17 @@ class Component extends DCLogic {
         if (h.locked) return { locked:true, s:0, v:-1, name:x[0], check:x[1], finding: h.noForms ? L2('No encontré formularios en la página de inicio: los reviso dentro de tu producto en el informe completo.','I found no forms on the home page: I review them inside your product in the full report.') : L2('Para evaluarla tengo que recorrer tu producto como lo haría un cliente: no se puede medir solo leyendo el código.','To evaluate it I need to go through your product the way a customer would: it can’t be measured just by reading the code.'), rec: L2('Incluida en el informe completo, con capturas y recomendaciones concretas.','Included in the full report, with screenshots and concrete recommendations.') };
         const bad = h.cs.filter(c => c.st<1);
         return { locked:false, s:h.s, v:audSev(h.s), name:x[0], check:x[1], finding: bad.length ? bad.map(c => c.text).join('\n') : L2('Todo lo que se puede revisar automáticamente está en orden. El resto se confirma recorriendo tu producto con usuarios reales.','Everything that can be checked automatically is in order. The rest is confirmed by going through your product with real users.'), rec: bad.length ? bad[0].rec : L2('Validarla con usuarios reales en el informe completo.','Validate it with real users in the full report.') }; })
-      : HEUR.map(x => ({ locked:false, s:x.s, v:x.v, name:x[lang][0], check:x[lang][1], finding:x[lang][2], rec:x[lang][3] }));
-    const heur = H.map((x,i)=>{ const seen=i<scan, sel=i===hsel; return { code:'H'+(i+1), name:x.name, op: x.locked?0.55:1, scoreTxt: x.locked ? '—' : seen ? x.s+'/10' : '—', barW: seen && !x.locked ? (x.s*10)+'%' : '0%', barC: scoreC(x.s), bg: sel?'#1E2430':'#FFFFFF', fg: sel?'#F7F5F1':'#1E2430', bd: sel?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.hsel!==i) this.setState({hsel:i}); } }; });
+      : HEUR.map(x => ({ empty:true, locked:false, s:0, v:-1, name:x[lang][0], check:x[lang][1], finding:'', rec:'' }));
+    const heur = H.map((x,i)=>{ const seen=i<scan, sel=i===hsel; return { code:'H'+(i+1), name:x.name, op: x.locked?0.55:1, scoreTxt: x.locked || x.empty ? '—' : seen ? x.s+'/10' : '—', barW: seen && !x.locked && !x.empty ? (x.s*10)+'%' : '0%', barC: scoreC(x.s), bg: sel?'#1E2430':'#FFFFFF', fg: sel?'#F7F5F1':'#1E2430', bd: sel?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.hsel!==i) this.setState({hsel:i}); } }; });
     const hx = H[hsel];
-    const det = { code:'H'+(hsel+1), name:hx.name, check:hx.check, finding:hx.finding, rec:hx.rec, locked: !!hx.locked,
-      sevLabel: hx.locked ? L2('En el informe completo','In the full report') : hx.v===0 ? L2('En orden','All good') : SEV[lang][hx.v]+' · '+hx.v+'/4',
-      sevC: hx.locked ? '#E9E6E0' : hx.v===0 ? '#A9DCC0' : SEV.c[hx.v] };
+    const det = { code:'H'+(hsel+1), name:hx.name, check:hx.check, finding:hx.finding, rec:hx.rec, locked: !!hx.locked, empty: !!hx.empty, full: !hx.empty,
+      sevLabel: hx.empty ? L2('Esperando tu web','Waiting for your site') : hx.locked ? L2('En el informe completo','In the full report') : hx.v===0 ? L2('En orden','All good') : SEV[lang][hx.v]+' · '+hx.v+'/4',
+      sevC: hx.locked || hx.empty ? '#E9E6E0' : hx.v===0 ? '#A9DCC0' : SEV.c[hx.v] };
     const shown = H.slice(0,scan).filter(x => !x.locked);
     const avgTxt = shown.length ? (shown.reduce((a,x)=>a+x.s,0)/shown.length).toFixed(1) : '—';
-    const sevCounts = [4,3,2,1].map(v=>({ c:SEV.c[v], label:SEV[lang][v], n: shown.filter(x=> v===1 ? (x.v===1||x.v===0) : x.v===v).length }));
+    const sevCounts = [4,3,2,1].map(v=>({ c:SEV.c[v], label:SEV[lang][v], n: shown.filter(x=> x.v===v).length }));
     const rep = M ? { title: L2('El detalle, heurística por heurística','The detail, heuristic by heuristic'), lead: L2(M.ev.length+' de las 10 heurísticas se pueden medir leyendo tu web. Las otras '+(10-M.ev.length)+' necesitan recorrer tu producto: están en el informe completo.', M.ev.length+' of the 10 heuristics can be measured by reading your site. The other '+(10-M.ev.length)+' need someone to go through your product: they’re in the full report.'), chip: this.state.audData.host, chipBd:'1px solid #7FC8A5', chipBg:'#E3F2EA', scoreK: L2('PUNTAJE PRELIMINAR','PRELIMINARY SCORE'), note: L2(M.ev.length+' de 10 heurísticas evaluadas automáticamente', M.ev.length+' of 10 heuristics checked automatically'), real:true }
-      : { title: t.audSampleT, lead: t.audSampleL, chip: t.sampleReport, chipBd:'1px dashed rgba(30,36,48,0.35)', chipBg:'transparent', scoreK: t.overall, note:'', real:false };
+      : { title: L2('Así se va a ver tu auditoría','This is how your audit will look'), lead: L2('Ingresá el link de tu web arriba y este reporte se completa con tus resultados, heurística por heurística.','Enter your site’s link above and this report fills in with your results, heuristic by heuristic.'), chip: L2('Esperando tu web','Waiting for your site'), chipBd:'1px dashed rgba(30,36,48,0.35)', chipBg:'transparent', scoreK: t.overall, note:'', real:false };
     const auditSteps = AUDIT_STEPS[lang].map((a,i)=>({ n:'0'+(i+1), title:a[0], body:a[1], out:a[2] }));
     const si = this.state.skill;
     const skillGroups = [0,1].map(g=>({ label: g? (lang==='es'?'UX/UI Y TECH':'UX/UI & TECH') : (lang==='es'?'ESTRATEGIA Y LIDERAZGO':'STRATEGY & LEADERSHIP'), c: g?'#7FC8A5':'#EE9B7E', items: SKILLS.map((s,i)=>({s,i})).filter(o=>o.s.g===g).map(({s,i})=>({ name:s[lang][0], bg: si===i?'#1E2430':'#FFFFFF', fg: si===i?'#F7F5F1':'#1E2430', bd: si===i?'#1E2430':'rgba(30,36,48,0.12)', pick:()=>{ if(this.state.skill!==i) this.setState({skill:i}); } })) }));
@@ -1206,7 +1218,8 @@ class Component extends DCLogic {
     const skill = { title: sk[1], scope: sk[2], items: sk[3].map(x=>({t:x})) };
     return {
       skillGroups, skill,
-      heur, det, avgTxt, sevCounts, rep, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(IDS.length-1),
+      heur, det, avgTxt, sevCounts, rep,
+      focusAudit: () => { const el = document.getElementById('aud-url'); if (!el) return; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - window.innerHeight/2, behavior:'smooth' }); setTimeout(() => el.focus({ preventScroll:true }), 450); }, auditSteps, scanBtn: done ? t.scan : t.scanning, rescan:()=>this.runScan(), goContact:()=>this.scrollTo(IDS.length-1),
       jobs: JOBS.map(j=>({ co:j.co, current:!!j.current, role:j[lang].role, dates:j[lang].dates, place:j[lang].place, team:j[lang].team, items:j[lang].items.map(x=>({t:x})) })),
       auditInfo: AUD_INFO[lang].map(x=>({k:x[0],v:x[1]})), auditFull: AUD_FULL[lang],
       audUrl: this.state.audUrl, audBtn: this.state.audState==='loading' ? '…' : t.audGo,
