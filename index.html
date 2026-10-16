@@ -293,8 +293,8 @@ html{touch-action:pan-y}
 <span style="font-size:22px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(247,245,241,0.3);display:grid;place-items:center">{{ pr.sign }}</span>
 </button>
 <sc-if value="{{ pr.open }}" hint-placeholder-val="{{ false }}">
-<div style="padding:0 8px 28px 68px;display:flex;flex-direction:column;gap:20px">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+<div style="padding:0 8px 28px 68px;display:flex;flex-direction:column;gap:22px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:20px 28px">
 <sc-for list="{{ pr.blocks }}" as="b" hint-placeholder-count="4">
 <div style="display:flex;flex-direction:column;gap:6px">
 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:{{ b.color }}">{{ b.label }}</span>
@@ -302,18 +302,12 @@ html{touch-action:pan-y}
 </div>
 </sc-for>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-<button sc-camel-on-click="{{ pr.play }}" style="text-align:left;border:0;border-radius:16px;padding:14px 16px;background:#F7F5F1;color:#1E2430;font-family:Manrope,sans-serif;cursor:pointer;display:flex;flex-direction:column;gap:4px" style-hover="background:#FFFFFF">
-<span style="font-weight:800;font-size:15px">{{ pr.a1 }}</span>
-<span style="font-size:13px;line-height:1.4;opacity:0.8">{{ pr.a1h }}</span>
-</button>
 <sc-if value="{{ pr.live }}" hint-placeholder-val="{{ false }}">
-<a href="{{ pr.extUrl }}" target="_blank" rel="noopener" style="border:1px solid rgba(247,245,241,0.35);border-radius:16px;padding:14px 16px;color:#F7F5F1;text-decoration:none;display:flex;flex-direction:column;gap:4px" style-hover="background:rgba(247,245,241,0.06)">
-<span style="font-weight:800;font-size:15px">{{ pr.a2 }} ↗</span>
-<span style="font-size:13px;line-height:1.4;opacity:0.8">{{ pr.a2h }}</span>
-</a>
-</sc-if>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding-top:18px;border-top:1px solid rgba(247,245,241,0.14)">
+<button sc-camel-on-click="{{ pr.play }}" style="display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;color:#F7F5F1;opacity:0.85;font-family:inherit;font-size:14px;cursor:pointer;text-align:left" style-hover="opacity:1"><span style="width:28px;height:28px;border-radius:50%;background:#A9DCC0;color:#1E2430;display:grid;place-items:center;font-size:11px">▶</span>{{ t.tryHint }}</button>
+<a href="{{ pr.extUrl }}" target="_blank" rel="noopener" style="border:1px solid rgba(247,245,241,0.35);border-radius:999px;padding:9px 16px;color:#F7F5F1;text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap" style-hover="background:rgba(247,245,241,0.08)">{{ pr.a2 }} ↗</a>
 </div>
+</sc-if>
 </div>
 </sc-if>
 </div>
@@ -695,6 +689,7 @@ html{touch-action:pan-y}
 <div style="width:min(100%,calc((100vh - 200px) * 1.6));border-radius:14px;background:#1E2430;padding:0 8px 8px;box-shadow:0 30px 60px rgba(30,36,48,0.28)">
 <div style="display:flex;align-items:center;gap:6px;padding:9px 4px"><span style="width:9px;height:9px;border-radius:50%;background:#EE9B7E"></span><span style="width:9px;height:9px;border-radius:50%;background:#F2CF7E"></span><span style="width:9px;height:9px;border-radius:50%;background:#7FC8A5"></span><span style="margin-left:10px;flex:1;max-width:320px;border-radius:6px;background:rgba(247,245,241,0.1);color:rgba(247,245,241,0.75);font:500 11px 'JetBrains Mono',monospace;padding:4px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ modal.host }}</span></div>
 <div ref="{{ deskRef }}" style="position:relative;width:100%;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#F5EEDD">
+<span style="position:absolute;inset:0;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#1E2430;opacity:0.55">{{ t.loadingDemo }}</span>
 <iframe src="{{ modal.url }}" title="{{ modal.title }}" style="position:absolute;top:0;left:0;width:1024px;height:640px;border:0;transform-origin:0 0;transform:{{ deskTransform }}"></iframe>
 </div>
 </div>
@@ -736,7 +731,7 @@ const COPY = {
     auditHint:'← Pasa el cursor por cada heurística para ver su hallazgo', auditCta:'¿Tu producto necesita una mirada externa? Empiezo con una auditoría.', auditBtn:'Solicitar auditoría', auditTg:'o escribime por Telegram', auditMsg:'Hola Andrea, vi tu portfolio y me interesa una auditoría UX para mi producto.',
     approachTitle:'Cómo trabajo', approachLead:'Cuatro etapas que se repiten en cada proyecto. Pasa el cursor sobre cada una para ver por qué la hago así.',
     why:'POR QUÉ', hoverHint:'↑ Pasa el cursor sobre cada etapa', projectsTitle:'Proyectos seleccionados',
-    sampleNote:'01–03 con demo en vivo', tipsLabel:'RECOMENDACIONES', ahzTag:'Finanzas personales · ARS / USD', ahzH:'Sabé en qué se va cada peso.', ahzSub:'Registrá gastos e ingresos en segundos, en pesos o dólares, y mirá tu patrimonio y tus metas al día.', ahzR1:'Sueldo', ahzR2:'Supermercado', ahzR3:'Meta: viaje', ahzNet:'Patrimonio neto', bfH:'Cada cliente acompañado. Cada póliza al día.', bfSub:'De la primera consulta a la postventa, con cuatro perfiles conectados.', bfTag:'CRM · Seguros · 4 perfiles', bfS1:'Lead nuevo', bfR1:'Asesor', bfS2:'Cotizada', bfR2:'Asesor', bfS3:'Póliza emitida', bfR3:'Admin', bfS4:'Cuota al día', bfR4:'Cobranzas', openBrowser:'Abrir en el navegador', live:'EN VIVO', openTab:'Abrir en pestaña nueva', howTry:'CÓMO PROBARLA', demoNote:'Demo con datos inventados. El código de ingreso aparece en pantalla: probá con cualquier celular.', play:'Jugar prototipo', caseSoon:'Caso completo · próximamente',
+    sampleNote:'01–03 con demo en vivo', tryHint:'Hacé clic en la portada para probarla acá mismo.', loadingDemo:'Cargando la demo…', tipsLabel:'RECOMENDACIONES', ahzTag:'Finanzas personales · ARS / USD', ahzH:'Sabé en qué se va cada peso.', ahzSub:'Registrá gastos e ingresos en segundos, en pesos o dólares, y mirá tu patrimonio y tus metas al día.', ahzR1:'Sueldo', ahzR2:'Supermercado', ahzR3:'Meta: viaje', ahzNet:'Patrimonio neto', bfH:'Cada cliente acompañado. Cada póliza al día.', bfSub:'De la primera consulta a la postventa, con cuatro perfiles conectados.', bfTag:'CRM · Seguros · 4 perfiles', bfS1:'Lead nuevo', bfR1:'Asesor', bfS2:'Cotizada', bfR2:'Asesor', bfS3:'Póliza emitida', bfR3:'Admin', bfS4:'Cuota al día', bfR4:'Cobranzas', openBrowser:'Abrir en el navegador', live:'EN VIVO', openTab:'Abrir en pestaña nueva', howTry:'CÓMO PROBARLA', demoNote:'Demo con datos inventados. El código de ingreso aparece en pantalla: probá con cualquier celular.', play:'Jugar prototipo', caseSoon:'Caso completo · próximamente',
     keyDecision:'DECISIÓN CLAVE', contactA:'¿Construimos', contactB:'algo juntos?', cv:'Descargar CV', footTime:'HORA EN LA PLATA', footOpen:'Abierta a trabajo remoto y proyectos freelance.', footTop:'Volver arriba',
     tourLabel:'RECORRIDO', prev:'Anterior', next:'Siguiente', finish:'Terminar',
     protoSlot:'Prototipo embebido · pega aquí el enlace del prototipo', previewSlot:'Captura del proyecto'
@@ -752,7 +747,7 @@ const COPY = {
     auditHint:'← Hover each heuristic to see its finding', auditCta:'Does your product need an outside look? I start with an audit.', auditBtn:'Request an audit', auditTg:'or message me on Telegram', auditMsg:'Hi Andrea, I saw your portfolio and I’m interested in a UX audit for my product.',
     approachTitle:'How I work', approachLead:'Four stages I repeat on every project. Hover each one to see why I do it this way.',
     why:'WHY', hoverHint:'↑ Hover each stage', projectsTitle:'Selected projects',
-    sampleNote:'01–03 with live demo', tipsLabel:'TIPS', ahzTag:'Personal finance · ARS / USD', ahzH:'Know where every peso goes.', ahzSub:'Log expenses and income in seconds, in pesos or dollars, and keep your net worth and goals up to date.', ahzR1:'Salary', ahzR2:'Groceries', ahzR3:'Goal: trip', ahzNet:'Net worth', bfH:'Every client looked after. Every policy up to date.', bfSub:'From first inquiry to after-sales, with four connected roles.', bfTag:'CRM · Insurance · 4 roles', bfS1:'New lead', bfR1:'Advisor', bfS2:'Quoted', bfR2:'Advisor', bfS3:'Policy issued', bfR3:'Back office', bfS4:'Installment paid', bfR4:'Collections', openBrowser:'Open in browser', live:'LIVE', openTab:'Open in new tab', howTry:'HOW TO TRY IT', demoNote:'Demo with made-up data. The login code shows on screen: try any phone number.', play:'Play prototype', caseSoon:'Full case · coming soon',
+    sampleNote:'01–03 with live demo', tryHint:'Click the cover to try it right here.', loadingDemo:'Loading the demo…', tipsLabel:'TIPS', ahzTag:'Personal finance · ARS / USD', ahzH:'Know where every peso goes.', ahzSub:'Log expenses and income in seconds, in pesos or dollars, and keep your net worth and goals up to date.', ahzR1:'Salary', ahzR2:'Groceries', ahzR3:'Goal: trip', ahzNet:'Net worth', bfH:'Every client looked after. Every policy up to date.', bfSub:'From first inquiry to after-sales, with four connected roles.', bfTag:'CRM · Insurance · 4 roles', bfS1:'New lead', bfR1:'Advisor', bfS2:'Quoted', bfR2:'Advisor', bfS3:'Policy issued', bfR3:'Back office', bfS4:'Installment paid', bfR4:'Collections', openBrowser:'Open in browser', live:'LIVE', openTab:'Open in new tab', howTry:'HOW TO TRY IT', demoNote:'Demo with made-up data. The login code shows on screen: try any phone number.', play:'Play prototype', caseSoon:'Full case · coming soon',
     keyDecision:'KEY DECISION', contactA:'Shall we build', contactB:'something together?', cv:'Download CV', footTime:'LOCAL TIME IN LA PLATA', footOpen:'Open to remote roles and freelance projects.', footTop:'Back to top',
     tourLabel:'TOUR', prev:'Back', next:'Next', finish:'Finish',
     protoSlot:'Embedded prototype · paste the prototype link here', previewSlot:'Project screenshot'
